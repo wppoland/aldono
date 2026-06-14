@@ -23,7 +23,7 @@ For each product you define a list of add-ons in the WooCommerce product editor.
 * **Cart & order display** — the customer's choices appear in the cart, at checkout, and on the order.
 * **Display settings** — choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card — all from the Add-Ons settings page.
 
-Add-on definitions are stored as standard product meta — no custom database tables. The feature is powered by the WPPoland storefront-kit engine, so the plugin itself stays small and fast.
+Add-on definitions are stored as standard product meta — no custom database tables, so the plugin itself stays small and fast.
 
 Settings live under **WooCommerce → Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
 

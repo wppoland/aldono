@@ -1,6 +1,6 @@
 <?php
 /**
- * Front-end add-on fields, rendered by the storefront-kit ProductAddOnsEngine on
+ * Front-end add-on fields, rendered on
  * `woocommerce_before_add_to_cart_button`.
  *
  * @var \WC_Product                                                                              $product

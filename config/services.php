@@ -1,9 +1,7 @@
 <?php
 /**
  * Service wiring. Returns a closure that registers every service in the
- * container. Keep services thin; product logic lives in the storefront-kit
- * ProductAddOnsEngine, instantiated inside AddOnsService with this plugin's
- * text-domain / option / product-meta key.
+ * container.
  *
  * @package Addons
  */
@@ -21,7 +19,6 @@ defined('ABSPATH') || exit;
 return static function (Container $c): void {
     $c->singleton(Migrator::class, static fn (): Migrator => new Migrator());
 
-    // Thin adapter over the storefront-kit ProductAddOnsEngine.
     $c->singleton(AddOnsService::class, static fn (): AddOnsService => new AddOnsService());
 
     // Admin (only needed in wp-admin context).

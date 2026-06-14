@@ -10,13 +10,13 @@ use WPPoland\StorefrontKit\AddOns\ProductAddOnsEngine;
 defined('ABSPATH') || exit;
 
 /**
- * Thin adapter over the storefront-kit {@see ProductAddOnsEngine}.
+ * Wires up the product add-ons feature for this plugin.
  *
- * Supplies this plugin's text-domain ('addons'), option storage, the per-product
- * meta read closure and the front-end fields template. All add-on orchestration
- * (render under the form, validation, cart capture, price adjustment, cart/order
- * display) lives in the namespace-neutral engine; this class only wires
- * localisation, settings, the product-meta reader and the template path.
+ * Supplies the text-domain ('addons'), option storage, the per-product meta read
+ * closure and the front-end fields template. The render under the form,
+ * validation, cart capture, price adjustment and cart/order display are handled
+ * by {@see ProductAddOnsEngine}; this class wires localisation, settings, the
+ * product-meta reader and the template path.
  */
 final class AddOnsService implements HasHooks
 {
@@ -27,9 +27,8 @@ final class AddOnsService implements HasHooks
 
     public function __construct()
     {
-        // The engine ships with storefront-kit >= 1.5.0. When present, wire it
-        // with this plugin's text-domain / option / meta. Otherwise leave the
-        // service inert (see registerHooks()).
+        // Wire the add-ons engine when available; otherwise leave the service
+        // inert (see registerHooks()).
         if (! class_exists(ProductAddOnsEngine::class)) {
             return;
         }
@@ -59,9 +58,8 @@ final class AddOnsService implements HasHooks
             return;
         }
 
-        // storefront-kit < 1.5.0 has no ProductAddOnsEngine. Bump the
-        // `wppoland/storefront-kit` constraint (composer update) to enable
-        // add-ons. No hooks are registered until the engine is present.
+        // No ProductAddOnsEngine available: no hooks are registered until it is
+        // present.
     }
 
     /**
