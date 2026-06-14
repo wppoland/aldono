@@ -23,7 +23,6 @@ final class Migrator
         }
 
         // Example: create tables / seed defaults here.
-        // $this->createWaitlistTable();
 
         update_option(self::OPTION, VERSION, false);
     }
