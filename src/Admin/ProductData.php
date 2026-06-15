@@ -127,7 +127,18 @@ final class ProductData implements HasHooks
             return [];
         }
 
-        $supportedTypes = ['text', 'checkbox', 'select'];
+        /**
+         * Filter supported add-on field types before product definitions are
+         * sanitised. Premium extensions can register extra types while the free
+         * plugin keeps ownership of the storage format.
+         *
+         * @param array<int, string> $supportedTypes Supported field type keys.
+         */
+        $supportedTypes = apply_filters('addons_supported_definition_types', ['text', 'checkbox', 'select']);
+
+        if (! is_array($supportedTypes)) {
+            $supportedTypes = ['text', 'checkbox', 'select'];
+        }
         $definitions    = [];
 
         foreach ($rows as $row) {

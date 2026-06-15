@@ -21,7 +21,7 @@ namespace {
 
 namespace Addons {
     if (! defined('Addons\\VERSION')) {
-        define('Addons\\VERSION', '0.1.0');
+        define('Addons\\VERSION', '0.2.0');
     }
     if (! defined('Addons\\PLUGIN_FILE')) {
         define('Addons\\PLUGIN_FILE', '/tmp/addons/addons.php');
