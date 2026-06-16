@@ -13,7 +13,7 @@ Let customers add paid or free options (text, checkbox, select) to products befo
 
 == Description ==
 
-Add-Ons lets store owners offer extra product options that customers choose before adding a product to the cart — gift wrapping, engraving text, an extended warranty, a colour choice and more.
+Add-Ons lets store owners offer extra product options that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty, a colour choice.
 
 For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
 
@@ -26,6 +26,8 @@ For each product you define a list of add-ons in the WooCommerce product editor.
 Add-on definitions are stored as standard product meta — no custom database tables — so the plugin itself stays small and fast.
 
 Settings live under **WooCommerce → Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
+
+The code is developed in the open at https://github.com/wppoland/addons — that's the place to report a bug or suggest a field type you'd like to see.
 
 == Installation ==
 
