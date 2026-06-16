@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-15T12:52:40+00:00\n"
+"POT-Creation-Date: 2026-06-16T20:25:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: addons\n"
 
 #. Plugin Name of the plugin
@@ -57,72 +57,94 @@ msgstr ""
 msgid "These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the \"Add-Ons\" tab in the Product data box."
 msgstr ""
 
-#: src/Admin/Settings.php:110
+#: src/Admin/Settings.php:106
+msgid "Status"
+msgstr ""
+
+#: src/Admin/Settings.php:108
+msgid "Switch the whole feature on or off without touching any product's configured options."
+msgstr ""
+
+#: src/Admin/Settings.php:115
 msgid "Enable add-ons"
 msgstr ""
 
-#: src/Admin/Settings.php:111
+#: src/Admin/Settings.php:116
 msgid "The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart — even if products still have add-ons configured. Turn it on once you are ready to go live."
 msgstr ""
 
-#: src/Admin/Settings.php:122
+#: src/Admin/Settings.php:127
 msgid "Show per-product add-on fields on the product page and apply price deltas in the cart."
 msgstr ""
 
-#: src/Admin/Settings.php:125
+#: src/Admin/Settings.php:130
 msgid "Leave this on for normal operation. Switch it off to temporarily hide all add-ons without deleting any product settings."
 msgstr ""
 
-#: src/Admin/Settings.php:131
+#: src/Admin/Settings.php:137
+msgid "On the product page"
+msgstr ""
+
+#: src/Admin/Settings.php:139
+msgid "How the add-on group is labelled and styled where customers see it. These choices affect appearance only — not pricing or which options show."
+msgstr ""
+
+#: src/Admin/Settings.php:146
 msgid "Group heading"
 msgstr ""
 
-#: src/Admin/Settings.php:132
+#: src/Admin/Settings.php:147
 msgid "A short heading printed above the options on the product page, for example \"Personalise your order\" or \"Extras\". It helps customers understand that the fields are optional add-ons. Clear the field to show no heading at all."
 msgstr ""
 
-#: src/Admin/Settings.php:141
+#: src/Admin/Settings.php:156
 msgid "e.g. Product options"
 msgstr ""
 
-#: src/Admin/Settings.php:144
-msgid "Heading shown above the fields on the product page. Leave empty to hide it."
+#. translators: %s: the packaged default group heading, e.g. "Product options".
+#: src/Admin/Settings.php:162
+#, php-format
+msgid "Heading shown above the fields on the product page. Leave empty to hide it. Default: %s."
 msgstr ""
 
-#: src/Admin/Settings.php:150
-#: src/Admin/Settings.php:156
+#: src/Admin/Settings.php:171
+#: src/Admin/Settings.php:177
 msgid "Display"
 msgstr ""
 
-#: src/Admin/Settings.php:151
+#: src/Admin/Settings.php:172
 msgid "Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear — only the visual treatment."
 msgstr ""
 
-#: src/Admin/Settings.php:166
+#: src/Admin/Settings.php:187
 msgid "Show the price next to paid options."
 msgstr ""
 
-#: src/Admin/Settings.php:169
+#: src/Admin/Settings.php:190
 msgid "Displays the extra cost in brackets, e.g. \"Gift wrap (+$5.00)\". Free options never show a price."
 msgstr ""
 
-#: src/Admin/Settings.php:180
+#: src/Admin/Settings.php:201
 msgid "Mark required fields with an asterisk."
 msgstr ""
 
-#: src/Admin/Settings.php:183
+#: src/Admin/Settings.php:204
 msgid "Adds a red * after the label of any option a customer must complete before adding to cart. Required options are still enforced even with this off."
 msgstr ""
 
-#: src/Admin/Settings.php:194
+#: src/Admin/Settings.php:215
 msgid "Wrap the options in a bordered card."
 msgstr ""
 
-#: src/Admin/Settings.php:197
+#: src/Admin/Settings.php:218
 msgid "Groups the options inside a subtle bordered box so they stand out from the rest of the product page. Turn off for a plain, inline layout that inherits your theme."
 msgstr ""
 
-#: src/Admin/Settings.php:206
+#: src/Admin/Settings.php:227
+msgid "Next step"
+msgstr ""
+
+#: src/Admin/Settings.php:228
 msgid "Define each product's add-ons in the product editor, under the \"Add-Ons\" tab in the Product data panel."
 msgstr ""
 
