@@ -7,7 +7,11 @@
  */
 
 .addons-admin {
-	--addons-a-accent: #2271b1;
+	/* Family accent: the storefront's "engraver's ink" indigo, so the admin
+	   reads as the same product. Computed contrast on the wp-admin surface:
+	   #4b3f9e on #fff = 8.39:1, on #f0f0f1 = 7.36:1 (AA text 4.5:1 and UI 3:1
+	   both pass). Dark scheme uses #9d92f0 on #1e1e1e = 6.19:1. */
+	--addons-a-accent: #4b3f9e;
 	--addons-a-border: #dcdcde;
 	--addons-a-surface: #fff;
 	--addons-a-muted: #50575e;
@@ -146,10 +150,51 @@
 	margin-block-end: 0.4rem;
 }
 
-/* ---- Settings page descriptions ---- */
+/* ---- Settings page sections ---- */
+
+.addons-settings__lead {
+	max-inline-size: 46rem;
+}
+
+/* Section heading: a restrained ink rule ties each group to the storefront
+   accent without fighting the native admin look. */
+.addons-settings__section {
+	margin-block: 1.75em 0.25em;
+	padding-inline-start: 0.6rem;
+	border-inline-start: 3px solid var(--addons-a-accent);
+	font-size: 1.05rem;
+	line-height: 1.3;
+}
+
+.addons-settings__section-intro {
+	margin-block: 0 0.25em;
+	max-inline-size: 46rem;
+}
 
 .addons-settings .form-table .description {
 	max-inline-size: 40rem;
+}
+
+.addons-settings .form-table .description code {
+	font-size: 0.85em;
+}
+
+/* Next-step callout: a quiet ink-tinted note pointing to the product editor. */
+.addons-settings__next {
+	max-inline-size: 46rem;
+	margin-block: 1.5em 0.5em;
+	padding: 0.7rem 0.9rem;
+	border: 1px solid var(--addons-a-border);
+	border-inline-start: 3px solid var(--addons-a-accent);
+	border-radius: var(--addons-a-radius);
+	background: color-mix(in srgb, var(--addons-a-accent) 4%, transparent);
+}
+
+.addons-settings__next-label {
+	display: inline-block;
+	margin-inline-end: 0.4rem;
+	font-weight: 600;
+	color: var(--addons-a-accent);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -161,6 +206,8 @@
 
 @media (prefers-color-scheme: dark) {
 	.addons-admin {
+		/* Lighter ink for dark surfaces: #9d92f0 on #1e1e1e = 6.19:1 (AA pass). */
+		--addons-a-accent: #9d92f0;
 		--addons-a-border: #3c434a;
 		--addons-a-surface: #1e1e1e;
 		--addons-a-muted: #a7aaad;
