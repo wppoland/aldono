@@ -1,6 +1,6 @@
 === Add-Ons – Product Options for WooCommerce ===
 Contributors: wppoland
-Tags: woocommerce, product options, add-ons, extra fields, product addons
+Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
@@ -9,11 +9,11 @@ Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Let customers add paid or free options (text, checkbox, select) to products before adding to cart.
+Add WooCommerce product options, product add-ons and custom product fields before add to cart.
 
 == Description ==
 
-Add-Ons lets store owners offer extra product options that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty, a colour choice.
+Add-Ons lets store owners offer WooCommerce product options, product add-ons and custom product fields that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty or a colour choice.
 
 For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
 
@@ -45,9 +45,25 @@ Yes. WooCommerce must be installed and active.
 
 On the single product page, just above the Add to cart button. Their selections then show in the cart, at checkout, and on the order.
 
+= What field types are included? =
+
+The free version includes text fields, checkboxes and select drop-downs. Each field can be free or add a price to the cart line.
+
+= Can a product option change the price? =
+
+Yes. Add a price to the row itself or to individual select choices, and Add-Ons adds that amount to the WooCommerce cart line.
+
+= Can I make a product option required? =
+
+Yes. Tick the Required checkbox for an option, and the product cannot be added to the cart until the shopper completes it.
+
 = Does it create custom database tables? =
 
 No. Add-on definitions are stored as product meta.
+
+= Does it support file uploads or conditional logic? =
+
+Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select product options.
 
 == Screenshots ==
 
