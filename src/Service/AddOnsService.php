@@ -85,6 +85,19 @@ final class AddOnsService implements HasHooks
             [],
             \Addons\VERSION,
         );
+
+        // Presentation-only enhancement: toggles the "inscribed" state that
+        // draws the ink underline when a field is filled. Defers, no deps.
+        wp_enqueue_script(
+            'addons',
+            \Addons\Plugin::instance()->url('assets/js/addons.js'),
+            [],
+            \Addons\VERSION,
+            [
+                'strategy'  => 'defer',
+                'in_footer' => true,
+            ],
+        );
     }
 
     private function isEnabled(): bool

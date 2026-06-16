@@ -1,9 +1,15 @@
 /**
  * Storefront add-on fields.
  *
+ * The moment: a customer inscribes a personalisation — types an engraving,
+ * ticks gift wrapping, picks a colour — and a generic product becomes theirs.
+ * So the accent is engraver's ink, and a filled field earns a single ink
+ * underline that draws itself in, like a pen signing off the choice.
+ *
  * CWV-native: space is reserved so options never cause layout shift (CLS) and
- * there is no flash of unstyled content. Themeable via CSS custom properties,
- * responsive with fluid sizing, dark-mode aware, and motion-safe.
+ * there is no flash of unstyled content. The ink stroke is a transform-only
+ * pseudo-element (no reflow). Themeable via CSS custom properties, responsive
+ * with fluid sizing, dark-mode aware, and motion-safe.
  */
 
 .addons-fields {
@@ -11,9 +17,12 @@
 	--addons-radius: 10px;
 	--addons-border: color-mix(in srgb, currentColor 14%, transparent);
 	--addons-surface: color-mix(in srgb, currentColor 3%, transparent);
-	--addons-accent: var(--wp--preset--color--primary, #2563eb);
+	/* Engraver's ink — a warm indigo that reads as pen-on-tag, not generic blue.
+	   Inherits a theme primary when present, falls back to the ink tone. */
+	--addons-ink: var(--wp--preset--color--primary, #4b3f9e);
+	--addons-accent: var(--addons-ink);
 	--addons-muted: color-mix(in srgb, currentColor 65%, transparent);
-	--addons-focus: color-mix(in srgb, var(--addons-accent) 45%, transparent);
+	--addons-focus: color-mix(in srgb, var(--addons-accent) 38%, transparent);
 
 	margin-block: 0 1.5em;
 	display: flex;
@@ -33,6 +42,19 @@
 	font-size: 1.02em;
 	margin-block: 0;
 	line-height: 1.3;
+	/* A short ink tick before the heading — a maker's mark for the section. */
+	padding-inline-start: 0.7em;
+	position: relative;
+}
+
+.addons-fields__title::before {
+	content: "";
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block: 0.18em;
+	inline-size: 3px;
+	border-radius: 3px;
+	background: var(--addons-ink);
 }
 
 .addons-field {
@@ -40,6 +62,8 @@
 	flex-direction: column;
 	gap: 0.3em;
 	margin-block: 0;
+	/* Anchor for the ink underline that draws in when a field is filled. */
+	position: relative;
 }
 
 .addons-field > label {
@@ -107,10 +131,59 @@
 	}
 }
 
+/* --- The moment: an ink underline signs off a filled personalisation. ----
+ * A pseudo-element ruled under each text/select control. It is always laid
+ * out (origin left, scaled to zero) so toggling it causes no layout shift.
+ * JS adds `.addons-field--inscribed` once the customer commits a value. */
+.addons-field--text .input-text,
+.addons-field--select select {
+	position: relative;
+	z-index: 1;
+}
+
+.addons-field--text::after,
+.addons-field--select::after {
+	content: "";
+	position: absolute;
+	inset-inline: 0.05em 0.05em;
+	block-size: 2px;
+	/* Sit on the lower edge of the control, reserved from the start (no CLS). */
+	inset-block-end: -2px;
+	border-radius: 2px;
+	background: linear-gradient(
+		90deg,
+		var(--addons-ink),
+		color-mix(in srgb, var(--addons-ink) 55%, transparent)
+	);
+	transform: scaleX(0);
+	transform-origin: left center;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.addons-field--inscribed::after {
+	transform: scaleX(1);
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.addons-field--text::after,
+	.addons-field--select::after {
+		transition: transform 360ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 200ms ease;
+	}
+}
+
+/* A checkbox is its own inscription: the box fills with ink when ticked. */
+.addons-field--checkbox input[type="checkbox"] {
+	accent-color: var(--addons-ink);
+}
+
 @media (prefers-color-scheme: dark) {
 	.addons-fields {
 		--addons-border: color-mix(in srgb, currentColor 22%, transparent);
 		--addons-surface: color-mix(in srgb, currentColor 6%, transparent);
+		/* Lift the ink so the stroke stays luminous on a dark surface. */
+		--addons-ink: var(--wp--preset--color--primary, #9d92f0);
 	}
 
 	.addons-field .required {
