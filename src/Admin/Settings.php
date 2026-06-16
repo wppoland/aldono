@@ -96,12 +96,17 @@ final class Settings implements HasHooks
         <div class="wrap addons-admin addons-settings">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 
-            <p class="description" style="max-width:46rem;">
+            <p class="description addons-settings__lead">
                 <?php esc_html_e('These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the "Add-Ons" tab in the Product data box.', 'addons'); ?>
             </p>
 
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
+
+                <h2 class="addons-settings__section"><?php esc_html_e('Status', 'addons'); ?></h2>
+                <p class="description addons-settings__section-intro">
+                    <?php esc_html_e('Switch the whole feature on or off without touching any product\'s configured options.', 'addons'); ?>
+                </p>
 
                 <table class="form-table" role="presentation">
                     <tbody>
@@ -126,6 +131,16 @@ final class Settings implements HasHooks
                                 </p>
                             </td>
                         </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="addons-settings__section"><?php esc_html_e('On the product page', 'addons'); ?></h2>
+                <p class="description addons-settings__section-intro">
+                    <?php esc_html_e('How the add-on group is labelled and styled where customers see it. These choices affect appearance only — not pricing or which options show.', 'addons'); ?>
+                </p>
+
+                <table class="form-table" role="presentation">
+                    <tbody>
                         <tr>
                             <th scope="row">
                                 <label for="addons_group_title"><?php esc_html_e('Group heading', 'addons'); ?></label>
@@ -141,7 +156,13 @@ final class Settings implements HasHooks
                                     placeholder="<?php esc_attr_e('e.g. Product options', 'addons'); ?>"
                                 />
                                 <p class="description">
-                                    <?php esc_html_e('Heading shown above the fields on the product page. Leave empty to hide it.', 'addons'); ?>
+                                    <?php
+                                    printf(
+                                        /* translators: %s: the packaged default group heading, e.g. "Product options". */
+                                        esc_html__('Heading shown above the fields on the product page. Leave empty to hide it. Default: %s.', 'addons'),
+                                        '<code>' . esc_html((string) ($this->defaults()['group_title'] ?? '')) . '</code>',
+                                    );
+                                    ?>
                                 </p>
                             </td>
                         </tr>
@@ -202,7 +223,8 @@ final class Settings implements HasHooks
                     </tbody>
                 </table>
 
-                <p class="description">
+                <p class="description addons-settings__next">
+                    <span class="addons-settings__next-label"><?php esc_html_e('Next step', 'addons'); ?></span>
                     <?php esc_html_e('Define each product\'s add-ons in the product editor, under the "Add-Ons" tab in the Product data panel.', 'addons'); ?>
                 </p>
 
@@ -248,9 +270,19 @@ final class Settings implements HasHooks
             $stored = [];
         }
 
+        return array_merge($this->defaults(), $stored);
+    }
+
+    /**
+     * Packaged defaults, used for display hints and as the merge base.
+     *
+     * @return array<string, mixed>
+     */
+    private function defaults(): array
+    {
         /** @var array<string, mixed> $defaults */
         $defaults = require ADDONS_DIR . 'config/defaults.php';
 
-        return array_merge($defaults, $stored);
+        return $defaults;
     }
 }
