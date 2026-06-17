@@ -69,6 +69,10 @@ Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select p
 
 1. Add-Ons – Product Options for WooCommerce in action.
 
+== External Services ==
+
+Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers — its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
+
 == Changelog ==
 
 = 0.2.0 =
