@@ -37,6 +37,15 @@ The code is developed in the open at https://github.com/wppoland/addons — that
 
 == Frequently Asked Questions ==
 
+= Documentation and links =
+
+* **Documentation** - https://plogins.com/addons/docs/
+* **Plugin page** - https://plogins.com/addons/
+* **Source code** - https://github.com/wppoland/addons
+* **Bug reports and feature requests** - https://github.com/wppoland/addons/issues
+* **Discussions and questions** - https://github.com/wppoland/addons/discussions
+
+
 = Does it require WooCommerce? =
 
 Yes. WooCommerce must be installed and active.
