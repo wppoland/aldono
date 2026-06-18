@@ -1,5 +1,5 @@
 === Add-Ons – Product Options for WooCommerce ===
-Contributors: wppoland
+Contributors: motylanogha
 Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5
 Tested up to: 7.0
