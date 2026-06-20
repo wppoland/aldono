@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.2.0
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,6 +18,7 @@ Add-Ons lets store owners offer WooCommerce product options, product add-ons and
 For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
 
 * **Field types** — plain text, a checkbox, or a select drop-down.
+* **Text limits** — set minimum and maximum character lengths for text product options.
 * **Price deltas** — give an add-on (or each select option) a price; the amount is added to the cart line total automatically.
 * **Free or paid** — leave the price at zero for free options such as a personalised message.
 * **Cart & order display** — the customer's choices appear in the cart, at checkout, and on the order.
@@ -66,6 +67,10 @@ Yes. Add a price to the row itself or to individual select choices, and Add-Ons 
 
 Yes. Tick the Required checkbox for an option, and the product cannot be added to the cart until the shopper completes it.
 
+= Can I limit text option length? =
+
+Yes. Text add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart.
+
 = Does it create custom database tables? =
 
 No. Add-on definitions are stored as product meta.
@@ -83,6 +88,9 @@ Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select p
 Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers — its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
 
 == Changelog ==
+
+= 0.3.0 =
+* Add minimum and maximum character limits for text add-ons, with storefront counters and server-side validation.
 
 = 0.2.0 =
 * Add a customisable group heading shown above the add-on fields on the product page.

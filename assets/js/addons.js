@@ -27,6 +27,46 @@
 	}
 
 	/**
+	 * @param {HTMLInputElement} control
+	 */
+	function updateCharCounter(control) {
+		var field = control.closest('.addons-field');
+		if (!field) {
+			return;
+		}
+
+		var counter = field.querySelector('[data-addons-char-counter]');
+		if (!counter) {
+			return;
+		}
+
+		var min = parseInt(counter.getAttribute('data-min') || '0', 10);
+		var max = parseInt(counter.getAttribute('data-max') || '0', 10);
+		var ignoreSpaces = counter.getAttribute('data-ignore-spaces') === '1';
+
+		var val = control.value || '';
+		if (ignoreSpaces) {
+			val = val.replace(/\s+/g, '');
+		}
+
+		var length = val.length;
+		var label = '';
+
+		if (min > 0 && max > 0) {
+			label = length + ' / ' + min + '-' + max;
+		} else if (max > 0) {
+			label = length + ' / ' + max;
+		} else if (min > 0) {
+			label = length + ' / min ' + min;
+		}
+
+		counter.textContent = label;
+
+		var invalid = (min > 0 && length < min) || (max > 0 && length > max);
+		counter.classList.toggle('addons-char-counter--invalid', invalid);
+	}
+
+	/**
 	 * @param {HTMLElement} control
 	 */
 	function reflect(control) {
@@ -37,6 +77,10 @@
 		}
 
 		field.classList.toggle(INSCRIBED, isInscribed(control));
+
+		if (control.tagName === 'INPUT' && control.type === 'text') {
+			updateCharCounter(control);
+		}
 	}
 
 	function init() {

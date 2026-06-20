@@ -68,6 +68,21 @@
 			}
 		}
 
+		function syncCharSettings(row) {
+			var select = row.querySelector('select[name*="[type]"]');
+			var charSettings = row.querySelector('[data-addons-char-settings]');
+
+			if (!select || !charSettings) {
+				return;
+			}
+
+			charSettings.style.display = select.value === 'text' ? '' : 'none';
+		}
+
+		function syncAllRows() {
+			rows.querySelectorAll('[data-addons-row]').forEach(syncCharSettings);
+		}
+
 		addBtn.addEventListener('click', addRow);
 
 		rows.addEventListener('click', function (event) {
@@ -85,6 +100,18 @@
 			}
 		});
 
+		rows.addEventListener('change', function (event) {
+			var target = event.target;
+
+			if (target && target.matches('select[name*="[type]"]')) {
+				var row = target.closest('[data-addons-row]');
+				if (row) {
+					syncCharSettings(row);
+				}
+			}
+		});
+
 		syncEmptyState();
+		syncAllRows();
 	});
 })();

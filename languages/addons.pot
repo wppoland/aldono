@@ -1,17 +1,17 @@
-# Copyright (C) 2026 WPPoland
+# Copyright (C) 2026 WPPoland.com
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Add-Ons – Product Options for WooCommerce 0.2.0\n"
+"Project-Id-Version: Add-Ons – Product Options for WooCommerce 0.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/addons\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-16T20:25:27+00:00\n"
+"POT-Creation-Date: 2026-06-20T08:27:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: addons\n"
 
 #. Plugin Name of the plugin
@@ -31,12 +31,12 @@ msgstr ""
 
 #. Author of the plugin
 #: addons.php
-msgid "WPPoland"
+msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
 #: addons.php
-msgid "https://plogins.com/"
+msgid "https://wppoland.com"
 msgstr ""
 
 #: addons.php:47
@@ -103,7 +103,6 @@ msgstr ""
 
 #. translators: %s: the packaged default group heading, e.g. "Product options".
 #: src/Admin/Settings.php:162
-#, php-format
 msgid "Heading shown above the fields on the product page. Leave empty to hide it. Default: %s."
 msgstr ""
 
@@ -152,12 +151,20 @@ msgstr ""
 msgid "Please complete the \"{label}\" option before adding to cart."
 msgstr ""
 
-#: templates/add-on-fields.php:80
-#: templates/add-on-fields.php:102
+#: src/Service/AddOnsService.php:44
+msgid "The option \"{label}\" must be at least {min} characters long."
+msgstr ""
+
+#: src/Service/AddOnsService.php:45
+msgid "The option \"{label}\" cannot exceed {max} characters."
+msgstr ""
+
+#: templates/add-on-fields.php:82
+#: templates/add-on-fields.php:104
 msgid "required"
 msgstr ""
 
-#: templates/add-on-fields.php:87
+#: templates/add-on-fields.php:89
 msgid "— Select —"
 msgstr ""
 
@@ -181,76 +188,96 @@ msgstr ""
 msgid "Add your first option to let customers personalise this product or pay for extras such as gift wrapping, engraving, or express handling."
 msgstr ""
 
-#: templates/admin/product-data-panel.php:56
-#: templates/admin/product-data-panel.php:97
+#: templates/admin/product-data-panel.php:58
+#: templates/admin/product-data-panel.php:103
 msgid "Option"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:57
-#: templates/admin/product-data-panel.php:98
+#: templates/admin/product-data-panel.php:59
+#: templates/admin/product-data-panel.php:104
 msgid "Label (e.g. Gift wrap)"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:57
-#: templates/admin/product-data-panel.php:98
+#: templates/admin/product-data-panel.php:59
+#: templates/admin/product-data-panel.php:104
 msgid "Option label"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:58
-#: templates/admin/product-data-panel.php:99
+#: templates/admin/product-data-panel.php:60
+#: templates/admin/product-data-panel.php:105
 msgid "Option type"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:100
+#: templates/admin/product-data-panel.php:61
+#: templates/admin/product-data-panel.php:106
 msgid "Text"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:60
-#: templates/admin/product-data-panel.php:101
+#: templates/admin/product-data-panel.php:62
+#: templates/admin/product-data-panel.php:107
 msgid "Checkbox"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:61
-#: templates/admin/product-data-panel.php:102
+#: templates/admin/product-data-panel.php:63
+#: templates/admin/product-data-panel.php:108
 msgid "Select"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:63
-#: templates/admin/product-data-panel.php:104
+#: templates/admin/product-data-panel.php:65
+#: templates/admin/product-data-panel.php:110
 msgid "Price"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:63
-#: templates/admin/product-data-panel.php:104
+#: templates/admin/product-data-panel.php:65
+#: templates/admin/product-data-panel.php:110
 msgid "Extra price added when chosen"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:66
-#: templates/admin/product-data-panel.php:107
-msgid "Required"
+#: templates/admin/product-data-panel.php:67
+#: templates/admin/product-data-panel.php:112
+msgid "Min chars"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:67
+#: templates/admin/product-data-panel.php:112
+msgid "Minimum character length"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:68
-#: templates/admin/product-data-panel.php:109
-msgid "Remove"
+#: templates/admin/product-data-panel.php:113
+msgid "Max chars"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:71
-#: templates/admin/product-data-panel.php:112
-msgid "Select options, one per line: Label | price"
-msgstr ""
-
-#: templates/admin/product-data-panel.php:71
-#: templates/admin/product-data-panel.php:112
-msgid "Choices for the Select type"
+#: templates/admin/product-data-panel.php:68
+#: templates/admin/product-data-panel.php:113
+msgid "Maximum character length"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:72
-#: templates/admin/product-data-panel.php:113
+#: templates/admin/product-data-panel.php:117
+msgid "Required"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:74
+#: templates/admin/product-data-panel.php:119
+msgid "Remove"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:77
+#: templates/admin/product-data-panel.php:122
+msgid "Select options, one per line: Label | price"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:77
+#: templates/admin/product-data-panel.php:122
+msgid "Choices for the Select type"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:78
+#: templates/admin/product-data-panel.php:123
 msgid "Only used for the \"Select\" type. One choice per line as \"Label | price\" — e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free choice."
 msgstr ""
 
-#: templates/admin/product-data-panel.php:91
+#: templates/admin/product-data-panel.php:97
 msgid "Add option"
 msgstr ""

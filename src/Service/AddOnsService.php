@@ -39,8 +39,10 @@ final class AddOnsService implements HasHooks
             fieldPrefix: 'addons_field_',
             fieldsTemplate: 'add-on-fields',
             labels: [
-                'group_title'    => $this->groupTitle(),
-                'required_error' => __('Please complete the "{label}" option before adding to cart.', 'addons'),
+                'group_title'     => $this->groupTitle(),
+                'required_error'  => __('Please complete the "{label}" option before adding to cart.', 'addons'),
+                'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'addons'),
+                'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'addons'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
             settings: fn (): array => $this->settings(),

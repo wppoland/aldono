@@ -39,13 +39,15 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
 
     <?php foreach ($add_ons as $addons_index => $addons_field) : ?>
         <?php
-        $addons_name     = $addons_prefix . (int) $addons_index;
-        $addons_id       = sanitize_html_class($addons_name);
-        $addons_label    = (string) ($addons_field['label'] ?? '');
-        $addons_type     = (string) ($addons_field['type'] ?? 'text');
-        $addons_required = (bool) ($addons_field['required'] ?? false);
-        $addons_price    = (float) ($addons_field['price'] ?? 0);
-        $addons_options  = isset($addons_field['options']) && is_array($addons_field['options'])
+        $addons_name      = $addons_prefix . (int) $addons_index;
+        $addons_id        = sanitize_html_class($addons_name);
+        $addons_label     = (string) ($addons_field['label'] ?? '');
+        $addons_type      = (string) ($addons_field['type'] ?? 'text');
+        $addons_required  = (bool) ($addons_field['required'] ?? false);
+        $addons_price     = (float) ($addons_field['price'] ?? 0);
+        $addons_min_chars = isset($addons_field['min_chars']) ? (int) $addons_field['min_chars'] : 0;
+        $addons_max_chars = isset($addons_field['max_chars']) ? (int) $addons_field['max_chars'] : 0;
+        $addons_options   = isset($addons_field['options']) && is_array($addons_field['options'])
             ? $addons_field['options']
             : array();
 
@@ -110,7 +112,14 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                     name="<?php echo esc_attr($addons_name); ?>"
                     class="input-text"
                     <?php echo $addons_required ? 'required' : ''; ?>
+                    <?php echo $addons_min_chars > 0 ? 'minlength="' . esc_attr((string) $addons_min_chars) . '"' : ''; ?>
+                    <?php echo $addons_max_chars > 0 ? 'maxlength="' . esc_attr((string) $addons_max_chars) . '"' : ''; ?>
                 />
+                <?php if ($addons_min_chars > 0 || $addons_max_chars > 0) : ?>
+                    <small class="addons-char-counter-wrap description">
+                        <span class="addons-char-counter" data-addons-char-counter data-min="<?php echo esc_attr((string) $addons_min_chars); ?>" data-max="<?php echo esc_attr((string) $addons_max_chars); ?>"></span>
+                    </small>
+                <?php endif; ?>
             <?php endif; ?>
         </p>
     <?php endforeach; ?>

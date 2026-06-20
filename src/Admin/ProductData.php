@@ -154,14 +154,16 @@ final class ProductData implements HasHooks
             }
 
             $definition = [
-                'label'    => $label,
-                'type'     => $type,
-                'required' => ! empty($row['required']),
+                'label'     => $label,
+                'type'      => $type,
+                'required'  => ! empty($row['required']),
                 // Add-on deltas are *added* to the line price by the engine. A
                 // negative delta would let a buyer drive the line (and cart)
                 // total below the base price, so clamp to a non-negative surcharge.
-                'price'    => isset($row['price']) ? max(0.0, (float) wc_format_decimal((string) $row['price'])) : 0.0,
-                'options'  => [],
+                'price'     => isset($row['price']) ? max(0.0, (float) wc_format_decimal((string) $row['price'])) : 0.0,
+                'min_chars' => isset($row['min_chars']) ? max(0, absint($row['min_chars'])) : 0,
+                'max_chars' => isset($row['max_chars']) ? max(0, absint($row['max_chars'])) : 0,
+                'options'   => [],
             ];
 
             if ($type === 'select' && isset($row['options']) && is_string($row['options'])) {

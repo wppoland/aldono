@@ -50,6 +50,8 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                     }
                     $addons_options = implode("\n", $addons_lines);
                 }
+                $addons_min_chars = (string) ($addons_row['min_chars'] ?? '');
+                $addons_max_chars = (string) ($addons_row['max_chars'] ?? '');
                 ?>
                 <div class="addons-admin-row" data-addons-row>
                     <p class="form-field">
@@ -61,6 +63,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                             <option value="select" <?php selected($addons_type, 'select'); ?>><?php esc_html_e('Select', 'addons'); ?></option>
                         </select>
                         <input type="text" inputmode="decimal" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][price]" placeholder="<?php esc_attr_e('Price', 'addons'); ?>" value="<?php echo esc_attr($addons_price); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Extra price added when chosen', 'addons'); ?>" />
+                        <span class="addons-char-settings" data-addons-char-settings <?php echo $addons_type === 'text' ? '' : 'style="display:none;"'; ?>>
+                            <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][min_chars]" placeholder="<?php esc_attr_e('Min chars', 'addons'); ?>" value="<?php echo esc_attr($addons_min_chars); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Minimum character length', 'addons'); ?>" />
+                            <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][max_chars]" placeholder="<?php esc_attr_e('Max chars', 'addons'); ?>" value="<?php echo esc_attr($addons_max_chars); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Maximum character length', 'addons'); ?>" />
+                        </span>
                         <label>
                             <input type="checkbox" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][required]" value="1" <?php checked($addons_required); ?> />
                             <?php esc_html_e('Required', 'addons'); ?>
@@ -102,6 +108,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         <option value="select"><?php esc_html_e('Select', 'addons'); ?></option>
                     </select>
                     <input type="text" inputmode="decimal" name="addons_def[__INDEX__][price]" placeholder="<?php esc_attr_e('Price', 'addons'); ?>" value="" style="width:6em;" aria-label="<?php esc_attr_e('Extra price added when chosen', 'addons'); ?>" />
+                    <span class="addons-char-settings" data-addons-char-settings>
+                        <input type="number" min="0" name="addons_def[__INDEX__][min_chars]" placeholder="<?php esc_attr_e('Min chars', 'addons'); ?>" value="" style="width:6em;" aria-label="<?php esc_attr_e('Minimum character length', 'addons'); ?>" />
+                        <input type="number" min="0" name="addons_def[__INDEX__][max_chars]" placeholder="<?php esc_attr_e('Max chars', 'addons'); ?>" value="" style="width:6em;" aria-label="<?php esc_attr_e('Maximum character length', 'addons'); ?>" />
+                    </span>
                     <label>
                         <input type="checkbox" name="addons_def[__INDEX__][required]" value="1" />
                         <?php esc_html_e('Required', 'addons'); ?>
