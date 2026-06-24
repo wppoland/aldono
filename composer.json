@@ -3,15 +3,8 @@
     "description": "Let customers add paid or free options (text, checkbox, select) to products before adding to cart.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/wppoland/storefront-kit"
-        }
-    ],
     "require": {
-        "php": ">=8.1",
-        "wppoland/storefront-kit": "^1.5"
+        "php": ">=8.1"
     },
     "require-dev": {
         "wp-coding-standards/wpcs": "^3.0",
@@ -22,7 +15,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Addons\\": "src/"
+            "Addons\\": "src/",
+            "WPPoland\\StorefrontKit\\": "lib/storefront-kit/"
         }
     },
     "scripts": {
