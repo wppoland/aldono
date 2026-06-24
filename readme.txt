@@ -17,18 +17,18 @@ Add-Ons lets store owners offer WooCommerce product options, product add-ons and
 
 For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
 
-* **Field types** — plain text, a checkbox, or a select drop-down.
-* **Text limits** — set minimum and maximum character lengths for text product options.
-* **Price deltas** — give an add-on (or each select option) a price; the amount is added to the cart line total automatically.
-* **Free or paid** — leave the price at zero for free options such as a personalised message.
-* **Cart & order display** — the customer's choices appear in the cart, at checkout, and on the order.
-* **Display settings** — choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card — all from the Add-Ons settings page.
+* **Field types**, plain text, a checkbox, or a select drop-down.
+* **Text limits**, set minimum and maximum character lengths for text product options.
+* **Price deltas**, give an add-on (or each select option) a price; the amount is added to the cart line total automatically.
+* **Free or paid**, leave the price at zero for free options such as a personalised message.
+* **Cart & order display**, the customer's choices appear in the cart, at checkout, and on the order.
+* **Display settings**, choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card, all from the Add-Ons settings page.
 
-Add-on definitions are stored as standard product meta — no custom database tables — so the plugin itself stays small and fast.
+Add-on definitions are stored as standard product meta, no custom database tables, so the plugin itself stays small and fast.
 
 Settings live under **WooCommerce → Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
 
-The code is developed in the open at https://github.com/wppoland/addons — that's the place to report a bug or suggest a field type you'd like to see.
+The code is developed in the open at https://github.com/wppoland/addons, that's the place to report a bug or suggest a field type you'd like to see.
 
 == Installation ==
 
@@ -85,7 +85,7 @@ Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select p
 
 == External Services ==
 
-Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers — its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
+Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
 
 == Changelog ==
 
