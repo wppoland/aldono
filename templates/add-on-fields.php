@@ -86,7 +86,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                     name="<?php echo esc_attr($addons_name); ?>"
                     <?php echo $addons_required ? 'required' : ''; ?>
                 >
-                    <option value=""><?php esc_html_e('— Select —', 'addons'); ?></option>
+                    <option value=""><?php esc_html_e(', Select, ', 'addons'); ?></option>
                     <?php foreach ($addons_options as $addons_opt_label => $addons_opt_price) : ?>
                         <?php
                         $addons_opt_label = (string) $addons_opt_label;

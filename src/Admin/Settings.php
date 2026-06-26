@@ -113,7 +113,7 @@ final class Settings implements HasHooks
                         <tr>
                             <th scope="row">
                                 <?php esc_html_e('Enable add-ons', 'addons'); ?>
-                                <?php InlineHelp::output('enabled', __('The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart — even if products still have add-ons configured. Turn it on once you are ready to go live.', 'addons')); ?>
+                                <?php InlineHelp::output('enabled', __('The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart, even if products still have add-ons configured. Turn it on once you are ready to go live.', 'addons')); ?>
                             </th>
                             <td>
                                 <label for="addons_enabled">
@@ -136,7 +136,7 @@ final class Settings implements HasHooks
 
                 <h2 class="addons-settings__section"><?php esc_html_e('On the product page', 'addons'); ?></h2>
                 <p class="description addons-settings__section-intro">
-                    <?php esc_html_e('How the add-on group is labelled and styled where customers see it. These choices affect appearance only — not pricing or which options show.', 'addons'); ?>
+                    <?php esc_html_e('How the add-on group is labelled and styled where customers see it. These choices affect appearance only, not pricing or which options show.', 'addons'); ?>
                 </p>
 
                 <table class="form-table" role="presentation">
@@ -169,7 +169,7 @@ final class Settings implements HasHooks
                         <tr>
                             <th scope="row">
                                 <?php esc_html_e('Display', 'addons'); ?>
-                                <?php InlineHelp::output('display', __('Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear — only the visual treatment.', 'addons')); ?>
+                                <?php InlineHelp::output('display', __('Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear, only the visual treatment.', 'addons')); ?>
                             </th>
                             <td>
                                 <fieldset>

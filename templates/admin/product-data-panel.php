@@ -75,7 +75,7 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                     </p>
                     <p class="form-field">
                         <textarea name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][options]" rows="3" placeholder="<?php esc_attr_e('Select options, one per line: Label | price', 'addons'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select type', 'addons'); ?>"><?php echo esc_textarea($addons_options); ?></textarea>
-                        <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" type. One choice per line as "Label | price" — e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'addons'); ?></span>
+                        <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" type. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'addons'); ?></span>
                     </p>
                     <?php
                     /**
@@ -120,7 +120,7 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                 </p>
                 <p class="form-field">
                     <textarea name="addons_def[__INDEX__][options]" rows="3" placeholder="<?php esc_attr_e('Select options, one per line: Label | price', 'addons'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select type', 'addons'); ?>"></textarea>
-                    <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" type. One choice per line as "Label | price" — e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'addons'); ?></span>
+                    <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" type. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'addons'); ?></span>
                 </p>
                 <?php
                 /**

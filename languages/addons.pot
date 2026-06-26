@@ -70,7 +70,7 @@ msgid "Enable add-ons"
 msgstr ""
 
 #: src/Admin/Settings.php:116
-msgid "The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart — even if products still have add-ons configured. Turn it on once you are ready to go live."
+msgid "The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart, even if products still have add-ons configured. Turn it on once you are ready to go live."
 msgstr ""
 
 #: src/Admin/Settings.php:127
@@ -86,7 +86,7 @@ msgid "On the product page"
 msgstr ""
 
 #: src/Admin/Settings.php:139
-msgid "How the add-on group is labelled and styled where customers see it. These choices affect appearance only — not pricing or which options show."
+msgid "How the add-on group is labelled and styled where customers see it. These choices affect appearance only, not pricing or which options show."
 msgstr ""
 
 #: src/Admin/Settings.php:146
@@ -112,7 +112,7 @@ msgid "Display"
 msgstr ""
 
 #: src/Admin/Settings.php:172
-msgid "Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear — only the visual treatment."
+msgid "Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear, only the visual treatment."
 msgstr ""
 
 #: src/Admin/Settings.php:187
@@ -165,7 +165,7 @@ msgid "required"
 msgstr ""
 
 #: templates/add-on-fields.php:89
-msgid "— Select —"
+msgid ", Select, "
 msgstr ""
 
 #: templates/admin/product-data-panel.php:23
@@ -275,7 +275,7 @@ msgstr ""
 
 #: templates/admin/product-data-panel.php:78
 #: templates/admin/product-data-panel.php:123
-msgid "Only used for the \"Select\" type. One choice per line as \"Label | price\" — e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free choice."
+msgid "Only used for the \"Select\" type. One choice per line as \"Label | price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free choice."
 msgstr ""
 
 #: templates/admin/product-data-panel.php:97

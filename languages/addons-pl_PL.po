@@ -87,11 +87,11 @@ msgstr "Włącz opcje produktu"
 #: src/Admin/Settings.php:116
 msgid ""
 "The master switch. When off, no add-on fields are shown on any product and "
-"no price changes are applied in the cart — even if products still have add-"
+"no price changes are applied in the cart, even if products still have add-"
 "ons configured. Turn it on once you are ready to go live."
 msgstr ""
 "Główny przełącznik. Po wyłączeniu przy żadnym produkcie nie pojawiają się "
-"pola opcji i nie są stosowane żadne zmiany ceny w koszyku — nawet jeśli "
+"pola opcji i nie są stosowane żadne zmiany ceny w koszyku, nawet jeśli "
 "produkty mają nadal skonfigurowane opcje. Włącz go, gdy będziesz gotów do "
 "uruchomienia."
 
@@ -118,7 +118,7 @@ msgstr ""
 #: src/Admin/Settings.php:139
 msgid ""
 "How the add-on group is labelled and styled where customers see it. These "
-"choices affect appearance only — not pricing or which options show."
+"choices affect appearance only, not pricing or which options show."
 msgstr ""
 
 #: src/Admin/Settings.php:146
@@ -154,11 +154,11 @@ msgstr "Wyświetlanie"
 #: src/Admin/Settings.php:172
 msgid ""
 "Presentation choices that change how the add-ons look on the storefront. "
-"They do not affect pricing or which options appear — only the visual "
+"They do not affect pricing or which options appear, only the visual "
 "treatment."
 msgstr ""
 "Ustawienia prezentacji, które zmieniają wygląd opcji w sklepie. Nie wpływają "
-"na ceny ani na to, które opcje się pojawiają — tylko na oprawę wizualną."
+"na ceny ani na to, które opcje się pojawiają, tylko na oprawę wizualną."
 
 #: src/Admin/Settings.php:187
 msgid "Show the price next to paid options."
@@ -220,8 +220,8 @@ msgid "required"
 msgstr "wymagane"
 
 #: templates/add-on-fields.php:87
-msgid "— Select —"
-msgstr "— Wybierz —"
+msgid ", Select, "
+msgstr ", Wybierz, "
 
 #: templates/admin/product-data-panel.php:23
 msgid "Product add-ons"
@@ -329,11 +329,11 @@ msgstr "Opcje dla typu Lista"
 #: templates/admin/product-data-panel.php:113
 msgid ""
 "Only used for the \"Select\" type. One choice per line as \"Label | price\" "
-"— e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
+", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
 "choice."
 msgstr ""
 "Używane tylko dla typu „Lista”. Jedna opcja w wierszu w formacie „Etykieta | "
-"cena” — np. „Standard | 0” i „Premium | 9.99”. Pomiń cenę, aby opcja była "
+"cena”, np. „Standard | 0” i „Premium | 9.99”. Pomiń cenę, aby opcja była "
 "bezpłatna."
 
 #: templates/admin/product-data-panel.php:91
