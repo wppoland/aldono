@@ -1,11 +1,11 @@
-=== Add-Ons – Product Options for WooCommerce ===
+=== Plogins Add-Ons for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.3.0
+Stable tag: 0.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,11 +28,11 @@ Add-on definitions are stored as standard product meta, no custom database table
 
 Settings live under **WooCommerce → Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
 
-The code is developed in the open at https://github.com/wppoland/addons, that's the place to report a bug or suggest a field type you'd like to see.
+The code is developed in the open at https://github.com/wppoland/plogins-addons, that's the place to report a bug or suggest a field type you'd like to see.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/addons`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/plogins-addons`, or install via Plugins → Add New.
 2. Activate it. WooCommerce must be active.
 3. Edit a product, open the **Add-Ons** tab in the Product data panel, and add your options.
 
@@ -40,11 +40,10 @@ The code is developed in the open at https://github.com/wppoland/addons, that's 
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/addons/docs/
-* **Plugin page** - https://plogins.com/addons/
-* **Source code** - https://github.com/wppoland/addons
-* **Bug reports and feature requests** - https://github.com/wppoland/addons/issues
-* **Discussions and questions** - https://github.com/wppoland/addons/discussions
+* **Documentation** - https://plogins.com/plogins-addons/docs/
+* **Plugin page** - https://plogins.com/plogins-addons/
+* **Source code** - https://github.com/wppoland/plogins-addons
+* **Bug reports and feature requests** - https://github.com/wppoland/plogins-addons/issues
 
 
 = Does it require WooCommerce? =
@@ -88,6 +87,9 @@ Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select p
 Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
 
 == Changelog ==
+
+= 0.3.1 =
+* Renamed to Plogins Add-Ons for WooCommerce for a more distinctive plugin name.
 
 = 0.3.0 =
 * Add minimum and maximum character limits for text add-ons, with storefront counters and server-side validation.

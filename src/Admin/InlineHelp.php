@@ -31,7 +31,7 @@ final class InlineHelp
         $button = sprintf(
             '<button type="button" class="addons-help" popovertarget="%1$s" aria-describedby="%1$s" aria-label="%2$s">?</button>',
             esc_attr($tipId),
-            esc_attr__('More information', 'addons'),
+            esc_attr__('More information', 'plogins-addons'),
         );
 
         $tip = sprintf(

@@ -4,7 +4,7 @@ includes:
 parameters:
     level: 6
     paths:
-        - addons.php
+        - plogins-addons.php
         - src
         - config
     excludePaths:

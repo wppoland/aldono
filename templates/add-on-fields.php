@@ -79,14 +79,14 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
             <?php elseif ($addons_type === 'select') : ?>
                 <label for="<?php echo esc_attr($addons_id); ?>">
                     <?php echo esc_html($addons_label); ?>
-                    <?php if ($addons_required && $addons_show_required) : ?><abbr class="required" title="<?php esc_attr_e('required', 'addons'); ?>">*</abbr><?php endif; ?>
+                    <?php if ($addons_required && $addons_show_required) : ?><abbr class="required" title="<?php esc_attr_e('required', 'plogins-addons'); ?>">*</abbr><?php endif; ?>
                 </label>
                 <select
                     id="<?php echo esc_attr($addons_id); ?>"
                     name="<?php echo esc_attr($addons_name); ?>"
                     <?php echo $addons_required ? 'required' : ''; ?>
                 >
-                    <option value=""><?php esc_html_e(', Select, ', 'addons'); ?></option>
+                    <option value=""><?php esc_html_e(', Select, ', 'plogins-addons'); ?></option>
                     <?php foreach ($addons_options as $addons_opt_label => $addons_opt_price) : ?>
                         <?php
                         $addons_opt_label = (string) $addons_opt_label;
@@ -101,7 +101,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
             <?php else : ?>
                 <label for="<?php echo esc_attr($addons_id); ?>">
                     <?php echo esc_html($addons_label); ?>
-                    <?php if ($addons_required && $addons_show_required) : ?><abbr class="required" title="<?php esc_attr_e('required', 'addons'); ?>">*</abbr><?php endif; ?>
+                    <?php if ($addons_required && $addons_show_required) : ?><abbr class="required" title="<?php esc_attr_e('required', 'plogins-addons'); ?>">*</abbr><?php endif; ?>
                     <?php if ($addons_show_prices && $addons_price > 0) : ?>
                         <span class="addons-field__price">(<?php echo wp_kses_post(wc_price($addons_price)); ?>)</span>
                     <?php endif; ?>

@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
 /**
  * Thin adapter over the storefront-kit {@see ProductAddOnsEngine}.
  *
- * Supplies this plugin's text-domain ('addons'), option storage, the per-product
+ * Supplies this plugin's text-domain ('plogins-addons'), option storage, the per-product
  * meta read closure and the front-end fields template. All add-on orchestration
  * (render under the form, validation, cart capture, price adjustment, cart/order
  * display) lives in the namespace-neutral engine; this class only wires
@@ -40,9 +40,9 @@ final class AddOnsService implements HasHooks
             fieldsTemplate: 'add-on-fields',
             labels: [
                 'group_title'     => $this->groupTitle(),
-                'required_error'  => __('Please complete the "{label}" option before adding to cart.', 'addons'),
-                'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'addons'),
-                'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'addons'),
+                'required_error'  => __('Please complete the "{label}" option before adding to cart.', 'plogins-addons'),
+                'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'plogins-addons'),
+                'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'plogins-addons'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
             settings: fn (): array => $this->settings(),

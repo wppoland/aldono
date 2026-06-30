@@ -2,8 +2,8 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: addons 0.2.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/addons\n"
+"Project-Id-Version: Plogins Add-Ons for WooCommerce 0.3.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-addons\n"
 "POT-Creation-Date: 2026-06-16T20:25:27+00:00\n"
 "PO-Revision-Date: 2026-06-15 10:00+0000\n"
 "Last-Translator: WPPoland <hello@plogins.com>\n"
@@ -13,22 +13,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: addons\n"
+"X-Domain: plogins-addons\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
 "|| n%100>14) ? 1 : 2);\n"
 
 #. Plugin Name of the plugin
-#: addons.php
+#: plogins-addons.php
 msgid "Add-Ons – Product Options for WooCommerce"
 msgstr "Add-Ons – opcje produktu dla WooCommerce"
 
 #. Plugin URI of the plugin
-#: addons.php
-msgid "https://plogins.com/addons/"
-msgstr "https://plogins.com/addons/"
+#: plogins-addons.php
+msgid "https://plogins.com/plogins-addons/"
+msgstr "https://plogins.com/plogins-addons/"
 
 #. Description of the plugin
-#: addons.php
+#: plogins-addons.php
 msgid ""
 "Let customers add paid or free options (text, checkbox, select) to products "
 "before adding to cart."
@@ -37,16 +37,16 @@ msgstr ""
 "lista) do produktów przed dodaniem do koszyka."
 
 #. Author of the plugin
-#: addons.php
+#: plogins-addons.php
 msgid "WPPoland"
 msgstr "WPPoland"
 
 #. Author URI of the plugin
-#: addons.php
+#: plogins-addons.php
 msgid "https://plogins.com/"
 msgstr "https://plogins.com/"
 
-#: addons.php:47
+#: plogins-addons.php:47
 msgid ""
 "Add-Ons – Product Options for WooCommerce requires WooCommerce to be active."
 msgstr "Add-Ons – opcje produktu dla WooCommerce wymaga aktywnego WooCommerce."
