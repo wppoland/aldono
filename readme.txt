@@ -78,6 +78,11 @@ No. Add-on definitions are stored as product meta.
 
 Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select product options.
 
+
+= Does this plugin work on WordPress Multisite? =
+
+Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data.
+
 == Screenshots ==
 
 1. Add-Ons – Product Options for WooCommerce in action.
