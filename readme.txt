@@ -85,8 +85,9 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == Screenshots ==
 
-1. Add-Ons – Product Options for WooCommerce in action.
-
+1. On the storefront.
+2. Settings in the WordPress admin.
+3. On a mobile device.
 == External Services ==
 
 Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
