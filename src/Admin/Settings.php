@@ -27,11 +27,19 @@ final class Settings implements HasHooks
      */
     private string $pageHook = '';
 
+    private ?ProUpsell $proUpsell = null;
+
+    private function proUpsell(): ProUpsell
+    {
+        return $this->proUpsell ??= new ProUpsell();
+    }
+
     public function registerHooks(): void
     {
         add_action('admin_menu', [$this, 'addMenuPage']);
         add_action('admin_init', [$this, 'registerSettings']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAssets']);
+        $this->proUpsell()->registerHooks();
     }
 
     public function addMenuPage(): void
@@ -96,10 +104,13 @@ final class Settings implements HasHooks
         <div class="wrap addons-admin addons-settings">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 
+            <?php $this->proUpsell()->banner(); ?>
+
             <p class="description addons-settings__lead">
                 <?php esc_html_e('These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the "Add-Ons" tab in the Product data box.', 'plogins-addons'); ?>
             </p>
 
+            <div class="addons-cols">
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
 
@@ -230,6 +241,11 @@ final class Settings implements HasHooks
 
                 <?php submit_button(); ?>
             </form>
+
+                <?php $this->proUpsell()->aside(); ?>
+            </div>
+
+            <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
     }
