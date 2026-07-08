@@ -1,0 +1,88 @@
+# wp.org Stable Readme translation (de_DE)
+msgid ""
+msgstr ""
+"Project-Id-Version: addons Stable Readme\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: plogins-i18n\n"
+
+msgid "Requires Plugins: woocommerce"
+msgstr "Erfordert Plugins: woocommerce"
+
+msgid "Add WooCommerce product options, product add-ons and custom product fields before add to cart."
+msgstr "Füge WooCommerce-Produktoptionen, Produkt-Add-ons und benutzerdefinierte Produktfelder hinzu, bevor du sie in den Warenkorb legen."
+
+msgid "Add-Ons lets store owners offer WooCommerce product options, product add-ons and custom product fields that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty or a colour choice."
+msgstr "Mit Add-Ons können Ladenbesitzer WooCommerce-Produktoptionen, Produkt-Add-Ons und benutzerdefinierte Produktfelder anbieten, die Kunden auswählen, bevor sie ein Produkt in den Warenkorb legen: Geschenkverpackung, eine Gravurnachricht, eine erweiterte Garantie oder eine Farbauswahl."
+
+msgid "For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price."
+msgstr "Für jedes Produkt definiere im WooCommerce-Produkteditor eine Liste von Add-ons. Jedes Add-on verfügt über eine Beschriftung, einen Feldtyp, eine optionale Pflichtkennzeichnung und einen optionalen Preis."
+
+msgid "* <strong>Field types</strong>, plain text, a checkbox, or a select drop-down.\n* <strong>Text limits</strong>, set minimum and maximum character lengths for text product options.\n* <strong>Price deltas</strong>, give an add-on (or each select option) a price; the amount is added to the cart line total automatically.\n* <strong>Free or paid</strong>, leave the price at zero for free options such as a personalised message.\n* <strong>Cart & order display</strong>, the customer's choices appear in the cart, at checkout, and on the order.\n* <strong>Display settings</strong>, choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card, all from the Add-Ons settings page."
+msgstr "* <strong>Feldtypen</strong>, einfacher Text, ein Kontrollkästchen oder ein Auswahl-Dropdown.\n* <strong>Textgrenzen</strong>, lege minimale und maximale Zeichenlängen für Textproduktoptionen fest.\n* <strong>Preisdeltas</strong>, gib einem Add-on (oder jeder ausgewählten Option) einen Preis; Der Betrag wird automatisch zur Gesamtsumme der Warenkorbzeile hinzugefügt.\n* <strong>Kostenlos oder kostenpflichtig</strong>, lass den Preis für kostenlose Optionen wie eine personalisierte Nachricht bei Null.\n* <strong>Warenkorb- und Bestellanzeige</strong>: Die Auswahlmöglichkeiten des Kunden werden im Warenkorb, an der Kasse und in der Bestellung angezeigt.\n* <strong>Anzeigeeinstellungen</strong>, Gruppenüberschrift auswählen, Optionspreise ein- oder ausblenden, das Sternchen im Pflichtfeld umschalten und die Optionen in eine umrandete Karte einschließen – alles auf der Seite mit den Add-On-Einstellungen."
+
+msgid "Add-on definitions are stored as standard product meta, no custom database tables, so the plugin itself stays small and fast."
+msgstr "Add-on-Definitionen werden als Standardprodukt-Meta und nicht als benutzerdefinierte Datenbanktabellen gespeichert, sodass das Plugin selbst klein und schnell bleibt."
+
+msgid "Settings live under <strong>WooCommerce → Add-Ons</strong>. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them."
+msgstr "Die Einstellungen findest du unter <strong>WooCommerce → Add-Ons</strong>. Durch das Entfernen des Plugins werden seine eigenen Optionen bereinigt; deine produktspezifischen Definitionen bleiben als Produktmeta erhalten und werden daher bei einer Neuinstallation wiederhergestellt."
+
+msgid "The code is developed in the open at https://github.com/wppoland/plogins-addons, that's the place to report a bug or suggest a field type you'd like to see."
+msgstr "Der Code wird öffentlich unter https://github.com/wppoland/plogins-addons entwickelt. Dort kannst du einen Fehler melden oder einen Feldtyp vorschlagen, den du sehen möchten."
+
+msgid "1. Upload the plugin to `/wp-content/plugins/plogins-addons`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Edit a product, open the <strong>Add-Ons</strong> tab in the Product data panel, and add your options."
+msgstr "1. Lade das Plugin nach „/wp-content/plugins/plogins-addons“ hoch oder installiere es über Plugins → Neu hinzufügen.\n2. Aktiviere es. WooCommerce muss aktiv sein.\n3. Bearbeite ein Produkt, öffne die Registerkarte <strong>Add-Ons</strong> im Produktdatenbereich und füge deine Optionen hinzu."
+
+msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-addons/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-addons/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-addons\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-addons/issues"
+msgstr "* <strong>Dokumentation</strong> - https://plogins.com/de/plogins-addons/docs/\n* <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-addons/\n* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-addons\n* <strong>Fehlerberichte und Funktionsanfragen</strong> – https://github.com/wppoland/plogins-addons/issues"
+
+msgid "Yes. WooCommerce must be installed and active."
+msgstr "Ja. WooCommerce muss installiert und aktiv sein."
+
+msgid "On the single product page, just above the Add to cart button. Their selections then show in the cart, at checkout, and on the order."
+msgstr "Auf der einzelnen Produktseite direkt über der Schaltfläche „In den Warenkorb“. deine Auswahl wird dann im Warenkorb, an der Kasse und in der Bestellung angezeigt."
+
+msgid "The free version includes text fields, checkboxes and select drop-downs. Each field can be free or add a price to the cart line."
+msgstr "Die kostenlose Version umfasst Textfelder, Kontrollkästchen und Auswahl-Dropdowns. Jedes Feld kann kostenlos sein oder der Warenkorbzeile einen Preis hinzufügen."
+
+msgid "Yes. Add a price to the row itself or to individual select choices, and Add-Ons adds that amount to the WooCommerce cart line."
+msgstr "Ja. Füge einen Preis zur Zeile selbst oder zu einzelnen Auswahlmöglichkeiten hinzu, und Add-Ons fügt diesen Betrag der WooCommerce-Warenkorbzeile hinzu."
+
+msgid "Yes. Tick the Required checkbox for an option, and the product cannot be added to the cart until the shopper completes it."
+msgstr "Ja. Aktiviere das Kontrollkästchen „Erforderlich“ für eine Option. Das Produkt kann dem Warenkorb erst hinzugefügt werden, wenn der Käufer es abgeschlossen hat."
+
+msgid "Yes. Text add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart."
+msgstr "Ja. Text-Add-ons können minimale und maximale Zeichenbeschränkungen haben. Die Storefront zeigt einen Live-Zähler und der Server validiert die gleichen Limits, bevor er in den Warenkorb gelegt wird."
+
+msgid "No. Add-on definitions are stored as product meta."
+msgstr "Nein. Add-on-Definitionen werden als Produktmeta gespeichert."
+
+msgid "Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select product options."
+msgstr "Das sind PRO-Funktionen. Add-Ons FREE konzentriert sich auf Schnelltext, Kontrollkästchen und ausgewählte Produktoptionen."
+
+msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
+msgstr "Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es im Netzwerk oder auf einzelnen Websites. Jede Site behält ihre eigenen Einstellungen und Daten."
+
+msgid "1. On the storefront.\n2. Settings in the WordPress admin.\n3. On a mobile device."
+msgstr "1. Im Schaufenster.\n2. Einstellungen im WordPress-Admin.\n3. Auf einem mobilen Gerät."
+
+msgid "Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database."
+msgstr "Add-Ons stellen keine Verbindung zu externen Diensten her. Es sendet keine Daten von deiner Website und lädt keine Remote-Skripte, Schriftarten oder Tracker. Sein Admin- und Storefront-CSS/JS wird vom Plugin-Ordner auf deinem eigenen Server bereitgestellt. deine Add-on-Definitionen werden als Produktmeta („_addons_definitions“) und die Anzeigeeinstellungen in einer einzigen Option („addons_settings“) gespeichert, allesamt in deiner WordPress-Datenbank."
+
+msgid "* First stable release."
+msgstr "* Erste stabile Version."
+
+msgid "* Renamed to Plogins Add-Ons for WooCommerce for a more distinctive plugin name."
+msgstr "* Für einen eindeutigeren Plugin-Namen in Plogins Add-Ons für WooCommerce umbenannt."
+
+msgid "* Add minimum and maximum character limits for text add-ons, with storefront counters and server-side validation."
+msgstr "* Füge minimale und maximale Zeichenbeschränkungen für Text-Add-ons hinzu, mit Storefront-Zählern und serverseitiger Validierung."
+
+msgid "* Add a customisable group heading shown above the add-on fields on the product page.\n* Add display settings: show/hide option prices, toggle the required-field asterisk, and an optional bordered card style.\n* Add an uninstall routine that removes the plugin's own options (product definitions are preserved as product meta)."
+msgstr "* Füge eine anpassbare Gruppenüberschrift hinzu, die über den Add-on-Feldern auf der Produktseite angezeigt wird.\n* Anzeigeeinstellungen hinzufügen: Optionspreise ein-/ausblenden, das Sternchen im Pflichtfeld umschalten und optional einen umrandeten Kartenstil hinzufügen.\n* Füge eine Deinstallationsroutine hinzu, die die eigenen Optionen des Plugins entfernt (Produktdefinitionen bleiben als Produktmeta erhalten)."
+
+msgid "* Initial release."
+msgstr "* Erstveröffentlichung."
+

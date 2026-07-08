@@ -12,186 +12,371 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: plogins-addons\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: plogins-addons\n"
 
+#. Plugin Name of the plugin
+#: plogins-addons.php
 msgid "Add-Ons – Product Options for WooCommerce"
 msgstr "Add-Ons – Produktoptionen für WooCommerce"
 
+#. Plugin URI of the plugin
+#: plogins-addons.php
 msgid "https://plogins.com/plogins-addons/"
 msgstr "https://plogins.com/plogins-addons/"
 
-msgid "Let customers add paid or free options (text, checkbox, select) to products before adding to cart."
-msgstr "Ermöglichen Sie Kunden, den Produkten kostenpflichtige oder kostenlose Optionen (Text, Kontrollkästchen, Auswahl) hinzuzufügen, bevor sie sie in den Warenkorb legen."
+#. Description of the plugin
+#: plogins-addons.php
+msgid ""
+"Let customers add paid or free options (text, checkbox, select) to products "
+"before adding to cart."
+msgstr ""
+"Ermögliche Kunden, den Produkten kostenpflichtige oder kostenlose Optionen "
+"(Text, Kontrollkästchen, Auswahl) hinzuzufügen, bevor sie sie in den "
+"Warenkorb legen."
 
+#. Author of the plugin
+#: plogins-addons.php
 msgid "WPPoland.com"
 msgstr "WPPoland.com"
 
+#. Author URI of the plugin
+#: plogins-addons.php
 msgid "https://wppoland.com"
 msgstr "https://wppoland.com"
 
-msgid "Add-Ons – Product Options for WooCommerce requires WooCommerce to be active."
-msgstr "Für Add-Ons – Produktoptionen für WooCommerce muss WooCommerce aktiv sein."
+#: plogins-addons.php:47
+msgid ""
+"Add-Ons – Product Options for WooCommerce requires WooCommerce to be active."
+msgstr ""
+"Für Add-Ons – Produktoptionen für WooCommerce muss WooCommerce aktiv sein."
 
+#: src/Admin/InlineHelp.php:34
 msgid "More information"
 msgstr "Weitere Informationen"
 
+#: src/Admin/ProductData.php:40 src/Admin/Settings.php:41
+#: src/Admin/Settings.php:42
 msgid "Add-Ons"
 msgstr "Add-Ons"
 
-msgid "These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the \"Add-Ons\" tab in the Product data box."
-msgstr "Diese Optionen steuern, wie Produkt-Add-ons in Ihrem gesamten Shop aussehen und sich verhalten. Um auszuwählen, welche Optionen für ein bestimmtes Produkt angezeigt werden, bearbeiten Sie dieses Produkt und öffnen Sie die Registerkarte „Add-Ons“ im Feld „Produktdaten“."
+#: src/Admin/Settings.php:100
+msgid ""
+"These options control how product add-ons look and behave across your whole "
+"store. To choose which options appear on a specific product, edit that "
+"product and open the \"Add-Ons\" tab in the Product data box."
+msgstr ""
+"Diese Optionen steuern, wie Produkt-Add-ons in deinem gesamten Shop aussehen"
+" und sich verhalten. Um auszuwählen, welche Optionen für ein bestimmtes "
+"Produkt angezeigt werden, bearbeite dieses Produkt und öffne die "
+"Registerkarte „Add-Ons“ im Feld „Produktdaten“."
 
+#: src/Admin/Settings.php:106
 msgid "Status"
 msgstr "Status"
 
-msgid "Switch the whole feature on or off without touching any product's configured options."
-msgstr "Schalten Sie die gesamte Funktion ein oder aus, ohne die konfigurierten Optionen eines Produkts zu berühren."
+#: src/Admin/Settings.php:108
+msgid ""
+"Switch the whole feature on or off without touching any product's configured"
+" options."
+msgstr ""
+"Schalte die gesamte Funktion ein oder aus, ohne die konfigurierten Optionen "
+"eines Produkts zu berühren."
 
+#: src/Admin/Settings.php:115
 msgid "Enable add-ons"
 msgstr "Add-ons aktivieren"
 
-msgid "The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart, even if products still have add-ons configured. Turn it on once you are ready to go live."
-msgstr "Der Hauptschalter. Wenn er ausgeschaltet ist, werden bei keinem Produkt Add-on-Felder angezeigt und im Warenkorb werden keine Preisänderungen angewendet, auch wenn Produkte weiterhin konfigurierte Add-ons haben. Aktivieren Sie ihn, sobald die Funktion für Kunden verfügbar sein soll."
+#: src/Admin/Settings.php:116
+msgid ""
+"The master switch. When off, no add-on fields are shown on any product and "
+"no price changes are applied in the cart, even if products still have add-"
+"ons configured. Turn it on once you are ready to go live."
+msgstr ""
+"Der Hauptschalter. Wenn er ausgeschaltet ist, werden bei keinem Produkt Add-"
+"on-Felder angezeigt und im Warenkorb werden keine Preisänderungen "
+"angewendet, auch wenn Produkte weiterhin konfigurierte Add-ons haben. "
+"Aktiviere ihn, sobald die Funktion für Kunden verfügbar sein soll."
 
-msgid "Show per-product add-on fields on the product page and apply price deltas in the cart."
-msgstr "Zeigen Sie Add-on-Felder pro Produkt auf der Produktseite an und wenden Sie Preisunterschiede im Warenkorb an."
+#: src/Admin/Settings.php:127
+msgid ""
+"Show per-product add-on fields on the product page and apply price deltas in"
+" the cart."
+msgstr ""
+"Zeige Add-on-Felder pro Produkt auf der Produktseite an und wende "
+"Preisunterschiede im Warenkorb an."
 
-msgid "Leave this on for normal operation. Switch it off to temporarily hide all add-ons without deleting any product settings."
-msgstr "Lassen Sie dies für den Normalbetrieb eingeschaltet. Schalten Sie es aus, um alle Add-ons vorübergehend auszublenden, ohne Produkteinstellungen zu löschen."
+#: src/Admin/Settings.php:130
+msgid ""
+"Leave this on for normal operation. Switch it off to temporarily hide all "
+"add-ons without deleting any product settings."
+msgstr ""
+"Lass dies für den Normalbetrieb eingeschaltet. Schalte es aus, um alle Add-"
+"ons vorübergehend auszublenden, ohne Produkteinstellungen zu löschen."
 
+#: src/Admin/Settings.php:137
 msgid "On the product page"
 msgstr "Auf der Produktseite"
 
-msgid "How the add-on group is labelled and styled where customers see it. These choices affect appearance only, not pricing or which options show."
-msgstr "Wie die Add-on-Gruppe dort beschriftet und gestaltet wird, wo Kunden sie sehen. Diese Auswahl wirkt sich nur auf das Erscheinungsbild aus, nicht auf den Preis oder die angezeigten Optionen."
+#: src/Admin/Settings.php:139
+msgid ""
+"How the add-on group is labelled and styled where customers see it. These "
+"choices affect appearance only, not pricing or which options show."
+msgstr ""
+"Wie die Add-on-Gruppe dort beschriftet und gestaltet wird, wo Kunden sie "
+"sehen. Diese Auswahl wirkt sich nur auf das Erscheinungsbild aus, nicht auf "
+"den Preis oder die angezeigten Optionen."
 
+#: src/Admin/Settings.php:146
 msgid "Group heading"
 msgstr "Gruppenüberschrift"
 
-msgid "A short heading printed above the options on the product page, for example \"Personalise your order\" or \"Extras\". It helps customers understand that the fields are optional add-ons. Clear the field to show no heading at all."
-msgstr "Über den Optionen auf der Produktseite wird eine kurze Überschrift gedruckt, zum Beispiel „Personalisieren Sie Ihre Bestellung“ oder „Extras“. Es hilft Kunden zu verstehen, dass es sich bei den Feldern um optionale Add-ons handelt. Löschen Sie das Feld, um überhaupt keine Überschrift anzuzeigen."
+#: src/Admin/Settings.php:147
+msgid ""
+"A short heading printed above the options on the product page, for example "
+"\"Personalise your order\" or \"Extras\". It helps customers understand that"
+" the fields are optional add-ons. Clear the field to show no heading at all."
+msgstr ""
+"Über den Optionen auf der Produktseite wird eine kurze Überschrift gedruckt,"
+" zum Beispiel „Personalisiere deine Bestellung“ oder „Extras“. Es hilft "
+"Kunden zu verstehen, dass es sich bei den Feldern um optionale Add-ons "
+"handelt. Lösche das Feld, um überhaupt keine Überschrift anzuzeigen."
 
+#: src/Admin/Settings.php:156
 msgid "e.g. Product options"
 msgstr "z.B. Produktoptionen"
 
-msgid "Heading shown above the fields on the product page. Leave empty to hide it. Default: %s."
-msgstr "Die Überschrift wird über den Feldern auf der Produktseite angezeigt. Lassen Sie es leer, um es zu verbergen. Standard: %s."
+#. translators: %s: the packaged default group heading, e.g. "Product
+#. options".
+#: src/Admin/Settings.php:162
+msgid ""
+"Heading shown above the fields on the product page. Leave empty to hide it. "
+"Default: %s."
+msgstr ""
+"Die Überschrift wird über den Feldern auf der Produktseite angezeigt. Lass "
+"es leer, um es zu verbergen. Standard: %s."
 
+#: src/Admin/Settings.php:171 src/Admin/Settings.php:177
 msgid "Display"
 msgstr "Anzeige"
 
-msgid "Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear, only the visual treatment."
-msgstr "Präsentationsoptionen, die das Aussehen der Add-ons auf der Storefront verändern. Sie haben keinen Einfluss auf die Preisgestaltung oder die angezeigten Optionen, sondern nur auf die visuelle Gestaltung."
+#: src/Admin/Settings.php:172
+msgid ""
+"Presentation choices that change how the add-ons look on the storefront. "
+"They do not affect pricing or which options appear, only the visual "
+"treatment."
+msgstr ""
+"Präsentationsoptionen, die das Aussehen der Add-ons auf der Storefront "
+"verändern. Du hast keinen Einfluss auf die Preisgestaltung oder die "
+"angezeigten Optionen, sondern nur auf die visuelle Gestaltung."
 
+#: src/Admin/Settings.php:187
 msgid "Show the price next to paid options."
-msgstr "Zeigen Sie den Preis neben kostenpflichtigen Optionen an."
+msgstr "Zeige den Preis neben kostenpflichtigen Optionen an."
 
-msgid "Displays the extra cost in brackets, e.g. \"Gift wrap (+$5.00)\". Free options never show a price."
-msgstr "Zeigt die zusätzlichen Kosten in Klammern an, z. B. „Geschenkverpackung (+5,00 $)“. Bei kostenlosen Optionen wird nie ein Preis angezeigt."
+#: src/Admin/Settings.php:190
+msgid ""
+"Displays the extra cost in brackets, e.g. \"Gift wrap (+$5.00)\". Free "
+"options never show a price."
+msgstr ""
+"Zeigt die zusätzlichen Kosten in Klammern an, z. B. „Geschenkverpackung "
+"(+5,00 $)“. Bei kostenlosen Optionen wird nie ein Preis angezeigt."
 
+#: src/Admin/Settings.php:201
 msgid "Mark required fields with an asterisk."
-msgstr "Markieren Sie Pflichtfelder mit einem Sternchen."
+msgstr "Markiere Pflichtfelder mit einem Sternchen."
 
-msgid "Adds a red * after the label of any option a customer must complete before adding to cart. Required options are still enforced even with this off."
-msgstr "Fügt nach der Beschriftung jeder Option, die ein Kunde abschließen muss, bevor er sie in den Warenkorb legt, ein rotes * ein. Erforderliche Optionen werden auch dann erzwungen, wenn diese Option deaktiviert ist."
+#: src/Admin/Settings.php:204
+msgid ""
+"Adds a red * after the label of any option a customer must complete before "
+"adding to cart. Required options are still enforced even with this off."
+msgstr ""
+"Fügt nach der Beschriftung jeder Option, die ein Kunde abschließen muss, "
+"bevor er sie in den Warenkorb legt, ein rotes * ein. Erforderliche Optionen "
+"werden auch dann erzwungen, wenn diese Option deaktiviert ist."
 
+#: src/Admin/Settings.php:215
 msgid "Wrap the options in a bordered card."
-msgstr "Zeigen Sie die Optionen in einer umrandeten Box an."
+msgstr "Zeige die Optionen in einer umrandeten Box an."
 
-msgid "Groups the options inside a subtle bordered box so they stand out from the rest of the product page. Turn off for a plain, inline layout that inherits your theme."
-msgstr "Gruppiert die Optionen in einem dezent umrandeten Feld, sodass sie sich vom Rest der Produktseite abheben. Deaktivieren Sie die Option, um ein einfaches Inline-Layout zu erhalten, das Ihr Design übernimmt."
+#: src/Admin/Settings.php:218
+msgid ""
+"Groups the options inside a subtle bordered box so they stand out from the "
+"rest of the product page. Turn off for a plain, inline layout that inherits "
+"your theme."
+msgstr ""
+"Gruppiert die Optionen in einem dezent umrandeten Feld, sodass sie sich vom "
+"Rest der Produktseite abheben. Deaktiviere die Option, um ein einfaches "
+"Inline-Layout zu erhalten, das dein Design übernimmt."
 
+#: src/Admin/Settings.php:227
 msgid "Next step"
 msgstr "Nächster Schritt"
 
-msgid "Define each product's add-ons in the product editor, under the \"Add-Ons\" tab in the Product data panel."
-msgstr "Definieren Sie die Add-ons für jedes Produkt im Produkteditor auf der Registerkarte „Add-ons“ im Bereich „Produktdaten“."
+#: src/Admin/Settings.php:228
+msgid ""
+"Define each product's add-ons in the product editor, under the \"Add-Ons\" "
+"tab in the Product data panel."
+msgstr ""
+"Definiere die Add-ons für jedes Produkt im Produkteditor auf der "
+"Registerkarte „Add-ons“ im Bereich „Produktdaten“."
 
+#: src/Service/AddOnsService.php:43
 msgid "Please complete the \"{label}\" option before adding to cart."
-msgstr "Bitte füllen Sie die Option „{label}“ aus, bevor Sie es in den Warenkorb legen."
+msgstr ""
+"Bitte fülle die Option „{label}“ aus, bevor du das Produkt in den Warenkorb "
+"legst."
 
+#: src/Service/AddOnsService.php:44
 msgid "The option \"{label}\" must be at least {min} characters long."
 msgstr "Die Option „{label}“ muss mindestens {min} Zeichen lang sein."
 
+#: src/Service/AddOnsService.php:45
 msgid "The option \"{label}\" cannot exceed {max} characters."
 msgstr "Die Option „{label}“ darf nicht länger als {max} Zeichen sein."
 
+#: templates/add-on-fields.php:82 templates/add-on-fields.php:104
 msgid "required"
 msgstr "erforderlich"
 
+#: templates/add-on-fields.php:89
 msgid ", Select, "
 msgstr ", Wählen,"
 
+#: templates/admin/product-data-panel.php:23
 msgid "Product add-ons"
 msgstr "Produkt-Add-ons"
 
-msgid "Each row below becomes one field a customer sees on this product page. Use Text for free-form input (like an engraving message), Checkbox for a yes/no extra, or Select for a list of choices. Any price you enter is added to the line total when the option is chosen."
-msgstr "Jede Zeile unten wird zu einem Feld, das ein Kunde auf dieser Produktseite sieht. Verwenden Sie „Text“ für die Eingabe in freier Form (z. B. eine Gravurnachricht), „Kontrollkästchen“ für ein Ja/Nein-Extra oder „Auswählen“ für eine Auswahlliste. Jeder von Ihnen eingegebene Preis wird zur Zeilensumme addiert, wenn die Option ausgewählt wird."
+#: templates/admin/product-data-panel.php:24
+msgid ""
+"Each row below becomes one field a customer sees on this product page. Use "
+"Text for free-form input (like an engraving message), Checkbox for a yes/no "
+"extra, or Select for a list of choices. Any price you enter is added to the "
+"line total when the option is chosen."
+msgstr ""
+"Jede Zeile unten wird zu einem Feld, das ein Kunde auf dieser Produktseite "
+"sieht. Verwende „Text“ für die Eingabe in freier Form (z. B. eine "
+"Gravurnachricht), „Kontrollkästchen“ für ein Ja/Nein-Extra oder „Auswählen“ "
+"für eine Auswahlliste. Jeder von dir eingegebene Preis wird zur Zeilensumme "
+"addiert, wenn die Option ausgewählt wird."
 
-msgid "Define options customers can choose before adding this product to the cart. A positive price is added to the line total."
-msgstr "Definieren Sie Optionen, aus denen Kunden wählen können, bevor sie dieses Produkt in den Warenkorb legen. Zur Zeilensumme wird ein positiver Preis addiert."
+#: templates/admin/product-data-panel.php:27
+msgid ""
+"Define options customers can choose before adding this product to the cart. "
+"A positive price is added to the line total."
+msgstr ""
+"Definiere Optionen, aus denen Kunden wählen können, bevor sie dieses Produkt"
+" in den Warenkorb legen. Zur Zeilensumme wird ein positiver Preis addiert."
 
+#: templates/admin/product-data-panel.php:33
 msgid "No add-ons yet"
 msgstr "Noch keine Add-ons"
 
-msgid "Add your first option to let customers personalise this product or pay for extras such as gift wrapping, engraving, or express handling."
-msgstr "Fügen Sie Ihre erste Option hinzu, damit Kunden dieses Produkt personalisieren oder Extras wie Geschenkverpackung, Gravur oder Expressversand bezahlen können."
+#: templates/admin/product-data-panel.php:34
+msgid ""
+"Add your first option to let customers personalise this product or pay for "
+"extras such as gift wrapping, engraving, or express handling."
+msgstr ""
+"Füge deine erste Option hinzu, damit Kunden dieses Produkt personalisieren "
+"oder Extras wie Geschenkverpackung, Gravur oder Expressversand bezahlen "
+"können."
 
+#: templates/admin/product-data-panel.php:58
+#: templates/admin/product-data-panel.php:103
 msgid "Option"
 msgstr "Option"
 
+#: templates/admin/product-data-panel.php:59
+#: templates/admin/product-data-panel.php:104
 msgid "Label (e.g. Gift wrap)"
 msgstr "Etikett (z. B. Geschenkverpackung)"
 
+#: templates/admin/product-data-panel.php:59
+#: templates/admin/product-data-panel.php:104
 msgid "Option label"
 msgstr "Optionsetikett"
 
+#: templates/admin/product-data-panel.php:60
+#: templates/admin/product-data-panel.php:105
 msgid "Option type"
 msgstr "Optionstyp"
 
+#: templates/admin/product-data-panel.php:61
+#: templates/admin/product-data-panel.php:106
 msgid "Text"
 msgstr "Text"
 
+#: templates/admin/product-data-panel.php:62
+#: templates/admin/product-data-panel.php:107
 msgid "Checkbox"
 msgstr "Kontrollkästchen"
 
+#: templates/admin/product-data-panel.php:63
+#: templates/admin/product-data-panel.php:108
 msgid "Select"
 msgstr "Auswahl"
 
+#: templates/admin/product-data-panel.php:65
+#: templates/admin/product-data-panel.php:110
 msgid "Price"
 msgstr "Preis"
 
+#: templates/admin/product-data-panel.php:65
+#: templates/admin/product-data-panel.php:110
 msgid "Extra price added when chosen"
 msgstr "Zusätzlicher Preis wird bei Auswahl hinzugefügt"
 
+#: templates/admin/product-data-panel.php:67
+#: templates/admin/product-data-panel.php:112
 msgid "Min chars"
 msgstr "Min. Zeichen"
 
+#: templates/admin/product-data-panel.php:67
+#: templates/admin/product-data-panel.php:112
 msgid "Minimum character length"
 msgstr "Mindestzeichenlänge"
 
+#: templates/admin/product-data-panel.php:68
+#: templates/admin/product-data-panel.php:113
 msgid "Max chars"
 msgstr "Max. Zeichen"
 
+#: templates/admin/product-data-panel.php:68
+#: templates/admin/product-data-panel.php:113
 msgid "Maximum character length"
 msgstr "Maximale Zeichenlänge"
 
+#: templates/admin/product-data-panel.php:72
+#: templates/admin/product-data-panel.php:117
 msgid "Required"
 msgstr "Erforderlich"
 
+#: templates/admin/product-data-panel.php:74
+#: templates/admin/product-data-panel.php:119
 msgid "Remove"
 msgstr "Entfernen"
 
+#: templates/admin/product-data-panel.php:77
+#: templates/admin/product-data-panel.php:122
 msgid "Select options, one per line: Label | price"
-msgstr "Wählen Sie Optionen aus, eine pro Zeile: Beschriftung | Preis"
+msgstr "Wähle Optionen aus, eine pro Zeile: Beschriftung | Preis"
 
+#: templates/admin/product-data-panel.php:77
+#: templates/admin/product-data-panel.php:122
 msgid "Choices for the Select type"
 msgstr "Auswahlmöglichkeiten für den Typ „Auswahl“"
 
-msgid "Only used for the \"Select\" type. One choice per line as \"Label | price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free choice."
-msgstr "Wird nur für den Typ „Auswahl“ verwendet. Eine Auswahl pro Zeile im Format „Beschriftung | Preis“, z. B. „Standard | 0“ und „Premium | 9,99“. Lassen Sie den Preis weg, wenn die Auswahl kostenlos ist."
+#: templates/admin/product-data-panel.php:78
+#: templates/admin/product-data-panel.php:123
+msgid ""
+"Only used for the \"Select\" type. One choice per line as \"Label | price\","
+" e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
+"choice."
+msgstr ""
+"Wird nur für den Typ „Auswahl“ verwendet. Eine Auswahl pro Zeile im Format "
+"„Beschriftung | Preis“, z. B. „Standard | 0“ und „Premium | 9,99“. Lass den "
+"Preis weg, wenn die Auswahl kostenlos ist."
 
+#: templates/admin/product-data-panel.php:97
 msgid "Add option"
 msgstr "Option hinzufügen"
-
