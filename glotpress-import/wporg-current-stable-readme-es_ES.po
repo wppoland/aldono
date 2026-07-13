@@ -9,79 +9,85 @@ msgstr ""
 "X-Generator: plogins-i18n\n"
 
 msgid "Requires Plugins: woocommerce"
-msgstr "Requiere complementos: woocommerce"
+msgstr "Requiere plugins: woocommerce"
 
 msgid "Add WooCommerce product options, product add-ons and custom product fields before add to cart."
-msgstr "Añade opciones de productos de WooCommerce, complementos de productos y campos de productos personalizados antes de agregarlos al carrito."
+msgstr "Añade opciones de producto de WooCommerce, complementos de producto y campos de producto personalizados antes de añadir al carrito."
 
 msgid "Add-Ons lets store owners offer WooCommerce product options, product add-ons and custom product fields that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty or a colour choice."
-msgstr "Los complementos permiten a los propietarios de tiendas ofrecer opciones de productos WooCommerce, complementos de productos y campos de productos personalizados que los clientes eligen antes de añadir un producto al carrito: envoltorio de regalo, un mensaje grabado, una garantía extendida o una elección de color."
+msgstr "Add-Ons permite a los propietarios de tiendas ofrecer opciones de producto de WooCommerce, complementos de producto y campos de producto personalizados que los clientes eligen antes de añadir un producto al carrito: envoltorio de regalo, un mensaje grabado, una garantía ampliada o una elección de color."
 
 msgid "For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price."
-msgstr "Para cada producto, define una lista de complementos en el editor de productos de WooCommerce. Cada complemento tiene una etiqueta, un tipo de campo, un indicador obligatorio opcional y un precio opcional."
+msgstr "Para cada producto defines una lista de complementos en el editor de productos de WooCommerce. Cada complemento tiene una etiqueta, un tipo de campo, una marca opcional de «obligatorio» y un precio opcional."
 
 msgid "* <strong>Field types</strong>, plain text, a checkbox, or a select drop-down.\n* <strong>Text limits</strong>, set minimum and maximum character lengths for text product options.\n* <strong>Price deltas</strong>, give an add-on (or each select option) a price; the amount is added to the cart line total automatically.\n* <strong>Free or paid</strong>, leave the price at zero for free options such as a personalised message.\n* <strong>Cart & order display</strong>, the customer's choices appear in the cart, at checkout, and on the order.\n* <strong>Display settings</strong>, choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card, all from the Add-Ons settings page."
-msgstr "* <strong>Tipos de campo</strong>, texto sin formato, una casilla de verificación o un menú desplegable de selección.\n* <strong>Límites de texto</strong>, establece longitudes mínimas y máximas de caracteres para las opciones de productos de texto.\n* <strong>Deltas de precios</strong>, asigna un precio a un complemento (o a cada opción seleccionada); el monto se añade al total de la línea del carrito automáticamente.\n* <strong>Gratis o de pago</strong>, deja el precio en cero para opciones gratuitas como un mensaje personalizado.\n* <strong>Visualización del carrito y del pedido</strong>, las opciones del cliente aparecen en el carrito, al finalizar la compra y en el pedido.\n* <strong>Mostrar configuración</strong>, elegir el encabezado del grupo, mostrar u ocultar los precios de las opciones, alternar el asterisco del campo obligatorio y envolver las opciones en una tarjeta con borde, todo desde la página de configuración de Complementos."
+msgstr "* <strong>Tipos de campo</strong> — texto sin formato, una casilla de verificación o una lista desplegable.\n* <strong>Límites de texto</strong> — establece el número mínimo y máximo de caracteres para las opciones de producto de tipo texto.\n* <strong>Diferencias de precio</strong> — asigna un precio a un complemento (o a cada opción de la lista); el importe se suma automáticamente al total de la línea del carrito.\n* <strong>Gratis o de pago</strong> — deja el precio a cero para las opciones gratuitas, como un mensaje personalizado.\n* <strong>Visualización en el carrito y el pedido</strong> — las selecciones del cliente aparecen en el carrito, en el pago y en el pedido.\n* <strong>Ajustes de visualización</strong> — elige el encabezado del grupo, muestra u oculta los precios de las opciones, activa o desactiva el asterisco del campo obligatorio y envuelve las opciones en una tarjeta con borde, todo desde la página de ajustes de Add-Ons."
 
 msgid "Add-on definitions are stored as standard product meta, no custom database tables, so the plugin itself stays small and fast."
-msgstr "Las definiciones de complementos se almacenan como metaestándar del producto, sin tablas de bases de datos personalizadas, por lo que el complemento en sí sigue siendo pequeño y rápido."
+msgstr "Las definiciones de complementos se almacenan como metadatos estándar del producto, sin tablas de base de datos personalizadas, por lo que el plugin en sí sigue siendo pequeño y rápido."
 
 msgid "Settings live under <strong>WooCommerce → Add-Ons</strong>. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them."
-msgstr "La configuración se encuentra en <strong>WooCommerce → Complementos</strong>. Al eliminar el complemento se limpian sus propias opciones; sus definiciones por producto se mantienen como meta del producto, por lo que la reinstalación las restaura."
+msgstr "Los ajustes están en <strong>WooCommerce → Complementos</strong>. Al eliminar el plugin se borran sus propias opciones; tus definiciones por producto se conservan como metadatos del producto, así que al reinstalarlo se restauran."
 
 msgid "The code is developed in the open at https://github.com/wppoland/plogins-addons, that's the place to report a bug or suggest a field type you'd like to see."
-msgstr "El código se desarrolla abiertamente en https://github.com/wppoland/plogins-addons, ese es el lugar para informar un error o sugerir un tipo de campo que le gustaría ver."
+msgstr "El código se desarrolla de forma abierta (código abierto) en https://github.com/wppoland/plogins-addons; ahí es donde puedes informar de un error o sugerir un tipo de campo que te gustaría ver."
 
 msgid "1. Upload the plugin to `/wp-content/plugins/plogins-addons`, or install via Plugins → Add New.\n2. Activate it. WooCommerce must be active.\n3. Edit a product, open the <strong>Add-Ons</strong> tab in the Product data panel, and add your options."
-msgstr "1. Cargue el complemento en `/wp-content/plugins/plogins-addons`, o instálelo a través de Complementos → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Edite un producto, abra la pestaña <strong>Complementos</strong> en el panel de datos del producto y añade sus opciones."
+msgstr "1. Sube el plugin a `/wp-content/plugins/plogins-addons` o instálalo desde Plugins → Añadir nuevo.\n2. Actívalo. WooCommerce debe estar activo.\n3. Edita un producto, abre la pestaña <strong>Complementos</strong> en el panel de datos del producto y añade tus opciones."
 
 msgid "* <strong>Documentation</strong> - https://plogins.com/plogins-addons/docs/\n* <strong>Plugin page</strong> - https://plogins.com/plogins-addons/\n* <strong>Source code</strong> - https://github.com/wppoland/plogins-addons\n* <strong>Bug reports and feature requests</strong> - https://github.com/wppoland/plogins-addons/issues"
-msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-addons/docs/\n* <strong>Página de complementos</strong> - https://plogins.com/es/plogins-addons/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-addons\n* <strong>Informes de errores y solicitudes de funciones</strong> - https://github.com/wppoland/plogins-addons/issues"
+msgstr "* <strong>Documentación</strong> - https://plogins.com/es/plogins-addons/docs/\n* <strong>Página del plugin</strong> - https://plogins.com/es/plogins-addons/\n* <strong>Código fuente</strong> - https://github.com/wppoland/plogins-addons\n* <strong>Informes de errores y peticiones de funciones</strong> - https://github.com/wppoland/plogins-addons/issues"
 
 msgid "Yes. WooCommerce must be installed and active."
 msgstr "Sí. WooCommerce debe estar instalado y activo."
 
 msgid "On the single product page, just above the Add to cart button. Their selections then show in the cart, at checkout, and on the order."
-msgstr "En la página de un solo producto, justo encima del botón Añadir al carrito. Sus selecciones luego se muestran en el carrito, al finalizar la compra y en el pedido."
+msgstr "En la página de producto individual, justo encima del botón Añadir al carrito. Sus selecciones aparecen después en el carrito, en el pago y en el pedido."
 
 msgid "The free version includes text fields, checkboxes and select drop-downs. Each field can be free or add a price to the cart line."
-msgstr "La versión gratuita incluye campos de texto, casillas de verificación y menús desplegables de selección. Cada campo puede ser gratuito o añadir un precio a la línea del carrito."
+msgstr "La versión gratuita incluye campos de texto, casillas de verificación y listas desplegables. Cada campo puede ser gratuito o sumar un importe a la línea del carrito."
 
 msgid "Yes. Add a price to the row itself or to individual select choices, and Add-Ons adds that amount to the WooCommerce cart line."
-msgstr "Sí. Añade un precio a la fila misma o a opciones seleccionadas individuales, y Add-Ons agregará esa cantidad a la línea del carrito de WooCommerce."
+msgstr "Sí. Añade un precio a la propia fila o a cada una de las opciones de la lista, y el plugin suma ese importe a la línea del carrito de WooCommerce."
 
 msgid "Yes. Tick the Required checkbox for an option, and the product cannot be added to the cart until the shopper completes it."
-msgstr "Sí. Marque la casilla Obligatorio para ver una opción y el producto no se podrá añadir al carrito hasta que el comprador lo complete."
+msgstr "Sí. Marca la casilla «Obligatorio» de una opción y el producto no se podrá añadir al carrito hasta que el comprador la complete."
 
 msgid "Yes. Text add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart."
-msgstr "Sí. Los complementos de texto pueden tener límites mínimos y máximos de caracteres. El escaparate muestra un contador en vivo y el servidor valida los mismos límites antes de agregarlos al carrito."
+msgstr "Sí. Los complementos de texto pueden tener límites mínimos y máximos de caracteres. La tienda muestra un contador en vivo y el servidor valida los mismos límites antes de añadir al carrito."
 
 msgid "No. Add-on definitions are stored as product meta."
-msgstr "No. Las definiciones de complementos se almacenan como meta del producto."
+msgstr "No. Las definiciones de complementos se almacenan como metadatos del producto."
 
 msgid "Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select product options."
-msgstr "Esas son características PRO. Add-Ons FREE se centra en texto rápido, casillas de verificación y opciones de productos seleccionados."
+msgstr "Esas son funciones PRO. Add-Ons FREE se centra en opciones de producto rápidas: texto, casillas de verificación y listas desplegables."
 
 msgid "Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data."
-msgstr "Sí. Este complemento es compatible con WordPress Multisite. Activarlo en red o activarlo en sitios individuales; Cada sitio mantiene su propia configuración y datos."
+msgstr "Sí. Este plugin es compatible con WordPress Multisite. Actívalo en red o en sitios concretos; cada sitio conserva sus propios ajustes y datos."
 
 msgid "1. On the storefront.\n2. Settings in the WordPress admin.\n3. On a mobile device."
-msgstr "1. En el escaparate.\n2. Configuración en el administrador de WordPress.\n3. En un dispositivo móvil."
+msgstr "1. En la tienda.\n2. Ajustes en la administración de WordPress.\n3. En un dispositivo móvil."
 
 msgid "Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database."
-msgstr "Los complementos no se conectan a ningún servicio externo. No envía datos fuera de tu sitio y no carga scripts, fuentes o rastreadores remotos, su administrador y CSS/JS de escaparate se sirven desde la carpeta de complementos en su propio servidor. Las definiciones de sus complementos se almacenan como meta del producto (`_addons_definitions`) y la configuración de visualización en una sola opción (`addons_settings`), todo guardado en tu base de datos de WordPress."
+msgstr "Add-Ons no se conecta a ningún servicio externo. No envía datos fuera de tu sitio y no carga scripts, fuentes ni rastreadores remotos: su CSS/JS de administración y de la tienda se sirven desde la carpeta del plugin en tu propio servidor. Tus definiciones de complementos se almacenan como metadatos del producto (`_addons_definitions`) y los ajustes de visualización en una sola opción (`addons_settings`), todo guardado en tu base de datos de WordPress."
+
+msgid "Plogins Add-Ons includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-addons`, so WordPress.org language packs can also override or extend these bundled translations."
+msgstr "Plogins Add-Ons incluye traducciones al polaco, al alemán y al español para la interfaz del plugin. El dominio de texto es `plogins-addons`, así que los paquetes de idioma de WordPress.org también pueden sustituir o ampliar estas traducciones incluidas."
+
+msgid "* Added bundled Polish, German and Spanish translations for the plugin interface."
+msgstr "* Añadidas traducciones incluidas al polaco, al alemán y al español para la interfaz del plugin."
 
 msgid "* First stable release."
 msgstr "* Primera versión estable."
 
 msgid "* Renamed to Plogins Add-Ons for WooCommerce for a more distinctive plugin name."
-msgstr "* Renombrado a Plogins Add-Ons para WooCommerce para obtener un nombre de complemento más distintivo."
+msgstr "* Renombrado a Plogins Add-Ons para WooCommerce, para un nombre de plugin más distintivo."
 
 msgid "* Add minimum and maximum character limits for text add-ons, with storefront counters and server-side validation."
-msgstr "* Añade límites mínimos y máximos de caracteres para complementos de texto, con contadores de tienda y validación del lado del servidor."
+msgstr "* Añadidos límites mínimos y máximos de caracteres para los complementos de texto, con contadores en la tienda y validación en el servidor."
 
 msgid "* Add a customisable group heading shown above the add-on fields on the product page.\n* Add display settings: show/hide option prices, toggle the required-field asterisk, and an optional bordered card style.\n* Add an uninstall routine that removes the plugin's own options (product definitions are preserved as product meta)."
-msgstr "* Añade un encabezado de grupo personalizable que se muestra encima de los campos complementarios en la página del producto.\n* Añadir configuración de visualización: mostrar/ocultar precios de opciones, alternar el asterisco del campo obligatorio y un estilo de tarjeta con borde opcional.\n* Añade una rutina de desinstalación que elimine las opciones propias del complemento (las definiciones de productos se conservan como meta del producto)."
+msgstr "* Añadido un encabezado de grupo personalizable que se muestra encima de los campos de complementos en la página del producto.\n* Añadidos ajustes de visualización: mostrar u ocultar los precios de las opciones, activar o desactivar el asterisco del campo obligatorio y un estilo opcional de tarjeta con borde.\n* Añadida una rutina de desinstalación que elimina las opciones propias del plugin (las definiciones de producto se conservan como metadatos del producto)."
 
 msgid "* Initial release."
 msgstr "* Lanzamiento inicial."

@@ -117,7 +117,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                 />
                 <?php if ($addons_min_chars > 0 || $addons_max_chars > 0) : ?>
                     <small class="addons-char-counter-wrap description">
-                        <span class="addons-char-counter" data-addons-char-counter data-min="<?php echo esc_attr((string) $addons_min_chars); ?>" data-max="<?php echo esc_attr((string) $addons_max_chars); ?>"></span>
+                        <span class="addons-char-counter" data-addons-char-counter data-min="<?php echo esc_attr((string) $addons_min_chars); ?>" data-max="<?php echo esc_attr((string) $addons_max_chars); ?>" aria-live="polite"></span>
                     </small>
                 <?php endif; ?>
             <?php endif; ?>
