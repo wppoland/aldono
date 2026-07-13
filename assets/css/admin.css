@@ -203,13 +203,3 @@
 		transition: border-color 150ms ease, color 150ms ease, background-color 150ms ease;
 	}
 }
-
-@media (prefers-color-scheme: dark) {
-	.addons-admin {
-		/* Lighter ink for dark surfaces: #9d92f0 on #1e1e1e = 6.19:1 (AA pass). */
-		--addons-a-accent: #9d92f0;
-		--addons-a-border: #3c434a;
-		--addons-a-surface: #1e1e1e;
-		--addons-a-muted: #a7aaad;
-	}
-}
