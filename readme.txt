@@ -1,4 +1,4 @@
-=== Plogins Add-Ons - Product Options for WooCommerce ===
+=== Add-Ons - Product Options for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5

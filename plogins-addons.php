@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Plogins Add-Ons - Product Options for WooCommerce
+ * Plugin Name:       Add-Ons - Product Options for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-addons/
  * Description:        Let customers add paid or free options (text, checkbox, select) to products before adding to cart.
  * Version:           1.0.3
