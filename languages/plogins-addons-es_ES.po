@@ -31,8 +31,8 @@ msgid ""
 "Let customers add paid or free options (text, checkbox, select) to products "
 "before adding to cart."
 msgstr ""
-"Permita que los clientes añadan opciones de pago o gratuitas (texto, casilla"
-" de verificación, selección) a los productos antes de añadirlos al carrito."
+"Permita que los clientes añadan opciones de pago o gratuitas (texto, casilla "
+"de verificación, selección) a los productos antes de añadirlos al carrito."
 
 #. Author of the plugin
 #: plogins-addons.php
@@ -77,8 +77,8 @@ msgstr "Estado"
 
 #: src/Admin/Settings.php:108
 msgid ""
-"Switch the whole feature on or off without touching any product's configured"
-" options."
+"Switch the whole feature on or off without touching any product's configured "
+"options."
 msgstr ""
 "Active o desactive toda la función sin tocar las opciones configuradas de "
 "ningún producto."
@@ -100,8 +100,8 @@ msgstr ""
 
 #: src/Admin/Settings.php:127
 msgid ""
-"Show per-product add-on fields on the product page and apply price deltas in"
-" the cart."
+"Show per-product add-on fields on the product page and apply price deltas in "
+"the cart."
 msgstr ""
 "Muestre campos complementarios por producto en la página del producto y "
 "aplique los ajustes de precio en el carrito."
@@ -135,8 +135,8 @@ msgstr "Encabezado del grupo"
 #: src/Admin/Settings.php:147
 msgid ""
 "A short heading printed above the options on the product page, for example "
-"\"Personalise your order\" or \"Extras\". It helps customers understand that"
-" the fields are optional add-ons. Clear the field to show no heading at all."
+"\"Personalise your order\" or \"Extras\". It helps customers understand that "
+"the fields are optional add-ons. Clear the field to show no heading at all."
 msgstr ""
 "Un título breve impreso encima de las opciones de la página del producto, "
 "por ejemplo \"Personaliza tu pedido\" o \"Extras\". Ayuda a los clientes a "
@@ -147,8 +147,7 @@ msgstr ""
 msgid "e.g. Product options"
 msgstr "p.ej. Opciones de producto"
 
-#. translators: %s: the packaged default group heading, e.g. "Product
-#. options".
+#. translators: %s: the packaged default group heading, e.g. "Product options".
 #: src/Admin/Settings.php:162
 msgid ""
 "Heading shown above the fields on the product page. Leave empty to hide it. "
@@ -167,8 +166,8 @@ msgid ""
 "They do not affect pricing or which options appear, only the visual "
 "treatment."
 msgstr ""
-"Opciones de presentación que cambian la apariencia de los complementos en el"
-" escaparate. No afectan el precio ni las opciones que aparecen, solo el "
+"Opciones de presentación que cambian la apariencia de los complementos en el "
+"escaparate. No afectan el precio ni las opciones que aparecen, solo el "
 "tratamiento visual."
 
 #: src/Admin/Settings.php:187
@@ -180,8 +179,8 @@ msgid ""
 "Displays the extra cost in brackets, e.g. \"Gift wrap (+$5.00)\". Free "
 "options never show a price."
 msgstr ""
-"Muestra el costo adicional entre paréntesis, p.e. \"Envoltorio de regalo "
-"(+$5,00)\". Las opciones gratuitas nunca muestran un precio."
+"Muestra el costo adicional entre paréntesis, p.e. \"Envoltorio de regalo (+"
+"$5,00)\". Las opciones gratuitas nunca muestran un precio."
 
 #: src/Admin/Settings.php:201
 msgid "Mark required fields with an asterisk."
@@ -256,8 +255,8 @@ msgstr ""
 "Cada fila a continuación se convierte en un campo que un cliente ve en esta "
 "página de producto. Utilice Texto para entrada de formato libre (como un "
 "mensaje grabado), Casilla de verificación para un sí/no adicional o "
-"Seleccionar para obtener una lista de opciones. Cualquier precio que ingrese"
-" se añade al total de la línea cuando se elige la opción."
+"Seleccionar para obtener una lista de opciones. Cualquier precio que ingrese "
+"se añade al total de la línea cuando se elige la opción."
 
 #: templates/admin/product-data-panel.php:27
 msgid ""
@@ -367,13 +366,13 @@ msgstr "Opciones para el tipo Selección"
 #: templates/admin/product-data-panel.php:78
 #: templates/admin/product-data-panel.php:123
 msgid ""
-"Only used for the \"Select\" type. One choice per line as \"Label | price\","
-" e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
+"Only used for the \"Select\" type. One choice per line as \"Label | price\", "
+"e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
 "choice."
 msgstr ""
 "Solo se usa para el tipo „Selección”. Una opción por línea con el formato "
-"„Etiqueta | precio”, por ejemplo „Standard | 0” y „Premium | 9,99”. Omita el"
-" precio si la opción es gratuita."
+"„Etiqueta | precio”, por ejemplo „Standard | 0” y „Premium | 9,99”. Omita el "
+"precio si la opción es gratuita."
 
 #: templates/admin/product-data-panel.php:97
 msgid "Add option"

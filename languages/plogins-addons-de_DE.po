@@ -66,8 +66,8 @@ msgid ""
 "store. To choose which options appear on a specific product, edit that "
 "product and open the \"Add-Ons\" tab in the Product data box."
 msgstr ""
-"Diese Optionen steuern, wie Produkt-Add-ons in deinem gesamten Shop aussehen"
-" und sich verhalten. Um auszuwählen, welche Optionen für ein bestimmtes "
+"Diese Optionen steuern, wie Produkt-Add-ons in deinem gesamten Shop aussehen "
+"und sich verhalten. Um auszuwählen, welche Optionen für ein bestimmtes "
 "Produkt angezeigt werden, bearbeite dieses Produkt und öffne die "
 "Registerkarte „Add-Ons“ im Feld „Produktdaten“."
 
@@ -77,8 +77,8 @@ msgstr "Status"
 
 #: src/Admin/Settings.php:108
 msgid ""
-"Switch the whole feature on or off without touching any product's configured"
-" options."
+"Switch the whole feature on or off without touching any product's configured "
+"options."
 msgstr ""
 "Schalte die gesamte Funktion ein oder aus, ohne die konfigurierten Optionen "
 "eines Produkts zu berühren."
@@ -100,8 +100,8 @@ msgstr ""
 
 #: src/Admin/Settings.php:127
 msgid ""
-"Show per-product add-on fields on the product page and apply price deltas in"
-" the cart."
+"Show per-product add-on fields on the product page and apply price deltas in "
+"the cart."
 msgstr ""
 "Zeige Add-on-Felder pro Produkt auf der Produktseite an und wende "
 "Preisunterschiede im Warenkorb an."
@@ -134,11 +134,11 @@ msgstr "Gruppenüberschrift"
 #: src/Admin/Settings.php:147
 msgid ""
 "A short heading printed above the options on the product page, for example "
-"\"Personalise your order\" or \"Extras\". It helps customers understand that"
-" the fields are optional add-ons. Clear the field to show no heading at all."
+"\"Personalise your order\" or \"Extras\". It helps customers understand that "
+"the fields are optional add-ons. Clear the field to show no heading at all."
 msgstr ""
-"Über den Optionen auf der Produktseite wird eine kurze Überschrift gedruckt,"
-" zum Beispiel „Personalisiere deine Bestellung“ oder „Extras“. Es hilft "
+"Über den Optionen auf der Produktseite wird eine kurze Überschrift gedruckt, "
+"zum Beispiel „Personalisiere deine Bestellung“ oder „Extras“. Es hilft "
 "Kunden zu verstehen, dass es sich bei den Feldern um optionale Add-ons "
 "handelt. Lösche das Feld, um überhaupt keine Überschrift anzuzeigen."
 
@@ -146,8 +146,7 @@ msgstr ""
 msgid "e.g. Product options"
 msgstr "z.B. Produktoptionen"
 
-#. translators: %s: the packaged default group heading, e.g. "Product
-#. options".
+#. translators: %s: the packaged default group heading, e.g. "Product options".
 #: src/Admin/Settings.php:162
 msgid ""
 "Heading shown above the fields on the product page. Leave empty to hide it. "
@@ -265,8 +264,8 @@ msgid ""
 "Define options customers can choose before adding this product to the cart. "
 "A positive price is added to the line total."
 msgstr ""
-"Definiere Optionen, aus denen Kunden wählen können, bevor sie dieses Produkt"
-" in den Warenkorb legen. Zur Zeilensumme wird ein positiver Preis addiert."
+"Definiere Optionen, aus denen Kunden wählen können, bevor sie dieses Produkt "
+"in den Warenkorb legen. Zur Zeilensumme wird ein positiver Preis addiert."
 
 #: templates/admin/product-data-panel.php:33
 msgid "No add-ons yet"
@@ -369,8 +368,8 @@ msgstr "Auswahlmöglichkeiten für den Typ „Auswahl“"
 #: templates/admin/product-data-panel.php:78
 #: templates/admin/product-data-panel.php:123
 msgid ""
-"Only used for the \"Select\" type. One choice per line as \"Label | price\","
-" e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
+"Only used for the \"Select\" type. One choice per line as \"Label | price\", "
+"e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
 "choice."
 msgstr ""
 "Wird nur für den Typ „Auswahl“ verwendet. Eine Auswahl pro Zeile im Format "

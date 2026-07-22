@@ -12,7 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 && "
+"(n % 100 < 12 || n % 100 > 14) ? 1 : 2);\n"
 "X-Domain: plogins-addons\n"
 
 #. Plugin Name of the plugin
@@ -48,8 +49,7 @@ msgstr "https://wppoland.com"
 #: plogins-addons.php:47
 msgid ""
 "Add-Ons – Product Options for WooCommerce requires WooCommerce to be active."
-msgstr ""
-"Add-Ons – opcje produktu dla WooCommerce wymaga aktywnego WooCommerce."
+msgstr "Add-Ons – opcje produktu dla WooCommerce wymaga aktywnego WooCommerce."
 
 #: src/Admin/InlineHelp.php:34
 msgid "More information"
@@ -77,8 +77,8 @@ msgstr "Stan"
 
 #: src/Admin/Settings.php:108
 msgid ""
-"Switch the whole feature on or off without touching any product's configured"
-" options."
+"Switch the whole feature on or off without touching any product's configured "
+"options."
 msgstr ""
 "Włącz lub wyłącz całą funkcję bez dotykania skonfigurowanych opcji produktu."
 
@@ -99,10 +99,9 @@ msgstr ""
 
 #: src/Admin/Settings.php:127
 msgid ""
-"Show per-product add-on fields on the product page and apply price deltas in"
-" the cart."
-msgstr ""
-"Pokaż pola opcji na stronie produktu i doliczaj zmiany ceny w koszyku."
+"Show per-product add-on fields on the product page and apply price deltas in "
+"the cart."
+msgstr "Pokaż pola opcji na stronie produktu i doliczaj zmiany ceny w koszyku."
 
 #: src/Admin/Settings.php:130
 msgid ""
@@ -131,8 +130,8 @@ msgstr "Nagłówek grupy"
 #: src/Admin/Settings.php:147
 msgid ""
 "A short heading printed above the options on the product page, for example "
-"\"Personalise your order\" or \"Extras\". It helps customers understand that"
-" the fields are optional add-ons. Clear the field to show no heading at all."
+"\"Personalise your order\" or \"Extras\". It helps customers understand that "
+"the fields are optional add-ons. Clear the field to show no heading at all."
 msgstr ""
 "Krótki nagłówek wydrukowany nad opcjami na stronie produktu, np. "
 "„Spersonalizuj swoje zamówienie” lub „Dodatki”. Pomaga klientom zrozumieć, "
@@ -143,8 +142,7 @@ msgstr ""
 msgid "e.g. Product options"
 msgstr "np. Opcje produktu"
 
-#. translators: %s: the packaged default group heading, e.g. "Product
-#. options".
+#. translators: %s: the packaged default group heading, e.g. "Product options".
 #: src/Admin/Settings.php:162
 msgid ""
 "Heading shown above the fields on the product page. Leave empty to hide it. "
@@ -363,13 +361,13 @@ msgstr "Opcje dla typu Lista"
 #: templates/admin/product-data-panel.php:78
 #: templates/admin/product-data-panel.php:123
 msgid ""
-"Only used for the \"Select\" type. One choice per line as \"Label | price\","
-" e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
+"Only used for the \"Select\" type. One choice per line as \"Label | price\", "
+"e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
 "choice."
 msgstr ""
-"Używane tylko dla typu „Lista”. Jedna opcja w wierszu w formacie „Etykieta |"
-" cena”, np. „Standard | 0” i „Premium | 9,99”. Pomiń cenę, jeśli wybór ma "
-"być bezpłatny."
+"Używane tylko dla typu „Lista”. Jedna opcja w wierszu w formacie „Etykieta | "
+"cena”, np. „Standard | 0” i „Premium | 9,99”. Pomiń cenę, jeśli wybór ma być "
+"bezpłatny."
 
 #: templates/admin/product-data-panel.php:97
 msgid "Add option"
