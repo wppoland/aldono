@@ -17,18 +17,18 @@ Dodatki pozwalają właścicielom sklepów oferować opcje produktu WooCommerce,
 
 Dla każdego produktu definiujesz listę dodatków w edytorze produktów WooCommerce. Każdy dodatek ma etykietę, typ pola, opcjonalne oznaczenie jako wymagane oraz opcjonalną cenę.
 
-* <strong>Typy pól</strong> — zwykły tekst, pole wyboru lub lista rozwijana.
-* <strong>Limity tekstu</strong> — ustaw minimalną i maksymalną liczbę znaków dla tekstowych opcji produktu.
-* <strong>Różnice cen</strong> — przypisz cenę dodatkowi (lub każdej opcji z listy); kwota jest automatycznie doliczana do sumy pozycji w koszyku.
-* <strong>Bezpłatne lub płatne</strong> — pozostaw cenę na zero dla bezpłatnych opcji, takich jak spersonalizowana wiadomość.
-* <strong>Wyświetlanie w koszyku i zamówieniu</strong> — dokonane wybory pojawiają się w koszyku, przy kasie i w zamówieniu.
-* <strong>Ustawienia wyświetlania</strong> — wybierz nagłówek grupy, pokaż lub ukryj ceny opcji, włącz lub wyłącz gwiazdkę pola wymaganego i umieść opcje w karcie z obramowaniem, a wszystko to na stronie ustawień dodatków.
+* <strong>Typy pól</strong>, zwykły tekst, pole wyboru lub lista rozwijana.
+* <strong>Limity tekstu</strong>, ustaw minimalną i maksymalną liczbę znaków dla tekstowych opcji produktu.
+* <strong>Różnice cen</strong>, przypisz cenę dodatkowi (lub każdej opcji z listy); kwota jest automatycznie doliczana do sumy pozycji w koszyku.
+* <strong>Bezpłatne lub płatne</strong>, pozostaw cenę na zero dla bezpłatnych opcji, takich jak spersonalizowana wiadomość.
+* <strong>Wyświetlanie w koszyku i zamówieniu</strong>, dokonane wybory pojawiają się w koszyku, przy kasie i w zamówieniu.
+* <strong>Ustawienia wyświetlania</strong>, wybierz nagłówek grupy, pokaż lub ukryj ceny opcji, włącz lub wyłącz gwiazdkę pola wymaganego i umieść opcje w karcie z obramowaniem, a wszystko to na stronie ustawień dodatków.
 
 Definicje dodatków są przechowywane jako standardowa meta produktu, bez niestandardowych tabel w bazie danych, więc sama wtyczka pozostaje mała i szybka.
 
 Ustawienia znajdziesz w <strong>WooCommerce → Dodatki</strong>. Usunięcie wtyczki czyści jej własne opcje; definicje poszczególnych produktów są zachowywane jako meta produktu, więc ponowna instalacja je przywraca.
 
-Kod jest rozwijany otwarcie (open source) pod adresem https://github.com/wppoland/plogins-addons — to właśnie tam zgłosisz błąd lub zaproponujesz typ pola, który chcesz zobaczyć.
+Kod jest rozwijany otwarcie (open source) pod adresem https://github.com/wppoland/plogins-addons, to właśnie tam zgłosisz błąd lub zaproponujesz typ pola, który chcesz zobaczyć.
 
 == Installation ==
 
@@ -90,7 +90,7 @@ Tak. Ta wtyczka jest zgodna z WordPress Multisite. Włącz ją dla całej sieci 
 3. Na urządzeniu mobilnym.
 == External Services ==
 
-Add-Ons nie łączy się z żadną usługą zewnętrzną. Nie wysyła żadnych danych poza Twoją witrynę i nie ładuje zdalnych skryptów, czcionek ani modułów śledzących — pliki CSS/JS panelu i sklepu są serwowane z folderu wtyczki na Twoim własnym serwerze. Definicje dodatków są przechowywane jako meta produktu (`_addons_definitions`), a ustawienia wyświetlania w jednej opcji (`addons_settings`) — wszystko w Twojej bazie danych WordPress.
+Add-Ons nie łączy się z żadną usługą zewnętrzną. Nie wysyła żadnych danych poza Twoją witrynę i nie ładuje zdalnych skryptów, czcionek ani modułów śledzących, pliki CSS/JS panelu i sklepu są serwowane z folderu wtyczki na Twoim własnym serwerze. Definicje dodatków są przechowywane jako meta produktu (`_addons_definitions`), a ustawienia wyświetlania w jednej opcji (`addons_settings`), wszystko w Twojej bazie danych WordPress.
 
 == Translations ==
 

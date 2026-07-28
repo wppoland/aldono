@@ -15,7 +15,7 @@ defined('ABSPATH') || exit;
  * Adds an "Add-Ons" product-data tab where the merchant defines a repeatable
  * list of add-ons (label, type text/checkbox/select, required flag, price delta,
  * and select options). Definitions are stored as the product meta key owned by
- * {@see AddOnsService::META_KEY} — no custom table.
+ * {@see AddOnsService::META_KEY}, no custom table.
  */
 final class ProductData implements HasHooks
 {
@@ -207,7 +207,7 @@ final class ProductData implements HasHooks
 
             $parts = explode('|', $line);
             $label = sanitize_text_field(trim($parts[0]));
-            // Clamp to a non-negative surcharge — see collectDefinitions().
+            // Clamp to a non-negative surcharge, see collectDefinitions().
             $price = isset($parts[1]) ? max(0.0, (float) wc_format_decimal(trim($parts[1]))) : 0.0;
 
             if ($label !== '') {

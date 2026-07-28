@@ -41,10 +41,10 @@ def main():
         ("addons", slug),
         ("ADDONS", ns.upper()),
         ("Addons", ns),
-        ("Add-Ons – Product Options for WooCommerce", name),
+        ("Add-Ons, Product Options for WooCommerce", name),
         ("Let customers add paid or free options (text, checkbox, select) to products before adding to cart.", short),
         ("Let customers add paid or free options (text, checkbox, select) to products before adding to cart.", desc),
-        ("Add-Ons – Product Options for WooCommerce in action.", name + " in action."),
+        ("Add-Ons, Product Options for WooCommerce in action.", name + " in action."),
     ]
 
     for path in tracked_files():

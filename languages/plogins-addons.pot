@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-addons.php
-msgid "Add-Ons – Product Options for WooCommerce"
+msgid "Add-Ons, Product Options for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -43,7 +43,7 @@ msgstr ""
 
 #: plogins-addons.php:47
 msgid ""
-"Add-Ons – Product Options for WooCommerce requires WooCommerce to be active."
+"Add-Ons, Product Options for WooCommerce requires WooCommerce to be active."
 msgstr ""
 
 #: src/Admin/InlineHelp.php:34
@@ -196,7 +196,7 @@ msgid "required"
 msgstr ""
 
 #: templates/add-on-fields.php:89
-msgid ", Select, "
+msgid "- Select -"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:23

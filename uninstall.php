@@ -1,6 +1,6 @@
 <?php
 /**
- * Uninstall cleanup for Add-Ons – Product Options for WooCommerce.
+ * Uninstall cleanup for Add-Ons, Product Options for WooCommerce.
  *
  * Removes the plugin's own options. Per-product add-on definitions are stored as
  * standard product meta (`_addons_definitions`); they are intentionally left in

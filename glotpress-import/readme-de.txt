@@ -17,18 +17,18 @@ Mit Add-Ons kannst du als Shop-Betreiber WooCommerce-Produktoptionen, Produkt-Ad
 
 Für jedes Produkt definierst du im WooCommerce-Produkteditor eine Liste von Add-ons. Jedes Add-on hat eine Beschriftung, einen Feldtyp, optional eine Pflicht-Kennzeichnung und optional einen Preis.
 
-* <strong>Feldtypen</strong> — einfacher Text, ein Kontrollkästchen oder ein Auswahl-Dropdown.
-* <strong>Textgrenzen</strong> — lege eine minimale und maximale Zeichenanzahl für Text-Produktoptionen fest.
-* <strong>Preisdifferenzen</strong> — gib einem Add-on (oder jeder Auswahloption) einen Preis; der Betrag wird automatisch zur Zeilensumme im Warenkorb hinzugefügt.
-* <strong>Kostenlos oder kostenpflichtig</strong> — belasse den Preis bei null für kostenlose Optionen wie eine personalisierte Nachricht.
-* <strong>Anzeige in Warenkorb und Bestellung</strong> — die Auswahl der Kundschaft erscheint im Warenkorb, an der Kasse und in der Bestellung.
-* <strong>Anzeigeeinstellungen</strong> — wähle die Gruppenüberschrift, blende Optionspreise ein oder aus, schalte das Sternchen des Pflichtfelds um und fasse die Optionen in einer umrandeten Karte zusammen, alles auf der Seite mit den Add-On-Einstellungen.
+* <strong>Feldtypen</strong>, einfacher Text, ein Kontrollkästchen oder ein Auswahl-Dropdown.
+* <strong>Textgrenzen</strong>, lege eine minimale und maximale Zeichenanzahl für Text-Produktoptionen fest.
+* <strong>Preisdifferenzen</strong>, gib einem Add-on (oder jeder Auswahloption) einen Preis; der Betrag wird automatisch zur Zeilensumme im Warenkorb hinzugefügt.
+* <strong>Kostenlos oder kostenpflichtig</strong>, belasse den Preis bei null für kostenlose Optionen wie eine personalisierte Nachricht.
+* <strong>Anzeige in Warenkorb und Bestellung</strong>, die Auswahl der Kundschaft erscheint im Warenkorb, an der Kasse und in der Bestellung.
+* <strong>Anzeigeeinstellungen</strong>, wähle die Gruppenüberschrift, blende Optionspreise ein oder aus, schalte das Sternchen des Pflichtfelds um und fasse die Optionen in einer umrandeten Karte zusammen, alles auf der Seite mit den Add-On-Einstellungen.
 
 Add-on-Definitionen werden als Standard-Produktmeta gespeichert, ohne eigene Datenbanktabellen, sodass das Plugin selbst klein und schnell bleibt.
 
 Die Einstellungen findest du unter <strong>WooCommerce → Add-Ons</strong>. Beim Entfernen des Plugins werden seine eigenen Optionen bereinigt; deine produktspezifischen Definitionen bleiben als Produktmeta erhalten, sodass sie bei einer Neuinstallation wiederhergestellt werden.
 
-Der Code wird quelloffen unter https://github.com/wppoland/plogins-addons entwickelt – dort kannst du einen Fehler melden oder einen Feldtyp vorschlagen, den du dir wünschst.
+Der Code wird quelloffen unter https://github.com/wppoland/plogins-addons entwickelt, dort kannst du einen Fehler melden oder einen Feldtyp vorschlagen, den du dir wünschst.
 
 == Installation ==
 
@@ -90,7 +90,7 @@ Ja. Dieses Plugin ist mit WordPress Multisite kompatibel. Aktiviere es netzwerkw
 3. Auf einem mobilen Gerät.
 == External Services ==
 
-Add-Ons stellt keine Verbindung zu externen Diensten her. Es sendet keine Daten von deiner Website und lädt keine externen Skripte, Schriftarten oder Tracker – sein Admin- und Shop-CSS/JS wird aus dem Plugin-Ordner auf deinem eigenen Server ausgeliefert. Deine Add-on-Definitionen werden als Produktmeta (`_addons_definitions`) gespeichert und die Anzeigeeinstellungen in einer einzigen Option (`addons_settings`), alles in deiner WordPress-Datenbank.
+Add-Ons stellt keine Verbindung zu externen Diensten her. Es sendet keine Daten von deiner Website und lädt keine externen Skripte, Schriftarten oder Tracker, sein Admin- und Shop-CSS/JS wird aus dem Plugin-Ordner auf deinem eigenen Server ausgeliefert. Deine Add-on-Definitionen werden als Produktmeta (`_addons_definitions`) gespeichert und die Anzeigeeinstellungen in einer einzigen Option (`addons_settings`), alles in deiner WordPress-Datenbank.
 
 == Translations ==
 

@@ -17,12 +17,12 @@ Add-Ons permite a los propietarios de tiendas ofrecer opciones de producto de Wo
 
 Para cada producto defines una lista de complementos en el editor de productos de WooCommerce. Cada complemento tiene una etiqueta, un tipo de campo, una marca opcional de «obligatorio» y un precio opcional.
 
-* <strong>Tipos de campo</strong> — texto sin formato, una casilla de verificación o una lista desplegable.
-* <strong>Límites de texto</strong> — establece el número mínimo y máximo de caracteres para las opciones de producto de tipo texto.
-* <strong>Diferencias de precio</strong> — asigna un precio a un complemento (o a cada opción de la lista); el importe se suma automáticamente al total de la línea del carrito.
-* <strong>Gratis o de pago</strong> — deja el precio a cero para las opciones gratuitas, como un mensaje personalizado.
-* <strong>Visualización en el carrito y el pedido</strong> — las selecciones del cliente aparecen en el carrito, en el pago y en el pedido.
-* <strong>Ajustes de visualización</strong> — elige el encabezado del grupo, muestra u oculta los precios de las opciones, activa o desactiva el asterisco del campo obligatorio y envuelve las opciones en una tarjeta con borde, todo desde la página de ajustes de Add-Ons.
+* <strong>Tipos de campo</strong>, texto sin formato, una casilla de verificación o una lista desplegable.
+* <strong>Límites de texto</strong>, establece el número mínimo y máximo de caracteres para las opciones de producto de tipo texto.
+* <strong>Diferencias de precio</strong>, asigna un precio a un complemento (o a cada opción de la lista); el importe se suma automáticamente al total de la línea del carrito.
+* <strong>Gratis o de pago</strong>, deja el precio a cero para las opciones gratuitas, como un mensaje personalizado.
+* <strong>Visualización en el carrito y el pedido</strong>, las selecciones del cliente aparecen en el carrito, en el pago y en el pedido.
+* <strong>Ajustes de visualización</strong>, elige el encabezado del grupo, muestra u oculta los precios de las opciones, activa o desactiva el asterisco del campo obligatorio y envuelve las opciones en una tarjeta con borde, todo desde la página de ajustes de Add-Ons.
 
 Las definiciones de complementos se almacenan como metadatos estándar del producto, sin tablas de base de datos personalizadas, por lo que el plugin en sí sigue siendo pequeño y rápido.
 

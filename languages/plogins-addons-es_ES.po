@@ -17,7 +17,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: plogins-addons.php
-msgid "Add-Ons – Product Options for WooCommerce"
+msgid "Add-Ons, Product Options for WooCommerce"
 msgstr "Complementos: opciones de producto para WooCommerce"
 
 #. Plugin URI of the plugin
@@ -46,7 +46,7 @@ msgstr "https://wppoland.com"
 
 #: plogins-addons.php:47
 msgid ""
-"Add-Ons – Product Options for WooCommerce requires WooCommerce to be active."
+"Add-Ons, Product Options for WooCommerce requires WooCommerce to be active."
 msgstr ""
 "Complementos: las opciones de producto para WooCommerce requieren que "
 "WooCommerce esté activo."
@@ -238,8 +238,8 @@ msgid "required"
 msgstr "obligatorio"
 
 #: templates/add-on-fields.php:89
-msgid ", Select, "
-msgstr ", Seleccionar,"
+msgid "- Select -"
+msgstr "- Seleccionar -"
 
 #: templates/admin/product-data-panel.php:23
 msgid "Product add-ons"

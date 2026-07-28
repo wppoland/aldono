@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace WPPoland\StorefrontKit\AddOns;
 
 /**
- * Namespace-neutral per-product add-ons engine (powers the Add-Ons – Product
+ * Namespace-neutral per-product add-ons engine (powers the Add-Ons, Product
  * Options for WooCommerce plugin).
  *
  * An admin defines a list of add-on fields per product (label, type
@@ -13,7 +13,7 @@ namespace WPPoland\StorefrontKit\AddOns;
  * them under the product form, validates and captures the customer's choices
  * into the cart line item, adjusts the line price by the summed deltas, and
  * exposes the selections for cart / order display. Add-ons are stored as product
- * meta — the host owns the meta key and read/write, injected via the
+ * meta, the host owns the meta key and read/write, injected via the
  * `productMeta` closure (no custom table). Everything WooCommerce/
  * text-domain/option/meta specific is constructor-injected, mirroring
  * {@see \WPPoland\StorefrontKit\Badge\BadgeEngine} and
