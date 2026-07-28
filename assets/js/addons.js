@@ -1,9 +1,9 @@
 /**
- * Storefront add-on fields — presentation only.
+ * Storefront add-on fields, presentation only.
  *
  * The single moment: when a customer commits a personalisation (types an
  * engraving, picks an option), the field signs itself off with an ink
- * underline. This script only toggles a class that drives that CSS state —
+ * underline. This script only toggles a class that drives that CSS state, 
  * it changes no values, names, or submission behaviour.
  */
 (function () {

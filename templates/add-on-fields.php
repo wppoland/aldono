@@ -51,7 +51,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
             ? $addons_field['options']
             : array();
 
-        // Skip malformed definitions (no label) and selects with no choices —
+        // Skip malformed definitions (no label) and selects with no choices, 
         // rendering them would produce empty, confusing controls.
         if ($addons_label === '') {
             continue;
@@ -86,7 +86,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                     name="<?php echo esc_attr($addons_name); ?>"
                     <?php echo $addons_required ? 'required' : ''; ?>
                 >
-                    <option value=""><?php esc_html_e(', Select, ', 'plogins-addons'); ?></option>
+                    <option value=""><?php esc_html_e('- Select -', 'plogins-addons'); ?></option>
                     <?php foreach ($addons_options as $addons_opt_label => $addons_opt_price) : ?>
                         <?php
                         $addons_opt_label = (string) $addons_opt_label;
@@ -117,7 +117,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                 />
                 <?php if ($addons_min_chars > 0 || $addons_max_chars > 0) : ?>
                     <small class="addons-char-counter-wrap description">
-                        <span class="addons-char-counter" data-addons-char-counter data-min="<?php echo esc_attr((string) $addons_min_chars); ?>" data-max="<?php echo esc_attr((string) $addons_max_chars); ?>"></span>
+                        <span class="addons-char-counter" data-addons-char-counter data-min="<?php echo esc_attr((string) $addons_min_chars); ?>" data-max="<?php echo esc_attr((string) $addons_max_chars); ?>" aria-live="polite"></span>
                     </small>
                 <?php endif; ?>
             <?php endif; ?>

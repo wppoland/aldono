@@ -1,11 +1,11 @@
-=== Plogins Add-Ons - Product Options for WooCommerce ===
+=== Add-Ons - Product Options for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.3.1
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,7 +92,24 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
 
+== Translations ==
+
+Plogins Add-Ons includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-addons`, so WordPress.org language packs can also override or extend these bundled translations.
+
 == Changelog ==
+
+= 1.0.4 =
+* Translations: completed Polish, German and Spanish for the PRO upgrade panel.
+
+= 1.0.3 =
+* Accessibility improvements to the admin and storefront markup.
+* Fixed low-contrast admin headings under an OS dark-mode preference.
+
+= 1.0.2 =
+* Added bundled Polish, German and Spanish translations for the plugin interface.
+
+= 1.0.1 =
+* First stable release.
 
 = 0.3.1 =
 * Renamed to Plogins Add-Ons for WooCommerce for a more distinctive plugin name.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Plogins Add-Ons - Product Options for WooCommerce — Live Preview",
+    "title": "Plogins Add-Ons - Product Options for WooCommerce, Live Preview",
     "author": "WPPoland"
   },
   "landingPage": "/wp-admin/admin.php?page=addons-settings",

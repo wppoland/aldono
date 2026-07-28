@@ -70,7 +70,7 @@ final class AddOnsService implements HasHooks
      * Enqueue the lightweight front-end stylesheet wherever the add-on fields
      * can render. The engine prints them on `woocommerce_before_add_to_cart_button`
      * whenever a product form is shown, which includes the `[product_page]`
-     * shortcode on an arbitrary page — not just the single-product template. We
+     * shortcode on an arbitrary page, not just the single-product template. We
      * therefore load on `is_product()` *or* when the current singular content
      * embeds that shortcode, so the fields are never unstyled (avoids CLS) while
      * staying off every other page (CWV / Plugin Check hygiene).

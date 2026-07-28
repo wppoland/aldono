@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Plogins Add-Ons - Product Options for WooCommerce
+ * Plugin Name:       Add-Ons - Product Options for WooCommerce
  * Plugin URI:        https://plogins.com/plogins-addons/
  * Description:        Let customers add paid or free options (text, checkbox, select) to products before adding to cart.
- * Version:           0.3.1
+ * Version:           1.0.5
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -14,6 +14,7 @@
  * Text Domain:       plogins-addons
  * Domain Path:       /languages
  * WC requires at least: 8.0
+ * WC tested up to: 10.9
  *
  * @package Addons
  */
@@ -24,7 +25,7 @@ namespace Addons;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '0.3.1';
+const VERSION     = '1.0.5';
 const PLUGIN_FILE = __FILE__;
 
 define('ADDONS_DIR', plugin_dir_path(__FILE__));
@@ -44,7 +45,7 @@ add_action('plugins_loaded', static function (): void {
     if (! class_exists('WooCommerce')) {
         add_action('admin_notices', static function (): void {
             echo '<div class="notice notice-error"><p>';
-            echo esc_html__('Add-Ons – Product Options for WooCommerce requires WooCommerce to be active.', 'plogins-addons');
+            echo esc_html__('Add-Ons, Product Options for WooCommerce requires WooCommerce to be active.', 'plogins-addons');
             echo '</p></div>';
         });
         return;
