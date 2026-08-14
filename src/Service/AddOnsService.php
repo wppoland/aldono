@@ -159,8 +159,26 @@ final class AddOnsService implements HasHooks
          * @param \WC_Product                     $product     Current product.
          */
         $filtered = apply_filters('addons_product_definitions', $definitions, $product);
+        $filtered = is_array($filtered) ? $filtered : $definitions;
 
-        return is_array($filtered) ? $filtered : $definitions;
+        // A select with no choices cannot be rendered, and the storefront
+        // template already skipped it. The validator read the same definitions
+        // and did not, so a row saved as required + select + no choices made the
+        // product permanently unbuyable: add-to-cart failed asking the shopper to
+        // complete a field that was never on the page. Dropping it here keeps the
+        // renderer and the validator reading one list, which is the point of this
+        // method being their single source.
+        return array_values(array_filter(
+            $filtered,
+            static function ($row): bool {
+                if (! is_array($row)) {
+                    return false;
+                }
+
+                return ($row['type'] ?? 'text') !== 'select'
+                    || (isset($row['options']) && is_array($row['options']) && $row['options'] !== []);
+            },
+        ));
     }
 
     /**
