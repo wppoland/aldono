@@ -28,7 +28,7 @@ Add-on definitions are stored as standard product meta, no custom database table
 
 Settings live under **WooCommerce → Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
 
-The code is developed in the open at https://github.com/wppoland/plogins-addons, that's the place to report a bug or suggest a field type you'd like to see.
+The code is developed in the open at [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons), that's the place to report a bug or suggest a field type you'd like to see.
 
 == Installation ==
 
@@ -40,10 +40,10 @@ The code is developed in the open at https://github.com/wppoland/plogins-addons,
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-addons/docs/
-* **Plugin page** - https://plogins.com/plogins-addons/
-* **Source code** - https://github.com/wppoland/plogins-addons
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-addons/issues
+* **Documentation**: [plogins.com/plogins-addons/docs/](https://plogins.com/plogins-addons/docs/)
+* **Plugin page**: [plogins.com/plogins-addons/](https://plogins.com/plogins-addons/)
+* **Source code**: [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-addons/issues](https://github.com/wppoland/plogins-addons/issues)
 
 
 = Does it require WooCommerce? =
