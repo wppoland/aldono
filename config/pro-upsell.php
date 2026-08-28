@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 49,
     'currency'   => 'EUR',
-    'price_pln'  => 215,
     'lead'       => [
         'en' => 'The features below ship in the current PRO 0.6.0 release.',
         'pl' => 'Poniższe funkcje są dostępne w bieżącym wydaniu PRO 0.6.0.',
