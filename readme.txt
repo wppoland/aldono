@@ -94,7 +94,7 @@ Add-Ons does not connect to any external services. It sends no data off your sit
 
 == Translations ==
 
-Plogins Add-Ons includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-addons`, so WordPress.org language packs can also override or extend these bundled translations.
+Plogins Add-Ons is fully translatable and ships the `plogins-addons.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
 
