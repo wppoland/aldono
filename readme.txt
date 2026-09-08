@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,11 @@ Add-Ons does not connect to any external services. It sends no data off your sit
 Plogins Add-Ons is fully translatable and ships the `plogins-addons.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.9 =
+* Fixed the heading above the product options always printing in English. "Product options" was a packaged default rather than a translatable string, so it never reached the translation file and a shop running in Polish, German or Spanish still showed English above the fields. It is now translated with the rest of the plugin, so it follows the site language as soon as a translation for it exists. Translations are delivered by WordPress.org language packs, not bundled in this download, so on a site with no pack for this plugin the heading stays English until one is published.
+* Your own heading is untouched. Only a heading still set to the exact English default is reset so the translation can take over.
+* Added a "Show the heading above the options" switch. Hiding the heading used to mean clearing the field, which now means "use the default"; if you had cleared it, the switch is set to off for you on update, so nothing changes on your product pages.
 
 = 1.0.8 =
 * Renamed to Plogins Add-Ons - Product Options for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.

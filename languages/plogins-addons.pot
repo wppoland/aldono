@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Plogins Add-Ons - Product Options for WooCommerce 1.0.8\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/addons\n"
+"Project-Id-Version: Plogins Add-Ons - Product Options for WooCommerce 1.0.9\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-addons\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-07T12:55:46+00:00\n"
+"POT-Creation-Date: 2026-09-08T13:45:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: plogins-addons\n"
@@ -48,8 +48,8 @@ msgid "More information"
 msgstr ""
 
 #: src/Admin/ProductData.php:40
-#: src/Admin/Settings.php:49
 #: src/Admin/Settings.php:50
+#: src/Admin/Settings.php:51
 msgid "Add-Ons"
 msgstr ""
 
@@ -107,98 +107,102 @@ msgstr ""
 msgid "What %s adds"
 msgstr ""
 
-#: src/Admin/Settings.php:110
+#: src/Admin/Settings.php:111
 msgid "These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the \"Add-Ons\" tab in the Product data box."
 msgstr ""
 
-#: src/Admin/Settings.php:117
+#: src/Admin/Settings.php:118
 msgid "Status"
 msgstr ""
 
-#: src/Admin/Settings.php:119
+#: src/Admin/Settings.php:120
 msgid "Switch the whole feature on or off without touching any product's configured options."
 msgstr ""
 
-#: src/Admin/Settings.php:126
+#: src/Admin/Settings.php:127
 msgid "Enable add-ons"
 msgstr ""
 
-#: src/Admin/Settings.php:127
+#: src/Admin/Settings.php:128
 msgid "The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart, even if products still have add-ons configured. Turn it on once you are ready to go live."
 msgstr ""
 
-#: src/Admin/Settings.php:138
+#: src/Admin/Settings.php:139
 msgid "Show per-product add-on fields on the product page and apply price deltas in the cart."
 msgstr ""
 
-#: src/Admin/Settings.php:141
+#: src/Admin/Settings.php:142
 msgid "Leave this on for normal operation. Switch it off to temporarily hide all add-ons without deleting any product settings."
 msgstr ""
 
-#: src/Admin/Settings.php:148
+#: src/Admin/Settings.php:149
 msgid "On the product page"
 msgstr ""
 
-#: src/Admin/Settings.php:150
+#: src/Admin/Settings.php:151
 msgid "How the add-on group is labelled and styled where customers see it. These choices affect appearance only, not pricing or which options show."
 msgstr ""
 
-#: src/Admin/Settings.php:157
+#: src/Admin/Settings.php:158
 msgid "Group heading"
 msgstr ""
 
-#: src/Admin/Settings.php:158
-msgid "A short heading printed above the options on the product page, for example \"Personalise your order\" or \"Extras\". It helps customers understand that the fields are optional add-ons. Clear the field to show no heading at all."
+#: src/Admin/Settings.php:159
+msgid "A short heading printed above the options on the product page, for example \"Personalise your order\" or \"Extras\". It helps customers understand that the fields are optional add-ons. Leave it empty to use the default heading, or switch the heading off below to show none at all."
 msgstr ""
 
-#: src/Admin/Settings.php:167
-msgid "e.g. Product options"
-msgstr ""
-
-#. translators: %s: the packaged default group heading, e.g. "Product options".
-#: src/Admin/Settings.php:173
+#. translators: %s: the default group heading in the site language, e.g. "Product options".
+#: src/Admin/Settings.php:174
 #, php-format
-msgid "Heading shown above the fields on the product page. Leave empty to hide it. Default: %s."
-msgstr ""
-
-#: src/Admin/Settings.php:182
-#: src/Admin/Settings.php:188
-msgid "Display"
+msgid "Heading shown above the fields on the product page. Leave it empty to use the default, %s, translated with the rest of the site."
 msgstr ""
 
 #: src/Admin/Settings.php:183
+#: src/Admin/Settings.php:189
+msgid "Display"
+msgstr ""
+
+#: src/Admin/Settings.php:184
 msgid "Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear, only the visual treatment."
 msgstr ""
 
-#: src/Admin/Settings.php:198
+#: src/Admin/Settings.php:199
+msgid "Show the heading above the options."
+msgstr ""
+
+#: src/Admin/Settings.php:202
+msgid "Turn this off to print the options with no heading at all. The heading text above is kept, so you can bring it back later."
+msgstr ""
+
+#: src/Admin/Settings.php:213
 msgid "Show the price next to paid options."
 msgstr ""
 
-#: src/Admin/Settings.php:201
+#: src/Admin/Settings.php:216
 msgid "Displays the extra cost in brackets, e.g. \"Gift wrap (+$5.00)\". Free options never show a price."
 msgstr ""
 
-#: src/Admin/Settings.php:212
+#: src/Admin/Settings.php:227
 msgid "Mark required fields with an asterisk."
 msgstr ""
 
-#: src/Admin/Settings.php:215
+#: src/Admin/Settings.php:230
 msgid "Adds a red * after the label of any option a customer must complete before adding to cart. Required options are still enforced even with this off."
 msgstr ""
 
-#: src/Admin/Settings.php:226
+#: src/Admin/Settings.php:241
 msgid "Wrap the options in a bordered card."
 msgstr ""
 
-#: src/Admin/Settings.php:229
+#: src/Admin/Settings.php:244
 msgid "Groups the options inside a subtle bordered box so they stand out from the rest of the product page. Turn off for a plain, inline layout that inherits your theme."
 msgstr ""
 
-#: src/Admin/Settings.php:238
+#: src/Admin/Settings.php:253
 msgid "Next step"
 msgstr ""
 
-#: src/Admin/Settings.php:239
+#: src/Admin/Settings.php:254
 msgid "Define each product's add-ons in the product editor, under the \"Add-Ons\" tab in the Product data panel."
 msgstr ""
 
@@ -212,6 +216,10 @@ msgstr ""
 
 #: src/Service/AddOnsService.php:45
 msgid "The option \"{label}\" cannot exceed {max} characters."
+msgstr ""
+
+#: src/Service/Texts.php:36
+msgid "Product options"
 msgstr ""
 
 #: templates/add-on-fields.php:82

@@ -132,12 +132,19 @@ final class AddOnsService implements HasHooks
     }
 
     /**
-     * Heading rendered above the add-on fields. An empty value intentionally
-     * hides the heading; the packaged default supplies the initial text.
+     * Heading rendered above the add-on fields, or an empty string when the
+     * merchant switched the heading off. Where no heading was typed, the
+     * translated default from {@see Texts} is used.
      */
     private function groupTitle(): string
     {
-        return trim((string) ($this->settings()['group_title'] ?? ''));
+        $settings = $this->settings();
+
+        if (empty($settings['show_group_title'])) {
+            return '';
+        }
+
+        return trim((string) ($settings['group_title'] ?? ''));
     }
 
     /**
@@ -182,7 +189,12 @@ final class AddOnsService implements HasHooks
     }
 
     /**
-     * Stored settings merged over packaged defaults.
+     * Stored settings merged over packaged defaults, resolved for RENDERING.
+     *
+     * {@see Texts::apply()} supplies the translated group heading when no
+     * merchant value exists. It runs here and not on the way into the option,
+     * because storing a resolved string would freeze one language into the
+     * database. The admin screen deliberately reads the raw values instead.
      *
      * @return array<string, mixed>
      */
@@ -197,7 +209,7 @@ final class AddOnsService implements HasHooks
         /** @var array<string, mixed> $defaults */
         $defaults = require ADDONS_DIR . 'config/defaults.php';
 
-        return array_merge($defaults, $stored);
+        return Texts::apply(array_merge($defaults, $stored));
     }
 
     /**

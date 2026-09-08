@@ -6,6 +6,7 @@ namespace Addons\Admin;
 
 use Addons\Contract\HasHooks;
 use Addons\Service\AddOnsService;
+use Addons\Service\Texts;
 
 defined('ABSPATH') || exit;
 
@@ -155,7 +156,7 @@ final class Settings implements HasHooks
                         <tr>
                             <th scope="row">
                                 <label for="addons_group_title"><?php esc_html_e('Group heading', 'plogins-addons'); ?></label>
-                                <?php InlineHelp::output('group_title', __('A short heading printed above the options on the product page, for example "Personalise your order" or "Extras". It helps customers understand that the fields are optional add-ons. Clear the field to show no heading at all.', 'plogins-addons')); ?>
+                                <?php InlineHelp::output('group_title', __('A short heading printed above the options on the product page, for example "Personalise your order" or "Extras". It helps customers understand that the fields are optional add-ons. Leave it empty to use the default heading, or switch the heading off below to show none at all.', 'plogins-addons')); ?>
                             </th>
                             <td>
                                 <input
@@ -164,14 +165,14 @@ final class Settings implements HasHooks
                                     class="regular-text"
                                     name="<?php echo esc_attr($option); ?>[group_title]"
                                     value="<?php echo esc_attr((string) ($settings['group_title'] ?? '')); ?>"
-                                    placeholder="<?php esc_attr_e('e.g. Product options', 'plogins-addons'); ?>"
+                                    placeholder="<?php echo esc_attr((string) (Texts::defaults()['group_title'] ?? '')); ?>"
                                 />
                                 <p class="description">
                                     <?php
                                     printf(
-                                        /* translators: %s: the packaged default group heading, e.g. "Product options". */
-                                        esc_html__('Heading shown above the fields on the product page. Leave empty to hide it. Default: %s.', 'plogins-addons'),
-                                        '<code>' . esc_html((string) ($this->defaults()['group_title'] ?? '')) . '</code>',
+                                        /* translators: %s: the default group heading in the site language, e.g. "Product options". */
+                                        esc_html__('Heading shown above the fields on the product page. Leave it empty to use the default, %s, translated with the rest of the site.', 'plogins-addons'),
+                                        '<code>' . esc_html((string) (Texts::defaults()['group_title'] ?? '')) . '</code>',
                                     );
                                     ?>
                                 </p>
@@ -187,6 +188,20 @@ final class Settings implements HasHooks
                                     <legend class="screen-reader-text">
                                         <span><?php esc_html_e('Display', 'plogins-addons'); ?></span>
                                     </legend>
+                                    <label for="addons_show_group_title">
+                                        <input
+                                            type="checkbox"
+                                            id="addons_show_group_title"
+                                            name="<?php echo esc_attr($option); ?>[show_group_title]"
+                                            value="1"
+                                            <?php checked((bool) ($settings['show_group_title'] ?? false), true); ?>
+                                        />
+                                        <?php esc_html_e('Show the heading above the options.', 'plogins-addons'); ?>
+                                    </label>
+                                    <p class="description">
+                                        <?php esc_html_e('Turn this off to print the options with no heading at all. The heading text above is kept, so you can bring it back later.', 'plogins-addons'); ?>
+                                    </p>
+                                    <br />
                                     <label for="addons_show_prices">
                                         <input
                                             type="checkbox"
@@ -265,11 +280,16 @@ final class Settings implements HasHooks
         $defaults = $this->settings();
 
         return array_merge($defaults, [
-            'enabled'       => ! empty($raw['enabled']),
-            'group_title'   => isset($raw['group_title']) ? sanitize_text_field((string) $raw['group_title']) : '',
-            'show_prices'   => ! empty($raw['show_prices']),
-            'show_required' => ! empty($raw['show_required']),
-            'card_style'    => ! empty($raw['card_style']),
+            'enabled'          => ! empty($raw['enabled']),
+            // Stored exactly as typed, including empty. An empty value resolves to
+            // the translated default at render time; substituting the English
+            // one here would freeze a single language into the option, which is
+            // the defect this field used to have.
+            'group_title'      => isset($raw['group_title']) ? sanitize_text_field((string) $raw['group_title']) : '',
+            'show_group_title' => ! empty($raw['show_group_title']),
+            'show_prices'      => ! empty($raw['show_prices']),
+            'show_required'    => ! empty($raw['show_required']),
+            'card_style'       => ! empty($raw['card_style']),
         ]);
     }
 
