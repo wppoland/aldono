@@ -26,13 +26,13 @@ Für jedes Produkt definierst du im WooCommerce-Produkteditor eine Liste von Add
 
 Add-on-Definitionen werden als Standard-Produktmeta gespeichert, ohne eigene Datenbanktabellen, sodass das Plugin selbst klein und schnell bleibt.
 
-Die Einstellungen findest du unter <strong>WooCommerce → Add-Ons</strong>. Beim Entfernen des Plugins werden seine eigenen Optionen bereinigt; deine produktspezifischen Definitionen bleiben als Produktmeta erhalten, sodass sie bei einer Neuinstallation wiederhergestellt werden.
+Die Einstellungen findest du unter <strong>WooCommerce > Add-Ons</strong>. Beim Entfernen des Plugins werden seine eigenen Optionen bereinigt; deine produktspezifischen Definitionen bleiben als Produktmeta erhalten, sodass sie bei einer Neuinstallation wiederhergestellt werden.
 
 Der Code wird quelloffen unter https://github.com/wppoland/plogins-addons entwickelt, dort kannst du einen Fehler melden oder einen Feldtyp vorschlagen, den du dir wünschst.
 
 == Installation ==
 
-1. Lade das Plugin nach `/wp-content/plugins/plogins-addons` hoch oder installiere es über Plugins → Installieren.
+1. Lade das Plugin nach `/wp-content/plugins/plogins-addons` hoch oder installiere es über Plugins > Installieren.
 2. Aktiviere es. WooCommerce muss aktiv sein.
 3. Bearbeite ein Produkt, öffne den Tab <strong>Add-Ons</strong> im Produktdaten-Bereich und füge deine Optionen hinzu.
 

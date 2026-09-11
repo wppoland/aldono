@@ -26,13 +26,13 @@ Para cada producto defines una lista de complementos en el editor de productos d
 
 Las definiciones de complementos se almacenan como metadatos estándar del producto, sin tablas de base de datos personalizadas, por lo que el plugin en sí sigue siendo pequeño y rápido.
 
-Los ajustes están en <strong>WooCommerce → Complementos</strong>. Al eliminar el plugin se borran sus propias opciones; tus definiciones por producto se conservan como metadatos del producto, así que al reinstalarlo se restauran.
+Los ajustes están en <strong>WooCommerce > Complementos</strong>. Al eliminar el plugin se borran sus propias opciones; tus definiciones por producto se conservan como metadatos del producto, así que al reinstalarlo se restauran.
 
 El código se desarrolla de forma abierta (código abierto) en https://github.com/wppoland/plogins-addons; ahí es donde puedes informar de un error o sugerir un tipo de campo que te gustaría ver.
 
 == Installation ==
 
-1. Sube el plugin a `/wp-content/plugins/plogins-addons` o instálalo desde Plugins → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/plogins-addons` o instálalo desde Plugins > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar activo.
 3. Edita un producto, abre la pestaña <strong>Complementos</strong> en el panel de datos del producto y añade tus opciones.
 

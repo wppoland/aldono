@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,13 +26,13 @@ For each product you define a list of add-ons in the WooCommerce product editor.
 
 Add-on definitions are stored as standard product meta, no custom database tables, so the plugin itself stays small and fast.
 
-Settings live under **WooCommerce → Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
+Settings live under **WooCommerce > Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
 
 The code is developed in the open at [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons), that's the place to report a bug or suggest a field type you'd like to see.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-addons`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/plogins-addons`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Edit a product, open the **Add-Ons** tab in the Product data panel, and add your options.
 
@@ -97,6 +97,10 @@ Add-Ons does not connect to any external services. It sends no data off your sit
 Plogins Add-Ons is fully translatable and ships the `plogins-addons.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.11 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
 
 = 1.0.10 =
 * Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
