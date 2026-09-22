@@ -10,7 +10,7 @@
 defined('ABSPATH') || exit;
 
 return [
-    'name'       => 'Add-Ons Pro',
+    'name'       => 'Aldono Pro',
     'url'        => 'https://plogins.com/plogins-addons-pro/pricing/',
     'sellable'   => true,
     'price_from' => 49,

@@ -33,7 +33,7 @@ final class Texts
     public static function defaults(): array
     {
         return [
-            'group_title' => __('Product options', 'plogins-addons'),
+            'group_title' => __('Product options', 'aldono'),
         ];
     }
 

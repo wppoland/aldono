@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Add-Ons - Product Options for WooCommerce 1.0.9\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/plogins-addons\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aldono\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,34 +12,34 @@ msgstr ""
 "POT-Creation-Date: 2026-09-08T13:45:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: plogins-addons\n"
+"X-Domain: aldono\n"
 
 #. Plugin Name of the plugin
-#: plogins-addons.php
+#: aldono.php
 msgid "Plogins Add-Ons - Product Options for WooCommerce"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: plogins-addons.php
-msgid "https://plogins.com/plogins-addons/"
+#: aldono.php
+msgid "https://plogins.com/aldono/"
 msgstr ""
 
 #. Description of the plugin
-#: plogins-addons.php
+#: aldono.php
 msgid "Let customers add paid or free options (text, checkbox, select) to products before adding to cart."
 msgstr ""
 
 #. Author of the plugin
-#: plogins-addons.php
+#: aldono.php
 msgid "WPPoland.com"
 msgstr ""
 
 #. Author URI of the plugin
-#: plogins-addons.php
+#: aldono.php
 msgid "https://wppoland.com"
 msgstr ""
 
-#: plogins-addons.php:48
+#: aldono.php:48
 msgid "Add-Ons, Product Options for WooCommerce requires WooCommerce to be active."
 msgstr ""
 

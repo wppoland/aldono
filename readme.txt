@@ -1,11 +1,11 @@
-=== Plogins Add-Ons - Product Options for WooCommerce ===
+=== Aldono - Product Options for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.11
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Add WooCommerce product options, product add-ons and custom product fields befor
 
 == Description ==
 
-Add-Ons lets store owners offer WooCommerce product options, product add-ons and custom product fields that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty or a colour choice.
+Aldono lets store owners offer WooCommerce product options, product add-ons and custom product fields that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty or a colour choice.
 
 For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
 
@@ -32,7 +32,7 @@ The code is developed in the open at [github.com/wppoland/plogins-addons](https:
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-addons`, or install via Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/aldono`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be active.
 3. Edit a product, open the **Add-Ons** tab in the Product data panel, and add your options.
 
@@ -60,7 +60,7 @@ The free version includes text fields, checkboxes and select drop-downs. Each fi
 
 = Can a product option change the price? =
 
-Yes. Add a price to the row itself or to individual select choices, and Add-Ons adds that amount to the WooCommerce cart line.
+Yes. Add a price to the row itself or to individual select choices, and Aldono adds that amount to the WooCommerce cart line.
 
 = Can I make a product option required? =
 
@@ -76,7 +76,7 @@ No. Add-on definitions are stored as product meta.
 
 = Does it support file uploads or conditional logic? =
 
-Those are PRO features. Add-Ons FREE focuses on fast text, checkbox and select product options.
+Those are PRO features. Aldono FREE focuses on fast text, checkbox and select product options.
 
 
 = Does this plugin work on WordPress Multisite? =
@@ -90,13 +90,16 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 3. On a mobile device.
 == External Services ==
 
-Add-Ons does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
+Aldono does not connect to any external services. It sends no data off your site and loads no remote scripts, fonts or trackers, its admin and storefront CSS/JS are served from the plugin folder on your own server. Your add-on definitions are stored as product meta (`_addons_definitions`) and the display settings in a single option (`addons_settings`), all kept in your WordPress database.
 
 == Translations ==
 
-Plogins Add-Ons is fully translatable and ships the `plogins-addons.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.0 =
+* Renamed to Aldono. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Aldono is Esperanto for an addition. The text domain follows the name; the stored add-on definitions, the settings and every hook are unchanged.
 
 = 1.0.11 =
 * Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.

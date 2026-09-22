@@ -37,7 +37,7 @@ final class ProductData implements HasHooks
     public function addTab(array $tabs): array
     {
         $tabs['addons'] = [
-            'label'    => __('Add-Ons', 'plogins-addons'),
+            'label'    => __('Add-Ons', 'aldono'),
             'target'   => 'addons_product_data',
             'class'    => ['show_if_simple', 'show_if_variable'],
             'priority' => 80,

@@ -47,8 +47,8 @@ final class Settings implements HasHooks
     {
         $hook = add_submenu_page(
             'woocommerce',
-            __('Add-Ons', 'plogins-addons'),
-            __('Add-Ons', 'plogins-addons'),
+            __('Add-Ons', 'aldono'),
+            __('Add-Ons', 'aldono'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -108,24 +108,24 @@ final class Settings implements HasHooks
             <?php $this->proUpsell()->banner(); ?>
 
             <p class="description addons-settings__lead">
-                <?php esc_html_e('These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the "Add-Ons" tab in the Product data box.', 'plogins-addons'); ?>
+                <?php esc_html_e('These options control how product add-ons look and behave across your whole store. To choose which options appear on a specific product, edit that product and open the "Add-Ons" tab in the Product data box.', 'aldono'); ?>
             </p>
 
             <div class="addons-cols">
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
 
-                <h2 class="addons-settings__section"><?php esc_html_e('Status', 'plogins-addons'); ?></h2>
+                <h2 class="addons-settings__section"><?php esc_html_e('Status', 'aldono'); ?></h2>
                 <p class="description addons-settings__section-intro">
-                    <?php esc_html_e('Switch the whole feature on or off without touching any product\'s configured options.', 'plogins-addons'); ?>
+                    <?php esc_html_e('Switch the whole feature on or off without touching any product\'s configured options.', 'aldono'); ?>
                 </p>
 
                 <table class="form-table" role="presentation">
                     <tbody>
                         <tr>
                             <th scope="row">
-                                <?php esc_html_e('Enable add-ons', 'plogins-addons'); ?>
-                                <?php InlineHelp::output('enabled', __('The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart, even if products still have add-ons configured. Turn it on once you are ready to go live.', 'plogins-addons')); ?>
+                                <?php esc_html_e('Enable add-ons', 'aldono'); ?>
+                                <?php InlineHelp::output('enabled', __('The master switch. When off, no add-on fields are shown on any product and no price changes are applied in the cart, even if products still have add-ons configured. Turn it on once you are ready to go live.', 'aldono')); ?>
                             </th>
                             <td>
                                 <label for="addons_enabled">
@@ -136,27 +136,27 @@ final class Settings implements HasHooks
                                         value="1"
                                         <?php checked((bool) ($settings['enabled'] ?? false), true); ?>
                                     />
-                                    <?php esc_html_e('Show per-product add-on fields on the product page and apply price deltas in the cart.', 'plogins-addons'); ?>
+                                    <?php esc_html_e('Show per-product add-on fields on the product page and apply price deltas in the cart.', 'aldono'); ?>
                                 </label>
                                 <p class="description">
-                                    <?php esc_html_e('Leave this on for normal operation. Switch it off to temporarily hide all add-ons without deleting any product settings.', 'plogins-addons'); ?>
+                                    <?php esc_html_e('Leave this on for normal operation. Switch it off to temporarily hide all add-ons without deleting any product settings.', 'aldono'); ?>
                                 </p>
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h2 class="addons-settings__section"><?php esc_html_e('On the product page', 'plogins-addons'); ?></h2>
+                <h2 class="addons-settings__section"><?php esc_html_e('On the product page', 'aldono'); ?></h2>
                 <p class="description addons-settings__section-intro">
-                    <?php esc_html_e('How the add-on group is labelled and styled where customers see it. These choices affect appearance only, not pricing or which options show.', 'plogins-addons'); ?>
+                    <?php esc_html_e('How the add-on group is labelled and styled where customers see it. These choices affect appearance only, not pricing or which options show.', 'aldono'); ?>
                 </p>
 
                 <table class="form-table" role="presentation">
                     <tbody>
                         <tr>
                             <th scope="row">
-                                <label for="addons_group_title"><?php esc_html_e('Group heading', 'plogins-addons'); ?></label>
-                                <?php InlineHelp::output('group_title', __('A short heading printed above the options on the product page, for example "Personalise your order" or "Extras". It helps customers understand that the fields are optional add-ons. Leave it empty to use the default heading, or switch the heading off below to show none at all.', 'plogins-addons')); ?>
+                                <label for="addons_group_title"><?php esc_html_e('Group heading', 'aldono'); ?></label>
+                                <?php InlineHelp::output('group_title', __('A short heading printed above the options on the product page, for example "Personalise your order" or "Extras". It helps customers understand that the fields are optional add-ons. Leave it empty to use the default heading, or switch the heading off below to show none at all.', 'aldono')); ?>
                             </th>
                             <td>
                                 <input
@@ -171,7 +171,7 @@ final class Settings implements HasHooks
                                     <?php
                                     printf(
                                         /* translators: %s: the default group heading in the site language, e.g. "Product options". */
-                                        esc_html__('Heading shown above the fields on the product page. Leave it empty to use the default, %s, translated with the rest of the site.', 'plogins-addons'),
+                                        esc_html__('Heading shown above the fields on the product page. Leave it empty to use the default, %s, translated with the rest of the site.', 'aldono'),
                                         '<code>' . esc_html((string) (Texts::defaults()['group_title'] ?? '')) . '</code>',
                                     );
                                     ?>
@@ -180,13 +180,13 @@ final class Settings implements HasHooks
                         </tr>
                         <tr>
                             <th scope="row">
-                                <?php esc_html_e('Display', 'plogins-addons'); ?>
-                                <?php InlineHelp::output('display', __('Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear, only the visual treatment.', 'plogins-addons')); ?>
+                                <?php esc_html_e('Display', 'aldono'); ?>
+                                <?php InlineHelp::output('display', __('Presentation choices that change how the add-ons look on the storefront. They do not affect pricing or which options appear, only the visual treatment.', 'aldono')); ?>
                             </th>
                             <td>
                                 <fieldset>
                                     <legend class="screen-reader-text">
-                                        <span><?php esc_html_e('Display', 'plogins-addons'); ?></span>
+                                        <span><?php esc_html_e('Display', 'aldono'); ?></span>
                                     </legend>
                                     <label for="addons_show_group_title">
                                         <input
@@ -196,10 +196,10 @@ final class Settings implements HasHooks
                                             value="1"
                                             <?php checked((bool) ($settings['show_group_title'] ?? false), true); ?>
                                         />
-                                        <?php esc_html_e('Show the heading above the options.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Show the heading above the options.', 'aldono'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Turn this off to print the options with no heading at all. The heading text above is kept, so you can bring it back later.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Turn this off to print the options with no heading at all. The heading text above is kept, so you can bring it back later.', 'aldono'); ?>
                                     </p>
                                     <br />
                                     <label for="addons_show_prices">
@@ -210,10 +210,10 @@ final class Settings implements HasHooks
                                             value="1"
                                             <?php checked((bool) ($settings['show_prices'] ?? false), true); ?>
                                         />
-                                        <?php esc_html_e('Show the price next to paid options.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Show the price next to paid options.', 'aldono'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Displays the extra cost in brackets, e.g. "Gift wrap (+$5.00)". Free options never show a price.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Displays the extra cost in brackets, e.g. "Gift wrap (+$5.00)". Free options never show a price.', 'aldono'); ?>
                                     </p>
                                     <br />
                                     <label for="addons_show_required">
@@ -224,10 +224,10 @@ final class Settings implements HasHooks
                                             value="1"
                                             <?php checked((bool) ($settings['show_required'] ?? false), true); ?>
                                         />
-                                        <?php esc_html_e('Mark required fields with an asterisk.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Mark required fields with an asterisk.', 'aldono'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Adds a red * after the label of any option a customer must complete before adding to cart. Required options are still enforced even with this off.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Adds a red * after the label of any option a customer must complete before adding to cart. Required options are still enforced even with this off.', 'aldono'); ?>
                                     </p>
                                     <br />
                                     <label for="addons_card_style">
@@ -238,10 +238,10 @@ final class Settings implements HasHooks
                                             value="1"
                                             <?php checked((bool) ($settings['card_style'] ?? false), true); ?>
                                         />
-                                        <?php esc_html_e('Wrap the options in a bordered card.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Wrap the options in a bordered card.', 'aldono'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Groups the options inside a subtle bordered box so they stand out from the rest of the product page. Turn off for a plain, inline layout that inherits your theme.', 'plogins-addons'); ?>
+                                        <?php esc_html_e('Groups the options inside a subtle bordered box so they stand out from the rest of the product page. Turn off for a plain, inline layout that inherits your theme.', 'aldono'); ?>
                                     </p>
                                 </fieldset>
                             </td>
@@ -250,8 +250,8 @@ final class Settings implements HasHooks
                 </table>
 
                 <p class="description addons-settings__next">
-                    <span class="addons-settings__next-label"><?php esc_html_e('Next step', 'plogins-addons'); ?></span>
-                    <?php esc_html_e('Define each product\'s add-ons in the product editor, under the "Add-Ons" tab in the Product data panel.', 'plogins-addons'); ?>
+                    <span class="addons-settings__next-label"><?php esc_html_e('Next step', 'aldono'); ?></span>
+                    <?php esc_html_e('Define each product\'s add-ons in the product editor, under the "Add-Ons" tab in the Product data panel.', 'aldono'); ?>
                 </p>
 
                 <?php submit_button(); ?>
