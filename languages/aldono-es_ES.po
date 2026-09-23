@@ -31,7 +31,7 @@ msgid ""
 "Let customers add paid or free options (text, checkbox, select) to products "
 "before adding to cart."
 msgstr ""
-"Permita que los clientes añadan opciones de pago o gratuitas (texto, casilla "
+"Permite que los clientes añadan opciones de pago o gratuitas (texto, casilla "
 "de verificación, selección) a los productos antes de añadirlos al carrito."
 
 #. Author of the plugin
@@ -68,7 +68,7 @@ msgid ""
 msgstr ""
 "Estas opciones controlan el aspecto y el comportamiento de los complementos "
 "de productos en toda la tienda. Para elegir qué opciones aparecen en un "
-"producto específico, edite ese producto y abra la pestaña \"Complementos\" "
+"producto específico, edita ese producto y abre la pestaña \"Complementos\" "
 "en el cuadro Datos del producto."
 
 #: src/Admin/Settings.php:106
@@ -80,7 +80,7 @@ msgid ""
 "Switch the whole feature on or off without touching any product's configured "
 "options."
 msgstr ""
-"Active o desactive toda la función sin tocar las opciones configuradas de "
+"Activa o desactiva toda la función sin tocar las opciones configuradas de "
 "ningún producto."
 
 #: src/Admin/Settings.php:115
@@ -96,22 +96,22 @@ msgstr ""
 "El interruptor principal. Cuando está desactivado, no se muestran campos de "
 "complementos en ningún producto y no se aplican cambios de precio en el "
 "carrito, aunque los productos sigan teniendo complementos configurados. "
-"Actívelo cuando la función deba estar disponible para los clientes."
+"Actívalo cuando la función deba estar disponible para los clientes."
 
 #: src/Admin/Settings.php:127
 msgid ""
 "Show per-product add-on fields on the product page and apply price deltas in "
 "the cart."
 msgstr ""
-"Muestre campos complementarios por producto en la página del producto y "
-"aplique los ajustes de precio en el carrito."
+"Muestra campos complementarios por producto en la página del producto y "
+"aplica los ajustes de precio en el carrito."
 
 #: src/Admin/Settings.php:130
 msgid ""
 "Leave this on for normal operation. Switch it off to temporarily hide all "
 "add-ons without deleting any product settings."
 msgstr ""
-"Déjelo activado para un funcionamiento normal. Desactívelo para ocultar "
+"Déjalo activado para un funcionamiento normal. Desactívalo para ocultar "
 "temporalmente todos los complementos sin eliminar ninguna configuración del "
 "producto."
 
@@ -140,7 +140,7 @@ msgid ""
 msgstr ""
 "Un título breve impreso encima de las opciones de la página del producto, "
 "por ejemplo \"Personaliza tu pedido\" o \"Extras\". Ayuda a los clientes a "
-"comprender que los campos son complementos opcionales. Borre el campo para "
+"comprender que los campos son complementos opcionales. Borra el campo para "
 "no mostrar ningún título."
 
 #: src/Admin/Settings.php:156
@@ -154,7 +154,7 @@ msgid ""
 "Default: %s."
 msgstr ""
 "Encabezado que se muestra encima de los campos en la página del producto. "
-"Déjelo vacío para ocultarlo. Valor predeterminado: %s."
+"Déjalo vacío para ocultarlo. Valor predeterminado: %s."
 
 #: src/Admin/Settings.php:171 src/Admin/Settings.php:177
 msgid "Display"
@@ -184,7 +184,7 @@ msgstr ""
 
 #: src/Admin/Settings.php:201
 msgid "Mark required fields with an asterisk."
-msgstr "Marque los campos obligatorios con un asterisco."
+msgstr "Marca los campos obligatorios con un asterisco."
 
 #: src/Admin/Settings.php:204
 msgid ""
@@ -206,8 +206,8 @@ msgid ""
 "your theme."
 msgstr ""
 "Agrupa las opciones dentro de un cuadro con un borde sutil para que se "
-"destaquen del resto de la página del producto. Desactívelo para obtener un "
-"diseño sencillo y en línea que herede su tema."
+"destaquen del resto de la página del producto. Desactívalo para obtener un "
+"diseño sencillo y en línea que herede tu tema."
 
 #: src/Admin/Settings.php:227
 msgid "Next step"
@@ -218,12 +218,12 @@ msgid ""
 "Define each product's add-ons in the product editor, under the \"Add-Ons\" "
 "tab in the Product data panel."
 msgstr ""
-"Defina los complementos de cada producto en el editor de productos, en la "
+"Define los complementos de cada producto en el editor de productos, en la "
 "pestaña \"Complementos\" en el panel de datos del producto."
 
 #: src/Service/AddOnsService.php:43
 msgid "Please complete the \"{label}\" option before adding to cart."
-msgstr "Complete la opción \"{label}\" antes de añadir al carrito."
+msgstr "Completa la opción \"{label}\" antes de añadir al carrito."
 
 #: src/Service/AddOnsService.php:44
 msgid "The option \"{label}\" must be at least {min} characters long."
@@ -253,9 +253,9 @@ msgid ""
 "line total when the option is chosen."
 msgstr ""
 "Cada fila a continuación se convierte en un campo que un cliente ve en esta "
-"página de producto. Utilice Texto para entrada de formato libre (como un "
+"página de producto. Utiliza Texto para entrada de formato libre (como un "
 "mensaje grabado), Casilla de verificación para un sí/no adicional o "
-"Seleccionar para obtener una lista de opciones. Cualquier precio que ingrese "
+"Seleccionar para obtener una lista de opciones. Cualquier precio que ingreses "
 "se añade al total de la línea cuando se elige la opción."
 
 #: templates/admin/product-data-panel.php:27
@@ -263,7 +263,7 @@ msgid ""
 "Define options customers can choose before adding this product to the cart. "
 "A positive price is added to the line total."
 msgstr ""
-"Defina las opciones que los clientes pueden elegir antes de añadir este "
+"Define las opciones que los clientes pueden elegir antes de añadir este "
 "producto al carrito. Se añade un precio positivo al total de la línea."
 
 #: templates/admin/product-data-panel.php:33
@@ -275,7 +275,7 @@ msgid ""
 "Add your first option to let customers personalise this product or pay for "
 "extras such as gift wrapping, engraving, or express handling."
 msgstr ""
-"Añade su primera opción para permitir que los clientes personalicen este "
+"Añade tu primera opción para permitir que los clientes personalicen este "
 "producto o paguen extras como envoltorio de regalo, grabado o manejo exprés."
 
 #: templates/admin/product-data-panel.php:58
@@ -356,7 +356,7 @@ msgstr "Eliminar"
 #: templates/admin/product-data-panel.php:77
 #: templates/admin/product-data-panel.php:122
 msgid "Select options, one per line: Label | price"
-msgstr "Seleccione opciones, una por línea: Etiqueta | precio"
+msgstr "Selecciona opciones, una por línea: Etiqueta | precio"
 
 #: templates/admin/product-data-panel.php:77
 #: templates/admin/product-data-panel.php:122
@@ -371,7 +371,7 @@ msgid ""
 "choice."
 msgstr ""
 "Solo se usa para el tipo „Selección”. Una opción por línea con el formato "
-"„Etiqueta | precio”, por ejemplo „Standard | 0” y „Premium | 9,99”. Omita el "
+"„Etiqueta | precio”, por ejemplo „Standard | 0” y „Premium | 9,99”. Omite el "
 "precio si la opción es gratuita."
 
 #: templates/admin/product-data-panel.php:97
