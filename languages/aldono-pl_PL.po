@@ -19,7 +19,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: aldono.php
 msgid "Plogins Add-Ons - Product Options for WooCommerce"
-msgstr ""
+msgstr "Plogins Add-Ons - Opcje produktu dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: aldono.php
@@ -187,7 +187,7 @@ msgid ""
 "\"Personalise your order\" or \"Extras\". It helps customers understand that "
 "the fields are optional add-ons. Leave it empty to use the default heading, "
 "or switch the heading off below to show none at all."
-msgstr ""
+msgstr "Krótki nagłówek wyświetlany nad opcjami na stronie produktu, na przykład \"Spersonalizuj zamówienie\" albo \"Dodatki\". Pomaga klientom zrozumieć, że pola są opcjonalnymi dodatkami. Zostaw puste, aby użyć domyślnego nagłówka, albo wyłącz nagłówek poniżej, żeby nie pokazywać żadnego."
 
 #. translators: %s: the default group heading in the site language, e.g. "Product options".
 #: src/Admin/Settings.php:174
@@ -195,7 +195,7 @@ msgstr ""
 msgid ""
 "Heading shown above the fields on the product page. Leave it empty to use "
 "the default, %s, translated with the rest of the site."
-msgstr ""
+msgstr "Nagłówek pokazywany nad polami na stronie produktu. Zostaw puste, aby użyć domyślnego, %s, tłumaczonego razem z resztą witryny."
 
 #: src/Admin/Settings.php:183 src/Admin/Settings.php:189
 msgid "Display"
@@ -212,13 +212,13 @@ msgstr ""
 
 #: src/Admin/Settings.php:199
 msgid "Show the heading above the options."
-msgstr ""
+msgstr "Pokaż nagłówek nad opcjami."
 
 #: src/Admin/Settings.php:202
 msgid ""
 "Turn this off to print the options with no heading at all. The heading text "
 "above is kept, so you can bring it back later."
-msgstr ""
+msgstr "Wyłącz to, aby wyświetlić opcje zupełnie bez nagłówka. Tekst nagłówka powyżej zostaje zapisany, więc możesz go później przywrócić."
 
 #: src/Admin/Settings.php:213
 msgid "Show the price next to paid options."
@@ -285,7 +285,7 @@ msgstr "Opcja „{label}” nie może przekraczać {max} znaków."
 
 #: src/Service/Texts.php:36
 msgid "Product options"
-msgstr ""
+msgstr "Opcje produktu"
 
 #: templates/add-on-fields.php:82 templates/add-on-fields.php:104
 msgid "required"
