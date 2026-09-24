@@ -334,12 +334,18 @@ final class ProductAddOnsEngine
     {
         $key = $this->fieldPrefix . $index;
 
+        // WooCommerce's add-to-cart form is public and carries no nonce, so there is
+        // none to verify. This reads only the shopper's own add-on choice, and it is
+        // sanitized before use.
+        // phpcs:disable WordPress.Security.NonceVerification.Recommended
         if (! isset($_REQUEST[$key])) {
             return '';
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- WooCommerce verifies the add-to-cart nonce upstream; this only reads the posted add-on value, which is sanitized here.
-        return sanitize_text_field((string) wp_unslash($_REQUEST[$key]));
+        $value = sanitize_text_field((string) wp_unslash($_REQUEST[$key]));
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended
+
+        return $value;
     }
 
     /**

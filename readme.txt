@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.2 =
+* Code comment correction only: the add-on value reader said WooCommerce checks a nonce on add-to-cart. It does not, the form is public, so the comment now says why no nonce is verified. No behaviour change.
 
 = 1.1.1 =
 * The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.
