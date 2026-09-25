@@ -111,16 +111,16 @@ final class ProductData implements HasHooks
      */
     private function collectDefinitions(): array
     {
-        // Nonce verified in save(); this only reads the already-validated request.
-        // Each scalar field is sanitised individually below (label, type, price,
-        // options), so the raw array is unslashed here without a blanket sanitiser.
+        // Nonce and capability verified in save(), the only caller.
         // phpcs:disable WordPress.Security.NonceVerification.Missing
         if (! isset($_POST['addons_def']) || ! is_array($_POST['addons_def'])) {
             return [];
         }
 
-        // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Per-field sanitisation happens below in the loop.
-        $rows = wp_unslash($_POST['addons_def']);
+        // Every value is sanitised on read. sanitize_textarea_field keeps the line
+        // breaks the choices textarea needs; each field is then validated and cast
+        // to its own type in the loop below.
+        $rows = map_deep(wp_unslash($_POST['addons_def']), 'sanitize_textarea_field');
         // phpcs:enable WordPress.Security.NonceVerification.Missing
 
         if (! is_array($rows)) {
@@ -177,7 +177,7 @@ final class ProductData implements HasHooks
              * example conditional-logic rules) without forking the free editor.
              *
              * @param array<string, mixed> $definition Sanitised definition.
-             * @param array<string, mixed> $row        Raw posted row.
+             * @param array<string, mixed> $row        Posted row, sanitised but not yet validated.
              */
             $definition = apply_filters('addons_sanitize_definition', $definition, $row);
 

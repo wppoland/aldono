@@ -43,6 +43,8 @@ final class AddOnsService implements HasHooks
                 'required_error'  => __('Please complete the "{label}" option before adding to cart.', 'aldono'),
                 'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'aldono'),
                 'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'aldono'),
+                'invalid_error'   => __('The choice for "{label}" is not one of its options.', 'aldono'),
+                'expired_error'   => __('This page has expired. Reload it and add the product again.', 'aldono'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
             settings: fn (): array => $this->settings(),

@@ -26,6 +26,10 @@ final class ProductAddOnsEngine
 {
     private const SUPPORTED_TYPES = ['text', 'checkbox', 'select'];
 
+    private const NONCE_ACTION = 'addons_add_to_cart';
+
+    private const NONCE_FIELD = 'addons_nonce';
+
     /**
      * @param \Closure(): bool $isEnabled
      * @param \Closure(): array<string, mixed> $settings Resolved settings.
@@ -74,6 +78,8 @@ final class ProductAddOnsEngine
             return;
         }
 
+        wp_nonce_field(self::NONCE_ACTION, self::NONCE_FIELD, false);
+
         ($this->renderTemplate)($this->fieldsTemplate, [
             'product' => $product,
             'add_ons' => $addOns,
@@ -100,8 +106,31 @@ final class ProductAddOnsEngine
             return true;
         }
 
-        foreach ($this->getAddOns($product) as $index => $addOn) {
+        $addOns = $this->getAddOns($product);
+
+        // A form rendered with the add-on fields carries a nonce. One that is
+        // present but no longer valid (an old cached page) is refused; without a
+        // nonce no add-on input is read at all, see postedValue().
+        if ($addOns !== [] && $this->nonceState() === 'invalid') {
+            wc_add_notice($this->message('expired_error'), 'error');
+
+            return false;
+        }
+
+        foreach ($addOns as $index => $addOn) {
             $value = $this->postedValue($index);
+
+            if ($value !== '' && ! $this->isAllowedValue($addOn, $value)) {
+                wc_add_notice(
+                    \WPPoland\StorefrontKit\Support\Formatter::interpolate(
+                        $this->message('invalid_error'),
+                        ['label' => $addOn['label']],
+                    ),
+                    'error',
+                );
+
+                return false;
+            }
 
             if ($addOn['required'] && $value === '') {
                 wc_add_notice(
@@ -175,7 +204,7 @@ final class ProductAddOnsEngine
         foreach ($this->getAddOns($product) as $index => $addOn) {
             $value = $this->postedValue($index);
 
-            if ($value === '') {
+            if ($value === '' || ! $this->isAllowedValue($addOn, $value)) {
                 continue;
             }
 
@@ -330,13 +359,44 @@ final class ProductAddOnsEngine
         return $addOn['price'];
     }
 
+    /**
+     * A select must post one of its own choices and a checkbox its own label;
+     * anything else did not come from the rendered form.
+     *
+     * @param array{label: string, type: string, options: array<string, float>} $addOn
+     */
+    private function isAllowedValue(array $addOn, string $value): bool
+    {
+        return match ($addOn['type']) {
+            'select' => isset($addOn['options'][$value]),
+            'checkbox' => $value === $addOn['label'],
+            default => true,
+        };
+    }
+
+    /**
+     * @return 'absent'|'valid'|'invalid'
+     */
+    private function nonceState(): string
+    {
+        if (! isset($_REQUEST[self::NONCE_FIELD])) {
+            return 'absent';
+        }
+
+        $nonce = sanitize_text_field(wp_unslash((string) $_REQUEST[self::NONCE_FIELD]));
+
+        return wp_verify_nonce($nonce, self::NONCE_ACTION) ? 'valid' : 'invalid';
+    }
+
     private function postedValue(int $index): string
     {
+        if ($this->nonceState() !== 'valid') {
+            return '';
+        }
+
         $key = $this->fieldPrefix . $index;
 
-        // WooCommerce's add-to-cart form is public and carries no nonce, so there is
-        // none to verify. This reads only the shopper's own add-on choice, and it is
-        // sanitized before use.
+        // Nonce verified by nonceState() just above.
         // phpcs:disable WordPress.Security.NonceVerification.Recommended
         if (! isset($_REQUEST[$key])) {
             return '';

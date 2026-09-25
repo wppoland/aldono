@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -97,6 +97,11 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.3 =
+* Security: the add-on fields on the product page now carry a nonce, and no add-on choice is read from the request unless it verifies. A page cached past the nonce lifetime asks the shopper to reload.
+* A select choice must be one of the options defined for it and a checkbox must post its own value; anything else is refused at add to cart.
+* The option definitions posted from the product editor are sanitised as soon as they are read, before any field is validated.
 
 = 1.1.2 =
 * Code comment correction only: the add-on value reader said WooCommerce checks a nonce on add-to-cart. It does not, the form is public, so the comment now says why no nonce is verified. No behaviour change.

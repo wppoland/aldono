@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Add-Ons for WooCommerce 0.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aldono\n"
-"POT-Creation-Date: 2026-09-08T13:45:21+00:00\n"
+"POT-Creation-Date: 2026-09-25T22:05:25+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -17,12 +17,14 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: aldono.php
-msgid "Plogins Add-Ons - Product Options for WooCommerce"
-msgstr ""
+#, fuzzy
+msgid "Aldono - Product Options for WooCommerce"
+msgstr "Complementos: opciones de producto para WooCommerce"
 
 #. Plugin URI of the plugin
 #: aldono.php
-msgid "https://plogins.com/aldono/"
+#, fuzzy
+msgid "https://plogins.com/plogins-addons/"
 msgstr "https://plogins.com/aldono/"
 
 #. Description of the plugin
@@ -45,8 +47,8 @@ msgid "https://wppoland.com"
 msgstr "https://wppoland.com"
 
 #: aldono.php:48
-msgid ""
-"Add-Ons, Product Options for WooCommerce requires WooCommerce to be active."
+#, fuzzy
+msgid "Aldono requires WooCommerce to be installed and activated."
 msgstr ""
 "Complementos: las opciones de producto para WooCommerce requieren que "
 "WooCommerce esté activo."
@@ -60,56 +62,56 @@ msgstr "Más información"
 msgid "Add-Ons"
 msgstr "Complementos"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Wkrótce"
 msgstr "Próximamente"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Próximamente"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "desde %1$s%2$d/año"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Mejora a PRO"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Powiadom mnie"
 msgstr "Avísame"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Avísame"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Permiso denegado."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Haz más con %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Descartar este aviso"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Desbloquea todas las funciones PRO"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "una licencia, todas las funciones PRO"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Lo que añade %s"
@@ -289,6 +291,14 @@ msgstr "La opción \"{label}\" debe tener al menos {min} caracteres."
 msgid "The option \"{label}\" cannot exceed {max} characters."
 msgstr "La opción \"{label}\" no puede exceder {max} caracteres."
 
+#: src/Service/AddOnsService.php:46
+msgid "The choice for \"{label}\" is not one of its options."
+msgstr ""
+
+#: src/Service/AddOnsService.php:47
+msgid "This page has expired. Reload it and add the product again."
+msgstr ""
+
 #: src/Service/Texts.php:36
 msgid "Product options"
 msgstr ""
@@ -437,9 +447,6 @@ msgstr ""
 #: templates/admin/product-data-panel.php:97
 msgid "Add option"
 msgstr "Añadir opción"
-
-#~ msgid "Add-Ons, Product Options for WooCommerce"
-#~ msgstr "Complementos: opciones de producto para WooCommerce"
 
 #~ msgid ""
 #~ "A short heading printed above the options on the product page, for "

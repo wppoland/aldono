@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Add-Ons for WooCommerce 0.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aldono\n"
-"POT-Creation-Date: 2026-09-08T13:45:21+00:00\n"
+"POT-Creation-Date: 2026-09-25T22:05:25+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -18,12 +18,14 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: aldono.php
-msgid "Plogins Add-Ons - Product Options for WooCommerce"
-msgstr "Plogins Add-Ons - Opcje produktu dla WooCommerce"
+#, fuzzy
+msgid "Aldono - Product Options for WooCommerce"
+msgstr "Add-Ons, opcje produktu dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: aldono.php
-msgid "https://plogins.com/aldono/"
+#, fuzzy
+msgid "https://plogins.com/plogins-addons/"
 msgstr "https://plogins.com/aldono/"
 
 #. Description of the plugin
@@ -47,8 +49,8 @@ msgid "https://wppoland.com"
 msgstr "https://wppoland.com"
 
 #: aldono.php:48
-msgid ""
-"Add-Ons, Product Options for WooCommerce requires WooCommerce to be active."
+#, fuzzy
+msgid "Aldono requires WooCommerce to be installed and activated."
 msgstr "Add-Ons, opcje produktu dla WooCommerce wymaga aktywnego WooCommerce."
 
 #: src/Admin/InlineHelp.php:34
@@ -60,56 +62,56 @@ msgstr "Więcej informacji"
 msgid "Add-Ons"
 msgstr "Add-Ons"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Wkrótce"
 msgstr "Wkrótce"
 
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Wkrótce"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "od %1$s%2$d/rok"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Przejdź na PRO"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Powiadom mnie"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Brak uprawnień."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Zrób więcej dzięki %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Odrzuć to powiadomienie"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Odblokuj wszystkie funkcje PRO"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "jedna licencja, wszystkie funkcje PRO"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Co dodaje %s"
@@ -187,7 +189,11 @@ msgid ""
 "\"Personalise your order\" or \"Extras\". It helps customers understand that "
 "the fields are optional add-ons. Leave it empty to use the default heading, "
 "or switch the heading off below to show none at all."
-msgstr "Krótki nagłówek wyświetlany nad opcjami na stronie produktu, na przykład \"Spersonalizuj zamówienie\" albo \"Dodatki\". Pomaga klientom zrozumieć, że pola są opcjonalnymi dodatkami. Zostaw puste, aby użyć domyślnego nagłówka, albo wyłącz nagłówek poniżej, żeby nie pokazywać żadnego."
+msgstr ""
+"Krótki nagłówek wyświetlany nad opcjami na stronie produktu, na przykład "
+"\"Spersonalizuj zamówienie\" albo \"Dodatki\". Pomaga klientom zrozumieć, że "
+"pola są opcjonalnymi dodatkami. Zostaw puste, aby użyć domyślnego nagłówka, "
+"albo wyłącz nagłówek poniżej, żeby nie pokazywać żadnego."
 
 #. translators: %s: the default group heading in the site language, e.g. "Product options".
 #: src/Admin/Settings.php:174
@@ -195,7 +201,9 @@ msgstr "Krótki nagłówek wyświetlany nad opcjami na stronie produktu, na przy
 msgid ""
 "Heading shown above the fields on the product page. Leave it empty to use "
 "the default, %s, translated with the rest of the site."
-msgstr "Nagłówek pokazywany nad polami na stronie produktu. Zostaw puste, aby użyć domyślnego, %s, tłumaczonego razem z resztą witryny."
+msgstr ""
+"Nagłówek pokazywany nad polami na stronie produktu. Zostaw puste, aby użyć "
+"domyślnego, %s, tłumaczonego razem z resztą witryny."
 
 #: src/Admin/Settings.php:183 src/Admin/Settings.php:189
 msgid "Display"
@@ -218,7 +226,9 @@ msgstr "Pokaż nagłówek nad opcjami."
 msgid ""
 "Turn this off to print the options with no heading at all. The heading text "
 "above is kept, so you can bring it back later."
-msgstr "Wyłącz to, aby wyświetlić opcje zupełnie bez nagłówka. Tekst nagłówka powyżej zostaje zapisany, więc możesz go później przywrócić."
+msgstr ""
+"Wyłącz to, aby wyświetlić opcje zupełnie bez nagłówka. Tekst nagłówka "
+"powyżej zostaje zapisany, więc możesz go później przywrócić."
 
 #: src/Admin/Settings.php:213
 msgid "Show the price next to paid options."
@@ -282,6 +292,14 @@ msgstr "Opcja „{label}” musi mieć co najmniej {min} znaków."
 #: src/Service/AddOnsService.php:45
 msgid "The option \"{label}\" cannot exceed {max} characters."
 msgstr "Opcja „{label}” nie może przekraczać {max} znaków."
+
+#: src/Service/AddOnsService.php:46
+msgid "The choice for \"{label}\" is not one of its options."
+msgstr ""
+
+#: src/Service/AddOnsService.php:47
+msgid "This page has expired. Reload it and add the product again."
+msgstr ""
 
 #: src/Service/Texts.php:36
 msgid "Product options"
@@ -433,8 +451,8 @@ msgstr ""
 msgid "Add option"
 msgstr "Dodaj opcję"
 
-#~ msgid "Add-Ons, Product Options for WooCommerce"
-#~ msgstr "Add-Ons, opcje produktu dla WooCommerce"
+#~ msgid "Plogins Add-Ons - Product Options for WooCommerce"
+#~ msgstr "Plogins Add-Ons - Opcje produktu dla WooCommerce"
 
 #~ msgid ""
 #~ "A short heading printed above the options on the product page, for "
