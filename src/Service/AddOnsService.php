@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
 /**
  * Thin adapter over the storefront-kit {@see ProductAddOnsEngine}.
  *
- * Supplies this plugin's text-domain ('plogins-addons'), option storage, the per-product
+ * Supplies this plugin's text-domain ('aldono'), option storage, the per-product
  * meta read closure and the front-end fields template. All add-on orchestration
  * (render under the form, validation, cart capture, price adjustment, cart/order
  * display) lives in the namespace-neutral engine; this class only wires
@@ -40,9 +40,11 @@ final class AddOnsService implements HasHooks
             fieldsTemplate: 'add-on-fields',
             labels: [
                 'group_title'     => $this->groupTitle(),
-                'required_error'  => __('Please complete the "{label}" option before adding to cart.', 'plogins-addons'),
-                'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'plogins-addons'),
-                'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'plogins-addons'),
+                'required_error'  => __('Please complete the "{label}" option before adding to cart.', 'aldono'),
+                'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'aldono'),
+                'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'aldono'),
+                'invalid_error'   => __('The choice for "{label}" is not one of its options.', 'aldono'),
+                'expired_error'   => __('This page has expired. Reload it and add the product again.', 'aldono'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
             settings: fn (): array => $this->settings(),
@@ -132,12 +134,19 @@ final class AddOnsService implements HasHooks
     }
 
     /**
-     * Heading rendered above the add-on fields. An empty value intentionally
-     * hides the heading; the packaged default supplies the initial text.
+     * Heading rendered above the add-on fields, or an empty string when the
+     * merchant switched the heading off. Where no heading was typed, the
+     * translated default from {@see Texts} is used.
      */
     private function groupTitle(): string
     {
-        return trim((string) ($this->settings()['group_title'] ?? ''));
+        $settings = $this->settings();
+
+        if (empty($settings['show_group_title'])) {
+            return '';
+        }
+
+        return trim((string) ($settings['group_title'] ?? ''));
     }
 
     /**
@@ -159,12 +168,35 @@ final class AddOnsService implements HasHooks
          * @param \WC_Product                     $product     Current product.
          */
         $filtered = apply_filters('addons_product_definitions', $definitions, $product);
+        $filtered = is_array($filtered) ? $filtered : $definitions;
 
-        return is_array($filtered) ? $filtered : $definitions;
+        // A select with no choices cannot be rendered, and the storefront
+        // template already skipped it. The validator read the same definitions
+        // and did not, so a row saved as required + select + no choices made the
+        // product permanently unbuyable: add-to-cart failed asking the shopper to
+        // complete a field that was never on the page. Dropping it here keeps the
+        // renderer and the validator reading one list, which is the point of this
+        // method being their single source.
+        return array_values(array_filter(
+            $filtered,
+            static function ($row): bool {
+                if (! is_array($row)) {
+                    return false;
+                }
+
+                return ($row['type'] ?? 'text') !== 'select'
+                    || (isset($row['options']) && is_array($row['options']) && $row['options'] !== []);
+            },
+        ));
     }
 
     /**
-     * Stored settings merged over packaged defaults.
+     * Stored settings merged over packaged defaults, resolved for RENDERING.
+     *
+     * {@see Texts::apply()} supplies the translated group heading when no
+     * merchant value exists. It runs here and not on the way into the option,
+     * because storing a resolved string would freeze one language into the
+     * database. The admin screen deliberately reads the raw values instead.
      *
      * @return array<string, mixed>
      */
@@ -179,7 +211,7 @@ final class AddOnsService implements HasHooks
         /** @var array<string, mixed> $defaults */
         $defaults = require ADDONS_DIR . 'config/defaults.php';
 
-        return array_merge($defaults, $stored);
+        return Texts::apply(array_merge($defaults, $stored));
     }
 
     /**

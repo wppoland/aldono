@@ -26,13 +26,13 @@ Dla każdego produktu definiujesz listę dodatków w edytorze produktów WooComm
 
 Definicje dodatków są przechowywane jako standardowa meta produktu, bez niestandardowych tabel w bazie danych, więc sama wtyczka pozostaje mała i szybka.
 
-Ustawienia znajdziesz w <strong>WooCommerce → Dodatki</strong>. Usunięcie wtyczki czyści jej własne opcje; definicje poszczególnych produktów są zachowywane jako meta produktu, więc ponowna instalacja je przywraca.
+Ustawienia znajdziesz w <strong>WooCommerce > Dodatki</strong>. Usunięcie wtyczki czyści jej własne opcje; definicje poszczególnych produktów są zachowywane jako meta produktu, więc ponowna instalacja je przywraca.
 
 Kod jest rozwijany otwarcie (open source) pod adresem https://github.com/wppoland/plogins-addons, to właśnie tam zgłosisz błąd lub zaproponujesz typ pola, który chcesz zobaczyć.
 
 == Installation ==
 
-1. Wgraj wtyczkę do `/wp-content/plugins/plogins-addons` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Wgraj wtyczkę do `/wp-content/plugins/plogins-addons` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być aktywne.
 3. Edytuj produkt, otwórz zakładkę <strong>Dodatki</strong> w panelu Dane produktu i dodaj swoje opcje.
 
