@@ -17,15 +17,13 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: aldono.php
-#, fuzzy
 msgid "Aldono - Product Options for WooCommerce"
-msgstr "Complementos: opciones de producto para WooCommerce"
+msgstr "Aldono - opciones de producto para WooCommerce"
 
 #. Plugin URI of the plugin
 #: aldono.php
-#, fuzzy
 msgid "https://plogins.com/plogins-addons/"
-msgstr "https://plogins.com/aldono/"
+msgstr ""
 
 #. Description of the plugin
 #: aldono.php
@@ -44,14 +42,11 @@ msgstr "WPPoland.com"
 #. Author URI of the plugin
 #: aldono.php
 msgid "https://wppoland.com"
-msgstr "https://wppoland.com"
+msgstr ""
 
 #: aldono.php:48
-#, fuzzy
 msgid "Aldono requires WooCommerce to be installed and activated."
-msgstr ""
-"Complementos: las opciones de producto para WooCommerce requieren que "
-"WooCommerce esté activo."
+msgstr "Aldono requiere que WooCommerce esté instalado y activado."
 
 #: src/Admin/InlineHelp.php:34
 msgid "More information"

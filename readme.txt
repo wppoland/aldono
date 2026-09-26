@@ -99,7 +99,7 @@ Aldono is fully translatable and ships the `aldono.pot` template. Translations a
 == Changelog ==
 
 = 1.1.3 =
-* Security: the add-on fields on the product page now carry a nonce, and no add-on choice is read from the request unless it verifies. A page cached past the nonce lifetime asks the shopper to reload.
+* Security (low): the add-on fields on the product page now carry a nonce, and no add-on choice is read from the request unless it verifies. A page cached past the nonce lifetime asks the shopper to reload.
 * A select choice must be one of the options defined for it and a checkbox must post its own value; anything else is refused at add to cart.
 * The option definitions posted from the product editor are sanitised as soon as they are read, before any field is validated.
 
@@ -159,3 +159,8 @@ Aldono is fully translatable and ships the `aldono.pot` template. Translations a
 
 = 0.1.0 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 1.1.3 =
+Security release. Default installations are exposed only to forged add-to-cart requests carrying add-on values. Update, nothing else to do.
