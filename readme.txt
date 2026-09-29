@@ -100,6 +100,7 @@ Aldono is fully translatable and ships the `aldono.pot` template. Translations a
 == Changelog ==
 
 = 1.2.0 =
+* The upgrade notice no longer lists per-character text pricing, which Aldono Pro does not ship.
 * New field types: Radio (a choice list with a price per choice, like Select), Textarea (multi-line text that keeps its line breaks, with the same minimum and maximum length as Text), Number (must be numeric, adds the row price when filled) and Date (the browser's date picker, must be a real date).
 * A number or date that does not parse is refused at add to cart with its own message, and a radio choice that is not one of its options is refused like a select.
 * The choices box in the product editor shows only for Select and Radio, and the character limits only for Text and Textarea.

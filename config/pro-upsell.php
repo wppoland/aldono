@@ -48,9 +48,5 @@ return [
             'en' => ['title' => 'Per-option inventory', 'desc' => 'Stock limits for individual add-ons, with sold-out hiding and order-complete deduction.'],
             'pl' => ['title' => 'Magazyn per opcja', 'desc' => 'Limit dostępności dla pojedynczego add-onu z ukrywaniem wyprzedanych opcji.'],
         ],
-        [
-            'en' => ['title' => 'Per-character text pricing', 'desc' => 'Charge text personalisation by typed character, with optional space exclusion.'],
-            'pl' => ['title' => 'Cena tekstu za znak', 'desc' => 'Doliczaj opłatę za wpisany tekst personalizacji, z opcją nieuwzględniania spacji.'],
-        ],
     ],
 ];
