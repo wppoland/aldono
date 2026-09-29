@@ -21,7 +21,7 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
     <div class="options_group">
         <p class="form-field">
             <label><?php esc_html_e('Product add-ons', 'aldono'); ?>
-                <?php InlineHelp::output('panel-intro', __('Each row below becomes one field a customer sees on this product page. Use Text for free-form input (like an engraving message), Checkbox for a yes/no extra, or Select for a list of choices. Any price you enter is added to the line total when the option is chosen.', 'aldono')); ?>
+                <?php InlineHelp::output('panel-intro', __('Each row below becomes one field a customer sees on this product page. Use Text or Textarea for free-form input (like an engraving message), Number for a quantity or size, Date for a delivery or event date, Checkbox for a yes/no extra, or Select or Radio for a list of choices. Any price you enter is added to the line total when the option is chosen.', 'aldono')); ?>
             </label>
             <span class="description">
                 <?php esc_html_e('Define options customers can choose before adding this product to the cart. A positive price is added to the line total.', 'aldono'); ?>
@@ -61,9 +61,13 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                             <option value="text" <?php selected($addons_type, 'text'); ?>><?php esc_html_e('Text', 'aldono'); ?></option>
                             <option value="checkbox" <?php selected($addons_type, 'checkbox'); ?>><?php esc_html_e('Checkbox', 'aldono'); ?></option>
                             <option value="select" <?php selected($addons_type, 'select'); ?>><?php esc_html_e('Select', 'aldono'); ?></option>
+                            <option value="radio" <?php selected($addons_type, 'radio'); ?>><?php esc_html_e('Radio', 'aldono'); ?></option>
+                            <option value="textarea" <?php selected($addons_type, 'textarea'); ?>><?php esc_html_e('Textarea', 'aldono'); ?></option>
+                            <option value="number" <?php selected($addons_type, 'number'); ?>><?php esc_html_e('Number', 'aldono'); ?></option>
+                            <option value="date" <?php selected($addons_type, 'date'); ?>><?php esc_html_e('Date', 'aldono'); ?></option>
                         </select>
                         <input type="text" inputmode="decimal" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][price]" placeholder="<?php esc_attr_e('Price', 'aldono'); ?>" value="<?php echo esc_attr($addons_price); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Extra price added when chosen', 'aldono'); ?>" />
-                        <span class="addons-char-settings" data-addons-char-settings <?php echo $addons_type === 'text' ? '' : 'style="display:none;"'; ?>>
+                        <span class="addons-char-settings" data-addons-char-settings <?php echo in_array($addons_type, array('text', 'textarea'), true) ? '' : 'style="display:none;"'; ?>>
                             <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][min_chars]" placeholder="<?php esc_attr_e('Min chars', 'aldono'); ?>" value="<?php echo esc_attr($addons_min_chars); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Minimum character length', 'aldono'); ?>" />
                             <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][max_chars]" placeholder="<?php esc_attr_e('Max chars', 'aldono'); ?>" value="<?php echo esc_attr($addons_max_chars); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Maximum character length', 'aldono'); ?>" />
                         </span>
@@ -73,9 +77,9 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         </label>
                         <button type="button" class="button addons-admin-remove" data-addons-remove><?php esc_html_e('Remove', 'aldono'); ?></button>
                     </p>
-                    <p class="form-field">
-                        <textarea name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][options]" rows="3" placeholder="<?php esc_attr_e('Select options, one per line: Label | price', 'aldono'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select type', 'aldono'); ?>"><?php echo esc_textarea($addons_options); ?></textarea>
-                        <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" type. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'aldono'); ?></span>
+                    <p class="form-field" data-addons-options <?php echo in_array($addons_type, array('select', 'radio'), true) ? '' : 'style="display:none;"'; ?>>
+                        <textarea name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][options]" rows="3" placeholder="<?php esc_attr_e('Choices, one per line: Label | price', 'aldono'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select and Radio types', 'aldono'); ?>"><?php echo esc_textarea($addons_options); ?></textarea>
+                        <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" and "Radio" types. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'aldono'); ?></span>
                     </p>
                     <?php
                     /**
@@ -106,6 +110,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         <option value="text"><?php esc_html_e('Text', 'aldono'); ?></option>
                         <option value="checkbox"><?php esc_html_e('Checkbox', 'aldono'); ?></option>
                         <option value="select"><?php esc_html_e('Select', 'aldono'); ?></option>
+                        <option value="radio"><?php esc_html_e('Radio', 'aldono'); ?></option>
+                        <option value="textarea"><?php esc_html_e('Textarea', 'aldono'); ?></option>
+                        <option value="number"><?php esc_html_e('Number', 'aldono'); ?></option>
+                        <option value="date"><?php esc_html_e('Date', 'aldono'); ?></option>
                     </select>
                     <input type="text" inputmode="decimal" name="addons_def[__INDEX__][price]" placeholder="<?php esc_attr_e('Price', 'aldono'); ?>" value="" style="width:6em;" aria-label="<?php esc_attr_e('Extra price added when chosen', 'aldono'); ?>" />
                     <span class="addons-char-settings" data-addons-char-settings>
@@ -118,9 +126,9 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                     </label>
                     <button type="button" class="button addons-admin-remove" data-addons-remove><?php esc_html_e('Remove', 'aldono'); ?></button>
                 </p>
-                <p class="form-field">
-                    <textarea name="addons_def[__INDEX__][options]" rows="3" placeholder="<?php esc_attr_e('Select options, one per line: Label | price', 'aldono'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select type', 'aldono'); ?>"></textarea>
-                    <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" type. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'aldono'); ?></span>
+                <p class="form-field" data-addons-options style="display:none;">
+                    <textarea name="addons_def[__INDEX__][options]" rows="3" placeholder="<?php esc_attr_e('Choices, one per line: Label | price', 'aldono'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select and Radio types', 'aldono'); ?>"></textarea>
+                    <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" and "Radio" types. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'aldono'); ?></span>
                 </p>
                 <?php
                 /**

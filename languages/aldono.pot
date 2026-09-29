@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Aldono - Product Options for WooCommerce 1.1.3\n"
+"Project-Id-Version: Aldono - Product Options for WooCommerce 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aldono\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-25T22:05:25+00:00\n"
+"POT-Creation-Date: 2026-09-29T09:16:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: aldono\n"
@@ -54,10 +54,6 @@ msgid "Add-Ons"
 msgstr ""
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr ""
 
@@ -69,10 +65,6 @@ msgstr ""
 
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
-msgstr ""
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
 msgstr ""
 
 #: src/Admin/ProUpsell.php:101
@@ -223,6 +215,14 @@ msgid "The choice for \"{label}\" is not one of its options."
 msgstr ""
 
 #: src/Service/AddOnsService.php:47
+msgid "The option \"{label}\" must be a number."
+msgstr ""
+
+#: src/Service/AddOnsService.php:48
+msgid "The option \"{label}\" must be a valid date."
+msgstr ""
+
+#: src/Service/AddOnsService.php:49
 msgid "This page has expired. Reload it and add the product again."
 msgstr ""
 
@@ -230,12 +230,11 @@ msgstr ""
 msgid "Product options"
 msgstr ""
 
-#: templates/add-on-fields.php:82
-#: templates/add-on-fields.php:104
+#: templates/add-on-fields.php:68
 msgid "required"
 msgstr ""
 
-#: templates/add-on-fields.php:89
+#: templates/add-on-fields.php:124
 msgid "- Select -"
 msgstr ""
 
@@ -244,7 +243,7 @@ msgid "Product add-ons"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:24
-msgid "Each row below becomes one field a customer sees on this product page. Use Text for free-form input (like an engraving message), Checkbox for a yes/no extra, or Select for a list of choices. Any price you enter is added to the line total when the option is chosen."
+msgid "Each row below becomes one field a customer sees on this product page. Use Text or Textarea for free-form input (like an engraving message), Number for a quantity or size, Date for a delivery or event date, Checkbox for a yes/no extra, or Select or Radio for a list of choices. Any price you enter is added to the line total when the option is chosen."
 msgstr ""
 
 #: templates/admin/product-data-panel.php:27
@@ -260,95 +259,115 @@ msgid "Add your first option to let customers personalise this product or pay fo
 msgstr ""
 
 #: templates/admin/product-data-panel.php:58
-#: templates/admin/product-data-panel.php:103
+#: templates/admin/product-data-panel.php:107
 msgid "Option"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:104
+#: templates/admin/product-data-panel.php:108
 msgid "Label (e.g. Gift wrap)"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:104
+#: templates/admin/product-data-panel.php:108
 msgid "Option label"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:60
-#: templates/admin/product-data-panel.php:105
+#: templates/admin/product-data-panel.php:109
 msgid "Option type"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:61
-#: templates/admin/product-data-panel.php:106
+#: templates/admin/product-data-panel.php:110
 msgid "Text"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:62
-#: templates/admin/product-data-panel.php:107
+#: templates/admin/product-data-panel.php:111
 msgid "Checkbox"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:63
-#: templates/admin/product-data-panel.php:108
+#: templates/admin/product-data-panel.php:112
 msgid "Select"
 msgstr ""
 
+#: templates/admin/product-data-panel.php:64
+#: templates/admin/product-data-panel.php:113
+msgid "Radio"
+msgstr ""
+
 #: templates/admin/product-data-panel.php:65
-#: templates/admin/product-data-panel.php:110
+#: templates/admin/product-data-panel.php:114
+msgid "Textarea"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:66
+#: templates/admin/product-data-panel.php:115
+msgid "Number"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:67
+#: templates/admin/product-data-panel.php:116
+msgid "Date"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:69
+#: templates/admin/product-data-panel.php:118
 msgid "Price"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:65
-#: templates/admin/product-data-panel.php:110
+#: templates/admin/product-data-panel.php:69
+#: templates/admin/product-data-panel.php:118
 msgid "Extra price added when chosen"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:67
-#: templates/admin/product-data-panel.php:112
+#: templates/admin/product-data-panel.php:71
+#: templates/admin/product-data-panel.php:120
 msgid "Min chars"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:67
-#: templates/admin/product-data-panel.php:112
+#: templates/admin/product-data-panel.php:71
+#: templates/admin/product-data-panel.php:120
 msgid "Minimum character length"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:68
-#: templates/admin/product-data-panel.php:113
+#: templates/admin/product-data-panel.php:72
+#: templates/admin/product-data-panel.php:121
 msgid "Max chars"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:68
-#: templates/admin/product-data-panel.php:113
+#: templates/admin/product-data-panel.php:72
+#: templates/admin/product-data-panel.php:121
 msgid "Maximum character length"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:72
-#: templates/admin/product-data-panel.php:117
+#: templates/admin/product-data-panel.php:76
+#: templates/admin/product-data-panel.php:125
 msgid "Required"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:74
-#: templates/admin/product-data-panel.php:119
+#: templates/admin/product-data-panel.php:78
+#: templates/admin/product-data-panel.php:127
 msgid "Remove"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:77
-#: templates/admin/product-data-panel.php:122
-msgid "Select options, one per line: Label | price"
+#: templates/admin/product-data-panel.php:81
+#: templates/admin/product-data-panel.php:130
+msgid "Choices, one per line: Label | price"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:77
-#: templates/admin/product-data-panel.php:122
-msgid "Choices for the Select type"
+#: templates/admin/product-data-panel.php:81
+#: templates/admin/product-data-panel.php:130
+msgid "Choices for the Select and Radio types"
 msgstr ""
 
-#: templates/admin/product-data-panel.php:78
-#: templates/admin/product-data-panel.php:123
-msgid "Only used for the \"Select\" type. One choice per line as \"Label | price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free choice."
+#: templates/admin/product-data-panel.php:82
+#: templates/admin/product-data-panel.php:131
+msgid "Only used for the \"Select\" and \"Radio\" types. One choice per line as \"Label | price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free choice."
 msgstr ""
 
-#: templates/admin/product-data-panel.php:97
+#: templates/admin/product-data-panel.php:101
 msgid "Add option"
 msgstr ""

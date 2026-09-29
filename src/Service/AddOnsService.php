@@ -44,6 +44,8 @@ final class AddOnsService implements HasHooks
                 'min_chars_error' => __('The option "{label}" must be at least {min} characters long.', 'aldono'),
                 'max_chars_error' => __('The option "{label}" cannot exceed {max} characters.', 'aldono'),
                 'invalid_error'   => __('The choice for "{label}" is not one of its options.', 'aldono'),
+                'number_error'    => __('The option "{label}" must be a number.', 'aldono'),
+                'date_error'      => __('The option "{label}" must be a valid date.', 'aldono'),
                 'expired_error'   => __('This page has expired. Reload it and add the product again.', 'aldono'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
@@ -170,7 +172,7 @@ final class AddOnsService implements HasHooks
         $filtered = apply_filters('addons_product_definitions', $definitions, $product);
         $filtered = is_array($filtered) ? $filtered : $definitions;
 
-        // A select with no choices cannot be rendered, and the storefront
+        // A select or radio with no choices cannot be rendered, and the storefront
         // template already skipped it. The validator read the same definitions
         // and did not, so a row saved as required + select + no choices made the
         // product permanently unbuyable: add-to-cart failed asking the shopper to
@@ -184,7 +186,7 @@ final class AddOnsService implements HasHooks
                     return false;
                 }
 
-                return ($row['type'] ?? 'text') !== 'select'
+                return ! in_array($row['type'] ?? 'text', ['select', 'radio'], true)
                     || (isset($row['options']) && is_array($row['options']) && $row['options'] !== []);
             },
         ));

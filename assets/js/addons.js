@@ -13,7 +13,8 @@
 
 	/**
 	 * A control counts as "inscribed" once it holds a committed value:
-	 * text with non-whitespace content, or a select past its placeholder.
+	 * a text, textarea, number or date with non-whitespace content, or a select
+	 * past its placeholder.
 	 *
 	 * @param {HTMLElement} control
 	 * @return {boolean}
@@ -78,14 +79,14 @@
 
 		field.classList.toggle(INSCRIBED, isInscribed(control));
 
-		if (control.tagName === 'INPUT' && control.type === 'text') {
+		if (control.tagName === 'TEXTAREA' || (control.tagName === 'INPUT' && control.type === 'text')) {
 			updateCharCounter(control);
 		}
 	}
 
 	function init() {
 		var controls = document.querySelectorAll(
-			'.addons-field--text .input-text, .addons-field--select select'
+			'.addons-field .input-text, .addons-field--select select'
 		);
 
 		Array.prototype.forEach.call(controls, function (control) {

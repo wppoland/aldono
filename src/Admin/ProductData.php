@@ -13,8 +13,8 @@ defined('ABSPATH') || exit;
  * Per-product add-on editor in the WooCommerce "Product data" panel.
  *
  * Adds an "Add-Ons" product-data tab where the merchant defines a repeatable
- * list of add-ons (label, type text/checkbox/select, required flag, price delta,
- * and select options). Definitions are stored as the product meta key owned by
+ * list of add-ons (label, field type, required flag, price delta, and the
+ * choices of a select or radio). Definitions are stored as the product meta key owned by
  * {@see AddOnsService::META_KEY}, no custom table.
  */
 final class ProductData implements HasHooks
@@ -134,10 +134,11 @@ final class ProductData implements HasHooks
          *
          * @param array<int, string> $supportedTypes Supported field type keys.
          */
-        $supportedTypes = apply_filters('addons_supported_definition_types', ['text', 'checkbox', 'select']);
+        $defaultTypes   = ['text', 'textarea', 'number', 'date', 'checkbox', 'select', 'radio'];
+        $supportedTypes = apply_filters('addons_supported_definition_types', $defaultTypes);
 
         if (! is_array($supportedTypes)) {
-            $supportedTypes = ['text', 'checkbox', 'select'];
+            $supportedTypes = $defaultTypes;
         }
         $definitions    = [];
 
@@ -166,7 +167,7 @@ final class ProductData implements HasHooks
                 'options'   => [],
             ];
 
-            if ($type === 'select' && isset($row['options']) && is_string($row['options'])) {
+            if (($type === 'select' || $type === 'radio') && isset($row['options']) && is_string($row['options'])) {
                 $definition['options'] = $this->parseOptions($row['options']);
             }
 

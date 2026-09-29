@@ -9,7 +9,8 @@ namespace WPPoland\StorefrontKit\AddOns;
  * Options for WooCommerce plugin).
  *
  * An admin defines a list of add-on fields per product (label, type
- * text/checkbox/select, optional per-option price delta); the engine renders
+ * text, textarea, number, date, checkbox, select or radio, optional
+ * per-option price delta); the engine renders
  * them under the product form, validates and captures the customer's choices
  * into the cart line item, adjusts the line price by the summed deltas, and
  * exposes the selections for cart / order display. Add-ons are stored as product
@@ -24,7 +25,7 @@ namespace WPPoland\StorefrontKit\AddOns;
  */
 final class ProductAddOnsEngine
 {
-    private const SUPPORTED_TYPES = ['text', 'checkbox', 'select'];
+    private const SUPPORTED_TYPES = ['text', 'textarea', 'number', 'date', 'checkbox', 'select', 'radio'];
 
     private const NONCE_ACTION = 'addons_add_to_cart';
 
@@ -118,12 +119,16 @@ final class ProductAddOnsEngine
         }
 
         foreach ($addOns as $index => $addOn) {
-            $value = $this->postedValue($index);
+            $value = $this->postedValue($index, $addOn['type']);
 
             if ($value !== '' && ! $this->isAllowedValue($addOn, $value)) {
                 wc_add_notice(
                     \WPPoland\StorefrontKit\Support\Formatter::interpolate(
-                        $this->message('invalid_error'),
+                        $this->message(match ($addOn['type']) {
+                            'number' => 'number_error',
+                            'date' => 'date_error',
+                            default => 'invalid_error',
+                        }),
                         ['label' => $addOn['label']],
                     ),
                     'error',
@@ -144,7 +149,7 @@ final class ProductAddOnsEngine
                 return false;
             }
 
-            if ($value !== '') {
+            if ($value !== '' && in_array($addOn['type'], ['text', 'textarea'], true)) {
                 $min = (int) ($addOn['min_chars'] ?? 0);
                 $max = (int) ($addOn['max_chars'] ?? 0);
                 $len = mb_strlen($value);
@@ -202,7 +207,7 @@ final class ProductAddOnsEngine
         $selections = [];
 
         foreach ($this->getAddOns($product) as $index => $addOn) {
-            $value = $this->postedValue($index);
+            $value = $this->postedValue($index, $addOn['type']);
 
             if ($value === '' || ! $this->isAllowedValue($addOn, $value)) {
                 continue;
@@ -352,7 +357,7 @@ final class ProductAddOnsEngine
      */
     private function resolvePrice(array $addOn, string $value): float
     {
-        if ($addOn['type'] === 'select' && isset($addOn['options'][$value])) {
+        if (in_array($addOn['type'], ['select', 'radio'], true) && isset($addOn['options'][$value])) {
             return $addOn['options'][$value];
         }
 
@@ -360,18 +365,28 @@ final class ProductAddOnsEngine
     }
 
     /**
-     * A select must post one of its own choices and a checkbox its own label;
-     * anything else did not come from the rendered form.
+     * A select or radio must post one of its own choices, a checkbox its own
+     * label, a number a number and a date a real Y-m-d date; anything else did
+     * not come from the rendered form.
      *
      * @param array{label: string, type: string, options: array<string, float>} $addOn
      */
     private function isAllowedValue(array $addOn, string $value): bool
     {
         return match ($addOn['type']) {
-            'select' => isset($addOn['options'][$value]),
+            'select', 'radio' => isset($addOn['options'][$value]),
             'checkbox' => $value === $addOn['label'],
+            'number' => is_numeric($value),
+            'date' => $this->isDate($value),
             default => true,
         };
+    }
+
+    private function isDate(string $value): bool
+    {
+        $date = \DateTimeImmutable::createFromFormat('!Y-m-d', $value);
+
+        return $date !== false && $date->format('Y-m-d') === $value;
     }
 
     /**
@@ -388,7 +403,7 @@ final class ProductAddOnsEngine
         return wp_verify_nonce($nonce, self::NONCE_ACTION) ? 'valid' : 'invalid';
     }
 
-    private function postedValue(int $index): string
+    private function postedValue(int $index, string $type): string
     {
         if ($this->nonceState() !== 'valid') {
             return '';
@@ -402,10 +417,16 @@ final class ProductAddOnsEngine
             return '';
         }
 
-        $value = sanitize_text_field((string) wp_unslash($_REQUEST[$key]));
+        $raw = (string) wp_unslash($_REQUEST[$key]);
         // phpcs:enable WordPress.Security.NonceVerification.Recommended
 
-        return $value;
+        if ($type !== 'textarea') {
+            return sanitize_text_field($raw);
+        }
+
+        // Keep the line breaks, as one "\n" each: the browser counts a line
+        // break as one character against maxlength but posts it as "\r\n".
+        return str_replace("\r\n", "\n", sanitize_textarea_field($raw));
     }
 
     /**

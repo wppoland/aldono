@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.4
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,9 +17,10 @@ Aldono lets store owners offer WooCommerce product options, product add-ons and 
 
 For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
 
-* **Field types**, plain text, a checkbox, or a select drop-down.
-* **Text limits**, set minimum and maximum character lengths for text product options.
-* **Price deltas**, give an add-on (or each select option) a price; the amount is added to the cart line total automatically.
+* **Field types**, a text line, a multi-line textarea, a number, a date picker, a checkbox, a select drop-down, or a group of radio buttons.
+* **Text limits**, set minimum and maximum character lengths for text and textarea product options.
+* **Checked input**, a number must be numeric, a date must be a real calendar date, and a select or radio must post one of its own choices.
+* **Price deltas**, give an add-on (or each select or radio choice) a price; the amount is added to the cart line total automatically.
 * **Free or paid**, leave the price at zero for free options such as a personalised message.
 * **Cart & order display**, the customer's choices appear in the cart, at checkout, and on the order.
 * **Display settings**, choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card, all from the Add-Ons settings page.
@@ -56,11 +57,11 @@ On the single product page, just above the Add to cart button. Their selections 
 
 = What field types are included? =
 
-The free version includes text fields, checkboxes and select drop-downs. Each field can be free or add a price to the cart line.
+The free version includes text, textarea, number and date fields, checkboxes, select drop-downs and radio buttons. Each field can be free or add a price to the cart line; a select or radio can price each choice separately.
 
 = Can a product option change the price? =
 
-Yes. Add a price to the row itself or to individual select choices, and Aldono adds that amount to the WooCommerce cart line.
+Yes. Add a price to the row itself or to individual select or radio choices, and Aldono adds that amount to the WooCommerce cart line.
 
 = Can I make a product option required? =
 
@@ -68,7 +69,7 @@ Yes. Tick the Required checkbox for an option, and the product cannot be added t
 
 = Can I limit text option length? =
 
-Yes. Text add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart.
+Yes. Text and textarea add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart.
 
 = Does it create custom database tables? =
 
@@ -76,7 +77,7 @@ No. Add-on definitions are stored as product meta.
 
 = Does it support file uploads or conditional logic? =
 
-Those are PRO features. Aldono FREE focuses on fast text, checkbox and select product options.
+Those are PRO features. Aldono FREE focuses on fast text, textarea, number, date, checkbox, select and radio product options.
 
 
 = Does this plugin work on WordPress Multisite? =
@@ -97,6 +98,12 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.2.0 =
+* New field types: Radio (a choice list with a price per choice, like Select), Textarea (multi-line text that keeps its line breaks, with the same minimum and maximum length as Text), Number (must be numeric, adds the row price when filled) and Date (the browser's date picker, must be a real date).
+* A number or date that does not parse is refused at add to cart with its own message, and a radio choice that is not one of its options is refused like a select.
+* The choices box in the product editor shows only for Select and Radio, and the character limits only for Text and Textarea.
+* Character limits are checked only on Text and Textarea fields, so a limit left over from a type change no longer blocks a select or checkbox.
 
 = 1.1.4 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.

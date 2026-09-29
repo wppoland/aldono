@@ -51,17 +51,26 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
             ? $addons_field['options']
             : array();
 
-        // Skip malformed definitions (no label) and selects with no choices, 
-        // rendering them would produce empty, confusing controls.
+        // Skip malformed definitions (no label) and selects or radios with no
+        // choices: rendering them would produce empty, confusing controls.
         if ($addons_label === '') {
             continue;
         }
 
-        if ($addons_type === 'select' && $addons_options === array()) {
+        if (($addons_type === 'select' || $addons_type === 'radio') && $addons_options === array()) {
             continue;
         }
+
+        $addons_price_html = ($addons_show_prices && $addons_price > 0)
+            ? '<span class="addons-field__price">(' . wc_price($addons_price) . ')</span>'
+            : '';
+        $addons_required_html = ($addons_required && $addons_show_required)
+            ? '<abbr class="required" title="' . esc_attr__('required', 'aldono') . '">*</abbr>'
+            : '';
+        $addons_char_attrs = ($addons_min_chars > 0 ? ' minlength="' . esc_attr((string) $addons_min_chars) . '"' : '')
+            . ($addons_max_chars > 0 ? ' maxlength="' . esc_attr((string) $addons_max_chars) . '"' : '');
         ?>
-        <p class="addons-field addons-field--<?php echo esc_attr($addons_type); ?>">
+        <div class="addons-field addons-field--<?php echo esc_attr($addons_type); ?>">
             <?php if ($addons_type === 'checkbox') : ?>
                 <label for="<?php echo esc_attr($addons_id); ?>">
                     <input
@@ -72,14 +81,40 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                         <?php echo $addons_required ? 'required' : ''; ?>
                     />
                     <?php echo esc_html($addons_label); ?>
-                    <?php if ($addons_show_prices && $addons_price > 0) : ?>
-                        <span class="addons-field__price">(<?php echo wp_kses_post(wc_price($addons_price)); ?>)</span>
-                    <?php endif; ?>
+                    <?php echo wp_kses_post($addons_price_html); ?>
                 </label>
+            <?php elseif ($addons_type === 'radio') : ?>
+                <fieldset class="addons-field__choices">
+                    <legend>
+                        <?php echo esc_html($addons_label); ?>
+                        <?php echo wp_kses_post($addons_required_html); ?>
+                    </legend>
+                    <?php $addons_opt_i = 0; ?>
+                    <?php foreach ($addons_options as $addons_opt_label => $addons_opt_price) : ?>
+                        <?php
+                        $addons_opt_label = (string) $addons_opt_label;
+                        $addons_opt_price = (float) $addons_opt_price;
+                        $addons_opt_id    = $addons_id . '-' . $addons_opt_i++;
+                        ?>
+                        <label for="<?php echo esc_attr($addons_opt_id); ?>">
+                            <input
+                                type="radio"
+                                id="<?php echo esc_attr($addons_opt_id); ?>"
+                                name="<?php echo esc_attr($addons_name); ?>"
+                                value="<?php echo esc_attr($addons_opt_label); ?>"
+                                <?php echo $addons_required ? 'required' : ''; ?>
+                            />
+                            <?php echo esc_html($addons_opt_label); ?>
+                            <?php if ($addons_show_prices && $addons_opt_price > 0) : ?>
+                                <span class="addons-field__price">(<?php echo wp_kses_post(wc_price($addons_opt_price)); ?>)</span>
+                            <?php endif; ?>
+                        </label>
+                    <?php endforeach; ?>
+                </fieldset>
             <?php elseif ($addons_type === 'select') : ?>
                 <label for="<?php echo esc_attr($addons_id); ?>">
                     <?php echo esc_html($addons_label); ?>
-                    <?php if ($addons_required && $addons_show_required) : ?><abbr class="required" title="<?php esc_attr_e('required', 'aldono'); ?>">*</abbr><?php endif; ?>
+                    <?php echo wp_kses_post($addons_required_html); ?>
                 </label>
                 <select
                     id="<?php echo esc_attr($addons_id); ?>"
@@ -101,27 +136,52 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
             <?php else : ?>
                 <label for="<?php echo esc_attr($addons_id); ?>">
                     <?php echo esc_html($addons_label); ?>
-                    <?php if ($addons_required && $addons_show_required) : ?><abbr class="required" title="<?php esc_attr_e('required', 'aldono'); ?>">*</abbr><?php endif; ?>
-                    <?php if ($addons_show_prices && $addons_price > 0) : ?>
-                        <span class="addons-field__price">(<?php echo wp_kses_post(wc_price($addons_price)); ?>)</span>
-                    <?php endif; ?>
+                    <?php echo wp_kses_post($addons_required_html); ?>
+                    <?php echo wp_kses_post($addons_price_html); ?>
                 </label>
-                <input
-                    type="text"
-                    id="<?php echo esc_attr($addons_id); ?>"
-                    name="<?php echo esc_attr($addons_name); ?>"
-                    class="input-text"
-                    <?php echo $addons_required ? 'required' : ''; ?>
-                    <?php echo $addons_min_chars > 0 ? 'minlength="' . esc_attr((string) $addons_min_chars) . '"' : ''; ?>
-                    <?php echo $addons_max_chars > 0 ? 'maxlength="' . esc_attr((string) $addons_max_chars) . '"' : ''; ?>
-                />
-                <?php if ($addons_min_chars > 0 || $addons_max_chars > 0) : ?>
+                <?php if ($addons_type === 'textarea') : ?>
+                    <textarea
+                        id="<?php echo esc_attr($addons_id); ?>"
+                        name="<?php echo esc_attr($addons_name); ?>"
+                        class="input-text"
+                        rows="3"
+                        <?php echo $addons_required ? 'required' : ''; ?>
+                        <?php echo $addons_char_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
+                    ></textarea>
+                <?php elseif ($addons_type === 'number') : ?>
+                    <input
+                        type="number"
+                        step="any"
+                        id="<?php echo esc_attr($addons_id); ?>"
+                        name="<?php echo esc_attr($addons_name); ?>"
+                        class="input-text"
+                        <?php echo $addons_required ? 'required' : ''; ?>
+                    />
+                <?php elseif ($addons_type === 'date') : ?>
+                    <input
+                        type="date"
+                        id="<?php echo esc_attr($addons_id); ?>"
+                        name="<?php echo esc_attr($addons_name); ?>"
+                        class="input-text"
+                        <?php echo $addons_required ? 'required' : ''; ?>
+                    />
+                <?php else : ?>
+                    <input
+                        type="text"
+                        id="<?php echo esc_attr($addons_id); ?>"
+                        name="<?php echo esc_attr($addons_name); ?>"
+                        class="input-text"
+                        <?php echo $addons_required ? 'required' : ''; ?>
+                        <?php echo $addons_char_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
+                    />
+                <?php endif; ?>
+                <?php if (($addons_type === 'text' || $addons_type === 'textarea') && ($addons_min_chars > 0 || $addons_max_chars > 0)) : ?>
                     <small class="addons-char-counter-wrap description">
                         <span class="addons-char-counter" data-addons-char-counter data-min="<?php echo esc_attr((string) $addons_min_chars); ?>" data-max="<?php echo esc_attr((string) $addons_max_chars); ?>" aria-live="polite"></span>
                     </small>
                 <?php endif; ?>
             <?php endif; ?>
-        </p>
+        </div>
     <?php endforeach; ?>
 </div>
 <?php

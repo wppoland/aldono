@@ -59,6 +59,7 @@
 			}
 
 			rows.appendChild(node);
+			syncCharSettings(node);
 			syncEmptyState();
 
 			var firstInput = node.querySelector('input, select, textarea');
@@ -71,12 +72,19 @@
 		function syncCharSettings(row) {
 			var select = row.querySelector('select[name*="[type]"]');
 			var charSettings = row.querySelector('[data-addons-char-settings]');
+			var options = row.querySelector('[data-addons-options]');
 
-			if (!select || !charSettings) {
+			if (!select) {
 				return;
 			}
 
-			charSettings.style.display = select.value === 'text' ? '' : 'none';
+			if (charSettings) {
+				charSettings.style.display = select.value === 'text' || select.value === 'textarea' ? '' : 'none';
+			}
+
+			if (options) {
+				options.style.display = select.value === 'select' || select.value === 'radio' ? '' : 'none';
+			}
 		}
 
 		function syncAllRows() {
