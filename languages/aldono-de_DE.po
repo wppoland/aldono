@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Add-Ons for WooCommerce 0.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aldono\n"
-"POT-Creation-Date: 2026-09-25T22:05:25+00:00\n"
+"POT-Creation-Date: 2026-09-29T09:16:17+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -59,10 +59,6 @@ msgid "Add-Ons"
 msgstr "Add-Ons"
 
 #: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Demnächst"
-
-#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Demnächst"
 
@@ -75,10 +71,6 @@ msgstr "ab %1$s%2$d/Jahr"
 #: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
-
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Benachrichtige mich"
 
 #: src/Admin/ProUpsell.php:101
 msgid "Get notified"
@@ -293,6 +285,14 @@ msgid "The choice for \"{label}\" is not one of its options."
 msgstr ""
 
 #: src/Service/AddOnsService.php:47
+msgid "The option \"{label}\" must be a number."
+msgstr ""
+
+#: src/Service/AddOnsService.php:48
+msgid "The option \"{label}\" must be a valid date."
+msgstr ""
+
+#: src/Service/AddOnsService.php:49
 msgid "This page has expired. Reload it and add the product again."
 msgstr ""
 
@@ -300,11 +300,11 @@ msgstr ""
 msgid "Product options"
 msgstr ""
 
-#: templates/add-on-fields.php:82 templates/add-on-fields.php:104
+#: templates/add-on-fields.php:68
 msgid "required"
 msgstr "erforderlich"
 
-#: templates/add-on-fields.php:89
+#: templates/add-on-fields.php:124
 msgid "- Select -"
 msgstr "- Wählen -"
 
@@ -315,15 +315,11 @@ msgstr "Produkt-Add-ons"
 #: templates/admin/product-data-panel.php:24
 msgid ""
 "Each row below becomes one field a customer sees on this product page. Use "
-"Text for free-form input (like an engraving message), Checkbox for a yes/no "
-"extra, or Select for a list of choices. Any price you enter is added to the "
-"line total when the option is chosen."
+"Text or Textarea for free-form input (like an engraving message), Number for "
+"a quantity or size, Date for a delivery or event date, Checkbox for a yes/no "
+"extra, or Select or Radio for a list of choices. Any price you enter is "
+"added to the line total when the option is chosen."
 msgstr ""
-"Jede Zeile unten wird zu einem Feld, das ein Kunde auf dieser Produktseite "
-"sieht. Verwende „Text“ für die Eingabe in freier Form (z. B. eine "
-"Gravurnachricht), „Kontrollkästchen“ für ein Ja/Nein-Extra oder „Auswählen“ "
-"für eine Auswahlliste. Jeder von dir eingegebene Preis wird zur Zeilensumme "
-"addiert, wenn die Option ausgewählt wird."
 
 #: templates/admin/product-data-panel.php:27
 msgid ""
@@ -347,104 +343,154 @@ msgstr ""
 "können."
 
 #: templates/admin/product-data-panel.php:58
-#: templates/admin/product-data-panel.php:103
+#: templates/admin/product-data-panel.php:107
 msgid "Option"
 msgstr "Option"
 
 #: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:104
+#: templates/admin/product-data-panel.php:108
 msgid "Label (e.g. Gift wrap)"
 msgstr "Etikett (z. B. Geschenkverpackung)"
 
 #: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:104
+#: templates/admin/product-data-panel.php:108
 msgid "Option label"
 msgstr "Optionsetikett"
 
 #: templates/admin/product-data-panel.php:60
-#: templates/admin/product-data-panel.php:105
+#: templates/admin/product-data-panel.php:109
 msgid "Option type"
 msgstr "Optionstyp"
 
 #: templates/admin/product-data-panel.php:61
-#: templates/admin/product-data-panel.php:106
+#: templates/admin/product-data-panel.php:110
 msgid "Text"
 msgstr "Text"
 
 #: templates/admin/product-data-panel.php:62
-#: templates/admin/product-data-panel.php:107
+#: templates/admin/product-data-panel.php:111
 msgid "Checkbox"
 msgstr "Kontrollkästchen"
 
 #: templates/admin/product-data-panel.php:63
-#: templates/admin/product-data-panel.php:108
+#: templates/admin/product-data-panel.php:112
 msgid "Select"
 msgstr "Auswahl"
 
+#: templates/admin/product-data-panel.php:64
+#: templates/admin/product-data-panel.php:113
+msgid "Radio"
+msgstr ""
+
 #: templates/admin/product-data-panel.php:65
-#: templates/admin/product-data-panel.php:110
+#: templates/admin/product-data-panel.php:114
+msgid "Textarea"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:66
+#: templates/admin/product-data-panel.php:115
+msgid "Number"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:67
+#: templates/admin/product-data-panel.php:116
+msgid "Date"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:69
+#: templates/admin/product-data-panel.php:118
 msgid "Price"
 msgstr "Preis"
 
-#: templates/admin/product-data-panel.php:65
-#: templates/admin/product-data-panel.php:110
+#: templates/admin/product-data-panel.php:69
+#: templates/admin/product-data-panel.php:118
 msgid "Extra price added when chosen"
 msgstr "Zusätzlicher Preis wird bei Auswahl hinzugefügt"
 
-#: templates/admin/product-data-panel.php:67
-#: templates/admin/product-data-panel.php:112
+#: templates/admin/product-data-panel.php:71
+#: templates/admin/product-data-panel.php:120
 msgid "Min chars"
 msgstr "Min. Zeichen"
 
-#: templates/admin/product-data-panel.php:67
-#: templates/admin/product-data-panel.php:112
+#: templates/admin/product-data-panel.php:71
+#: templates/admin/product-data-panel.php:120
 msgid "Minimum character length"
 msgstr "Mindestzeichenlänge"
 
-#: templates/admin/product-data-panel.php:68
-#: templates/admin/product-data-panel.php:113
+#: templates/admin/product-data-panel.php:72
+#: templates/admin/product-data-panel.php:121
 msgid "Max chars"
 msgstr "Max. Zeichen"
 
-#: templates/admin/product-data-panel.php:68
-#: templates/admin/product-data-panel.php:113
+#: templates/admin/product-data-panel.php:72
+#: templates/admin/product-data-panel.php:121
 msgid "Maximum character length"
 msgstr "Maximale Zeichenlänge"
 
-#: templates/admin/product-data-panel.php:72
-#: templates/admin/product-data-panel.php:117
+#: templates/admin/product-data-panel.php:76
+#: templates/admin/product-data-panel.php:125
 msgid "Required"
 msgstr "Erforderlich"
 
-#: templates/admin/product-data-panel.php:74
-#: templates/admin/product-data-panel.php:119
+#: templates/admin/product-data-panel.php:78
+#: templates/admin/product-data-panel.php:127
 msgid "Remove"
 msgstr "Entfernen"
 
-#: templates/admin/product-data-panel.php:77
-#: templates/admin/product-data-panel.php:122
-msgid "Select options, one per line: Label | price"
-msgstr "Wähle Optionen aus, eine pro Zeile: Beschriftung | Preis"
-
-#: templates/admin/product-data-panel.php:77
-#: templates/admin/product-data-panel.php:122
-msgid "Choices for the Select type"
-msgstr "Auswahlmöglichkeiten für den Typ „Auswahl“"
-
-#: templates/admin/product-data-panel.php:78
-#: templates/admin/product-data-panel.php:123
-msgid ""
-"Only used for the \"Select\" type. One choice per line as \"Label | price\", "
-"e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for a free "
-"choice."
+#: templates/admin/product-data-panel.php:81
+#: templates/admin/product-data-panel.php:130
+msgid "Choices, one per line: Label | price"
 msgstr ""
-"Wird nur für den Typ „Auswahl“ verwendet. Eine Auswahl pro Zeile im Format "
-"„Beschriftung | Preis“, z. B. „Standard | 0“ und „Premium | 9,99“. Lass den "
-"Preis weg, wenn die Auswahl kostenlos ist."
 
-#: templates/admin/product-data-panel.php:97
+#: templates/admin/product-data-panel.php:81
+#: templates/admin/product-data-panel.php:130
+msgid "Choices for the Select and Radio types"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:82
+#: templates/admin/product-data-panel.php:131
+msgid ""
+"Only used for the \"Select\" and \"Radio\" types. One choice per line as "
+"\"Label | price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the "
+"price for a free choice."
+msgstr ""
+
+#: templates/admin/product-data-panel.php:101
 msgid "Add option"
 msgstr "Option hinzufügen"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Demnächst"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Benachrichtige mich"
+
+#~ msgid ""
+#~ "Each row below becomes one field a customer sees on this product page. "
+#~ "Use Text for free-form input (like an engraving message), Checkbox for a "
+#~ "yes/no extra, or Select for a list of choices. Any price you enter is "
+#~ "added to the line total when the option is chosen."
+#~ msgstr ""
+#~ "Jede Zeile unten wird zu einem Feld, das ein Kunde auf dieser "
+#~ "Produktseite sieht. Verwende „Text“ für die Eingabe in freier Form (z. B. "
+#~ "eine Gravurnachricht), „Kontrollkästchen“ für ein Ja/Nein-Extra oder "
+#~ "„Auswählen“ für eine Auswahlliste. Jeder von dir eingegebene Preis wird "
+#~ "zur Zeilensumme addiert, wenn die Option ausgewählt wird."
+
+#~ msgid "Select options, one per line: Label | price"
+#~ msgstr "Wähle Optionen aus, eine pro Zeile: Beschriftung | Preis"
+
+#~ msgid "Choices for the Select type"
+#~ msgstr "Auswahlmöglichkeiten für den Typ „Auswahl“"
+
+#~ msgid ""
+#~ "Only used for the \"Select\" type. One choice per line as \"Label | "
+#~ "price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the price for "
+#~ "a free choice."
+#~ msgstr ""
+#~ "Wird nur für den Typ „Auswahl“ verwendet. Eine Auswahl pro Zeile im "
+#~ "Format „Beschriftung | Preis“, z. B. „Standard | 0“ und „Premium | 9,99“. "
+#~ "Lass den Preis weg, wenn die Auswahl kostenlos ist."
 
 #~ msgid ""
 #~ "A short heading printed above the options on the product page, for "
