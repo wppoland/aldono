@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,11 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.2.1 =
+* Fixed: the mini cart and the header cart showed each line at the product's base price, without its add-ons, under a subtotal that included them. The add-on price is now on the line as soon as it is in the cart.
+* Fixed: the price shown beside a choice in the order, the REST API, exports and plain-text emails is plain text. It used to keep the currency symbol as an HTML entity, such as &euro;.
+* Fixed: with Add-ons switched off, carts no longer list priced choices that are not charged, and new orders no longer record them.
 
 = 1.2.0 =
 * The upgrade notice no longer lists per-character text pricing, which Aldono Pro does not ship.
