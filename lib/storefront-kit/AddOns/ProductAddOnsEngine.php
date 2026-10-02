@@ -61,7 +61,12 @@ final class ProductAddOnsEngine
         add_filter('woocommerce_add_to_cart_validation', [$this, 'validate'], 10, 3);
         add_filter('woocommerce_add_cart_item_data', [$this, 'captureCartItemData'], 10, 2);
         add_filter('woocommerce_get_item_data', [$this, 'displayCartItemData'], 10, 2);
-        add_action('woocommerce_before_calculate_totals', [$this, 'adjustCartPrices'], 20);
+        // Price the line once per product object, when it enters the cart and
+        // each time the cart is rebuilt from the session. A price set only in
+        // woocommerce_before_calculate_totals never reached the mini cart or the
+        // cart fragments, which render without recalculating.
+        add_filter('woocommerce_add_cart_item', [$this, 'applyCartItemPrice'], 20);
+        add_filter('woocommerce_get_cart_item_from_session', [$this, 'applyCartItemPrice'], 20);
         add_action('woocommerce_checkout_create_order_line_item', [$this, 'addOrderLineItemMeta'], 10, 4);
     }
 
@@ -234,13 +239,18 @@ final class ProductAddOnsEngine
      */
     public function displayCartItemData($itemData, $cartItem): array
     {
+        // Switched off: nothing is charged, so do not list priced choices.
+        if (! $this->isEnabled()) {
+            return $itemData;
+        }
+
         $selections = $this->selectionsFromCartItem($cartItem);
 
         foreach ($selections as $selection) {
             $value = $selection['value'];
 
             if ($selection['price'] > 0) {
-                $value .= ' (' . wp_strip_all_tags(wc_price($selection['price'])) . ')';
+                $value .= ' (' . $this->plainPrice($selection['price']) . ')';
             }
 
             $itemData[] = [
@@ -252,32 +262,28 @@ final class ProductAddOnsEngine
         return $itemData;
     }
 
-    public function adjustCartPrices(\WC_Cart $cart): void
+    /**
+     * @param array<string, mixed> $cartItem
+     * @return array<string, mixed>
+     */
+    public function applyCartItemPrice($cartItem): array
     {
-        if (! $this->isEnabled()) {
-            return;
+        if (! $this->isEnabled() || ! isset($cartItem[$this->cartKey]) || ! ($cartItem['data'] ?? null) instanceof \WC_Product) {
+            return $cartItem;
         }
 
-        if (did_action('woocommerce_before_calculate_totals') > 1) {
-            return;
+        $extra = 0.0;
+
+        foreach ($this->selectionsFromCartItem($cartItem) as $selection) {
+            $extra += $selection['price'];
         }
 
-        foreach ($cart->get_cart() as $cartItem) {
-            if (! isset($cartItem[$this->cartKey]) || ! $cartItem['data'] instanceof \WC_Product) {
-                continue;
-            }
-
-            $extra = 0.0;
-
-            foreach ($this->selectionsFromCartItem($cartItem) as $selection) {
-                $extra += $selection['price'];
-            }
-
-            if ($extra !== 0.0) {
-                $base = (float) $cartItem['data']->get_price('edit');
-                $cartItem['data']->set_price((string) ($base + $extra));
-            }
+        if ($extra !== 0.0) {
+            $base = (float) $cartItem['data']->get_price('edit');
+            $cartItem['data']->set_price((string) ($base + $extra));
         }
+
+        return $cartItem;
     }
 
     /**
@@ -288,15 +294,29 @@ final class ProductAddOnsEngine
      */
     public function addOrderLineItemMeta($item, $cartItemKey, $values, $order): void
     {
+        if (! $this->isEnabled()) {
+            return;
+        }
+
         foreach ($this->selectionsFromCartItem($values) as $selection) {
             $value = $selection['value'];
 
             if ($selection['price'] > 0) {
-                $value .= ' (' . wp_strip_all_tags(wc_price($selection['price'])) . ')';
+                $value .= ' (' . $this->plainPrice($selection['price']) . ')';
             }
 
             $item->add_meta_data($selection['label'], $value);
         }
+    }
+
+    /**
+     * The price as plain text. wc_price() writes the currency symbol as an
+     * entity (&euro;, &#122;&#322;), which the order meta kept and REST, CSV
+     * exports and plain-text emails then showed raw.
+     */
+    private function plainPrice(float $price): string
+    {
+        return html_entity_decode(wp_strip_all_tags(wc_price($price)), ENT_QUOTES | ENT_HTML5, 'UTF-8');
     }
 
     /**
