@@ -2,7 +2,8 @@
  * The live subtotal must show the number the cart will charge:
  * (unit price + add-on prices) x quantity x tax display factor, formatted like
  * wc_price(). tests/tax-modes.json holds the cart's own line subtotals in all
- * four tax setups, produced by tests/tax-display-check.php.
+ * four tax setups and the choice prices the cart and order meta show,
+ * produced by tests/tax-display-check.php.
  *
  * Run: node tests/subtotal-check.js
  */
@@ -46,6 +47,15 @@ fixture.cases.forEach((c) => {
 	}
 });
 assert.strictEqual(modes.size, 4, 'all four tax setups covered');
-assert.strictEqual(failures, 0, `${failures} of ${fixture.cases.length} subtotals differ from the cart`);
+fixture.metas.forEach((m) => {
+	[['cart', m.shown], ['order', m.order]].forEach(([where, got]) => {
+		if (got !== `x (${m.cart})`) {
+			failures++;
+			console.log(`FAIL ${m.mode}: ${where} shows choice price ${m.price} as ${JSON.stringify(got)}, the cart line for it is ${m.cart}`);
+		}
+	});
+});
+assert.ok(fixture.metas.length > 0, 'cart and order meta covered');
+assert.strictEqual(failures, 0, `${failures} prices differ from the cart`);
 
-console.log(`OK: subtotal math and formatting match the cart (${fixture.cases.length} cart lines, 4 tax setups)`);
+console.log(`OK: subtotal math and formatting match the cart (${fixture.cases.length} cart lines, ${fixture.metas.length} cart and order choice prices, 4 tax setups)`);
