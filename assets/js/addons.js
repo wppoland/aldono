@@ -1,5 +1,6 @@
 /**
- * Storefront add-on fields, presentation only.
+ * Storefront add-on fields, presentation only: the inscribed state, the
+ * character counter and the live subtotal.
  *
  * The single moment: when a customer commits a personalisation (types an
  * engraving, picks an option), the field signs itself off with an ink
@@ -84,7 +85,126 @@
 		}
 	}
 
+	/**
+	 * The price of one add-on control as the cart will charge it: a field adds
+	 * its price once it holds a value, a select or radio adds the price of the
+	 * chosen option. Mirrors captureCartItemData() + resolvePrice() in
+	 * lib/storefront-kit/AddOns/ProductAddOnsEngine.php, where the server trims
+	 * and strips tags (sanitize_text_field) before testing for an empty value.
+	 *
+	 * @param {HTMLElement} control
+	 * @return {number}
+	 */
+	function controlPrice(control) {
+		var source = control;
+
+		if (control.tagName === 'SELECT') {
+			source = control.value === '' ? null : control.options[control.selectedIndex];
+		} else if (control.type === 'checkbox' || control.type === 'radio') {
+			source = control.checked ? control : null;
+		} else if (control.value.replace(/<[^>]*>/g, '').trim() === '') {
+			source = null;
+		}
+
+		return source ? parseFloat(source.getAttribute('data-addons-price') || '0') || 0 : 0;
+	}
+
+	/**
+	 * (unit price + add-on prices) x quantity, the cart line subtotal.
+	 *
+	 * @param {number}   base   Product or variation display price.
+	 * @param {number[]} prices Add-on prices currently selected.
+	 * @param {number}   qty
+	 * @return {number}
+	 */
+	function lineTotal(base, prices, qty) {
+		var unit = base;
+
+		prices.forEach(function (price) {
+			unit += price;
+		});
+
+		return unit * qty;
+	}
+
+	/**
+	 * Format like wc_price(): rounded to the store decimals, grouped with the
+	 * store separators, the symbol placed by the store price format.
+	 *
+	 * @param {number} amount
+	 * @param {{decimals: number, decimalSeparator: string, thousandSeparator: string, symbol: string, priceFormat: string}} fmt
+	 * @return {string}
+	 */
+	function formatPrice(amount, fmt) {
+		var factor = Math.pow(10, fmt.decimals);
+		var parts = (Math.round((amount + Number.EPSILON) * factor) / factor).toFixed(fmt.decimals).split('.');
+		var number = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, fmt.thousandSeparator)
+			+ (parts[1] ? fmt.decimalSeparator + parts[1] : '');
+
+		return fmt.priceFormat.replace('%1$s', fmt.symbol).replace('%2$s', number);
+	}
+
+	/**
+	 * Wire the live subtotal of one add-on group. Empty while the price is not
+	 * known (no variation chosen, quantity cleared); the region keeps its
+	 * height either way so the form never shifts.
+	 *
+	 * @param {HTMLElement} region
+	 */
+	function initSubtotal(region) {
+		var form = region.closest('form');
+		var group = region.closest('.addons-fields');
+
+		if (!form || !group) {
+			return;
+		}
+
+		var base = parseFloat(region.getAttribute('data-base') || '');
+		var fmt = {
+			decimals: parseInt(region.getAttribute('data-decimals') || '2', 10),
+			decimalSeparator: region.getAttribute('data-decimal-separator') || '.',
+			thousandSeparator: region.getAttribute('data-thousand-separator') || '',
+			symbol: region.getAttribute('data-symbol') || '',
+			priceFormat: region.getAttribute('data-price-format') || '%1$s%2$s'
+		};
+		var label = region.getAttribute('data-label') || '%s';
+
+		function update() {
+			var qtyInput = form.querySelector('input[name="quantity"]');
+			var qty = qtyInput ? parseFloat(qtyInput.value) : 1;
+			var prices = Array.prototype.map.call(group.querySelectorAll('[name][data-addons-price], select[name]'), controlPrice);
+			var total = lineTotal(base, prices, qty);
+			var text = qty > 0 && isFinite(total) && total >= 0 ? label.replace('%s', formatPrice(total, fmt)) : '';
+
+			if (region.textContent !== text) {
+				region.textContent = text;
+			}
+		}
+
+		form.addEventListener('input', update);
+		form.addEventListener('change', update);
+
+		// WooCommerce announces variations with jQuery .trigger(), which emits no
+		// native DOM event, so this is the one place jQuery is touched. It is
+		// already on the page wherever a variable product form is.
+		if (window.jQuery) {
+			window.jQuery(form)
+				.on('found_variation', function (event, variation) {
+					base = variation && variation.display_price !== undefined ? parseFloat(variation.display_price) : NaN;
+					update();
+				})
+				.on('reset_data', function () {
+					base = NaN;
+					update();
+				});
+		}
+
+		update();
+	}
+
 	function init() {
+		Array.prototype.forEach.call(document.querySelectorAll('[data-addons-subtotal]'), initSubtotal);
+
 		var controls = document.querySelectorAll(
 			'.addons-field .input-text, .addons-field--select select'
 		);
@@ -101,6 +221,9 @@
 			});
 		});
 	}
+
+	// The pure price math, for tests/subtotal-check.js.
+	window.addonsSubtotalMath = { lineTotal: lineTotal, formatPrice: formatPrice };
 
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', init);
