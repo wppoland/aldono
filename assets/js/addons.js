@@ -110,26 +110,30 @@
 	}
 
 	/**
-	 * (unit price + add-on prices) x quantity, the cart line subtotal.
+	 * The cart line as displayed: (unit price + add-on prices) x quantity, all
+	 * raw as entered, times the store's tax display factor. WooCommerce converts
+	 * the whole line once, so this converts once too; formatPrice() rounds.
 	 *
-	 * @param {number}   base   Product or variation display price.
-	 * @param {number[]} prices Add-on prices currently selected.
+	 * @param {number}   base   Raw product or variation price.
+	 * @param {number[]} prices Raw add-on prices currently selected.
 	 * @param {number}   qty
+	 * @param {number}   factor Engine::displayFactor(), 1 when taxes change nothing.
 	 * @return {number}
 	 */
-	function lineTotal(base, prices, qty) {
+	function lineTotal(base, prices, qty, factor) {
 		var unit = base;
 
 		prices.forEach(function (price) {
 			unit += price;
 		});
 
-		return unit * qty;
+		return unit * qty * factor;
 	}
 
 	/**
-	 * Format like wc_price(): rounded to the store decimals, grouped with the
-	 * store separators, the symbol placed by the store price format.
+	 * Format like wc_price(): rounded half up to the store decimals the way PHP
+	 * round() does (0.615 is 0.61499... in binary, PHP still gives 0.62), grouped
+	 * with the store separators, the symbol placed by the store price format.
 	 *
 	 * @param {number} amount
 	 * @param {{decimals: number, decimalSeparator: string, thousandSeparator: string, symbol: string, priceFormat: string}} fmt
@@ -137,7 +141,7 @@
 	 */
 	function formatPrice(amount, fmt) {
 		var factor = Math.pow(10, fmt.decimals);
-		var parts = (Math.round((amount + Number.EPSILON) * factor) / factor).toFixed(fmt.decimals).split('.');
+		var parts = (Math.round(Number((amount * factor).toPrecision(15))) / factor).toFixed(fmt.decimals).split('.');
 		var number = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, fmt.thousandSeparator)
 			+ (parts[1] ? fmt.decimalSeparator + parts[1] : '');
 
@@ -160,6 +164,7 @@
 		}
 
 		var base = parseFloat(region.getAttribute('data-base') || '');
+		var taxFactor = parseFloat(region.getAttribute('data-tax-factor') || '1');
 		var fmt = {
 			decimals: parseInt(region.getAttribute('data-decimals') || '2', 10),
 			decimalSeparator: region.getAttribute('data-decimal-separator') || '.',
@@ -173,7 +178,7 @@
 			var qtyInput = form.querySelector('input[name="quantity"]');
 			var qty = qtyInput ? parseFloat(qtyInput.value) : 1;
 			var prices = Array.prototype.map.call(group.querySelectorAll('[name][data-addons-price], select[name]'), controlPrice);
-			var total = lineTotal(base, prices, qty);
+			var total = lineTotal(base, prices, qty, taxFactor);
 			var text = qty > 0 && isFinite(total) && total >= 0 ? label.replace('%s', formatPrice(total, fmt)) : '';
 
 			if (region.textContent !== text) {
@@ -190,7 +195,8 @@
 		if (window.jQuery) {
 			window.jQuery(form)
 				.on('found_variation', function (event, variation) {
-					base = variation && variation.display_price !== undefined ? parseFloat(variation.display_price) : NaN;
+					base = variation && variation.addons_price !== undefined ? parseFloat(variation.addons_price) : NaN;
+					taxFactor = variation && variation.addons_tax_factor !== undefined ? parseFloat(variation.addons_tax_factor) : NaN;
 					update();
 				})
 				.on('reset_data', function () {
