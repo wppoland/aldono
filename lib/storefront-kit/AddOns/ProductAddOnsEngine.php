@@ -285,12 +285,13 @@ final class ProductAddOnsEngine
         }
 
         $selections = $this->selectionsFromCartItem($cartItem);
+        $product = $cartItem['data'] ?? null;
 
         foreach ($selections as $selection) {
             $value = $selection['value'];
 
             if ($selection['price'] > 0) {
-                $value .= ' (' . $this->plainPrice($selection['price']) . ')';
+                $value .= ' (' . $this->plainPrice($this->cartDisplayPrice($product, $selection['price'])) . ')';
             }
 
             $itemData[] = [
@@ -338,15 +339,38 @@ final class ProductAddOnsEngine
             return;
         }
 
+        $product = $values['data'] ?? null;
+
         foreach ($this->selectionsFromCartItem($values) as $selection) {
             $value = $selection['value'];
 
+            // Stored once, as the cart showed it when the order was placed.
             if ($selection['price'] > 0) {
-                $value .= ' (' . $this->plainPrice($selection['price']) . ')';
+                $value .= ' (' . $this->plainPrice($this->cartDisplayPrice($product, $selection['price'])) . ')';
             }
 
             $item->add_meta_data($selection['label'], $value);
         }
+    }
+
+    /**
+     * An add-on price the way the cart shows the line it is added to: taxed
+     * like the product, including or excluding tax as the cart displays prices
+     * (WC_Cart::get_product_subtotal()). Without a product it stays as entered.
+     */
+    private function cartDisplayPrice(mixed $product, float $price): float
+    {
+        if (! $product instanceof \WC_Product) {
+            return $price;
+        }
+
+        $cart = function_exists('WC') ? WC()->cart : null;
+        $including = $cart instanceof \WC_Cart
+            ? $cart->display_prices_including_tax()
+            : get_option('woocommerce_tax_display_cart') === 'incl';
+        $args = ['price' => $price, 'qty' => 1];
+
+        return (float) ($including ? wc_get_price_including_tax($product, $args) : wc_get_price_excluding_tax($product, $args));
     }
 
     /**
@@ -473,22 +497,21 @@ final class ProductAddOnsEngine
 
         $key = $this->fieldPrefix . $index;
 
-        // Nonce verified by nonceState() just above.
+        // Nonce verified by nonceState() just above. A field posted as an
+        // array (name="addons_field_0[]") did not come from the form.
         // phpcs:disable WordPress.Security.NonceVerification.Recommended
-        if (! isset($_REQUEST[$key])) {
+        if (! isset($_REQUEST[$key]) || ! is_string($_REQUEST[$key])) {
             return '';
         }
 
-        $raw = (string) wp_unslash($_REQUEST[$key]);
-        // phpcs:enable WordPress.Security.NonceVerification.Recommended
-
         if ($type !== 'textarea') {
-            return sanitize_text_field($raw);
+            return sanitize_text_field(wp_unslash($_REQUEST[$key]));
         }
 
         // Keep the line breaks, as one "\n" each: the browser counts a line
         // break as one character against maxlength but posts it as "\r\n".
-        return str_replace("\r\n", "\n", sanitize_textarea_field($raw));
+        return str_replace("\r\n", "\n", sanitize_textarea_field(wp_unslash($_REQUEST[$key])));
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended
     }
 
     /**

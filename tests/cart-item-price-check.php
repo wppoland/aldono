@@ -34,6 +34,24 @@ namespace {
         return '<span>&euro;' . number_format($price, 2) . '</span>';
     }
 
+    // Prices entered excluding tax, 23% VAT, display switched per assertion.
+    $taxDisplay = 'excl';
+
+    function get_option(string $name): mixed
+    {
+        return 'woocommerce_tax_display_cart' === $name ? $GLOBALS['taxDisplay'] : false;
+    }
+
+    function wc_get_price_including_tax(WC_Product $product, array $args): float
+    {
+        return round($args['price'] * 1.23, 2);
+    }
+
+    function wc_get_price_excluding_tax(WC_Product $product, array $args): float
+    {
+        return (float) $args['price'];
+    }
+
     function wp_strip_all_tags(string $text): string
     {
         return strip_tags($text);
@@ -99,12 +117,35 @@ namespace {
         $failures++;
     }
 
+    $taxDisplay = 'incl';
+    $shown      = $engine->displayCartItemData([], $line());
+    if ('Wrap (€6.15)' !== ($shown[0]['value'] ?? '')) {
+        echo 'FAIL: with prices shown including tax the cart shows ' . var_export($shown[0]['value'] ?? null, true) . ", expected 'Wrap (€6.15)'\n";
+        $failures++;
+    }
+
+    $item = new class () {
+        /** @var array<string, string> */
+        public array $meta = [];
+
+        public function add_meta_data(string $key, string $value): void
+        {
+            $this->meta[$key] = $value;
+        }
+    };
+    $engine->addOrderLineItemMeta($item, 'key', $line(), null);
+    if ('Wrap (€6.15)' !== ($item->meta['Wrap'] ?? '')) {
+        echo 'FAIL: the order stores ' . var_export($item->meta['Wrap'] ?? null, true) . ", expected 'Wrap (€6.15)' as the cart showed it\n";
+        $failures++;
+    }
+    $taxDisplay = 'excl';
+
     $enabled = false;
     if ([] !== $engine->displayCartItemData([], $line())) {
         echo "FAIL: switched off, the cart still lists a priced choice nothing charges\n";
         $failures++;
     }
 
-    echo 0 === $failures ? "OK: add-on price is on the line from the start, shown as plain text\n" : '';
+    echo 0 === $failures ? "OK: add-on price is on the line from the start, shown as plain text, taxed as the cart displays it\n" : '';
     exit($failures > 0 ? 1 : 0);
 }

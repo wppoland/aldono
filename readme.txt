@@ -107,6 +107,8 @@ Aldono is fully translatable and ships the `aldono.pot` template. Translations a
 * Changed: the live subtotal now also shows when taxes change displayed prices, in all four combinations of prices entered with or without tax and shown with or without tax. With one tax rate per product it matches the cart line to the cent. It stays hidden when the shop and the cart are set to display taxes differently.
 * New: an optional description under each option's label and an optional placeholder for text, textarea and number options, set per option in the product editor.
 * Fixed: a required checkbox option now shows the required marker like the other field types.
+* Fixed: the price beside a chosen option in the cart, at checkout, in the order confirmation and in the admin order was the amount as entered, without tax. It is now shown the way the cart displays prices, and new orders store it that way. Existing orders keep what they stored.
+* Fixed: an option field posted as a list instead of text is now ignored instead of being read as the word "Array".
 
 = 1.3.0 =
 * New: a live subtotal under the product options. It adds the price of each chosen option to the product price, multiplies by the quantity, updates as options and quantity change and when a variation is chosen, and uses the store currency format. It is shown on simple and variable products when add-on prices are visible and taxes leave displayed prices unchanged; otherwise it stays hidden rather than show a figure the cart would not charge.
