@@ -164,6 +164,8 @@ final class ProductData implements HasHooks
                 'price'     => isset($row['price']) ? max(0.0, (float) wc_format_decimal((string) $row['price'])) : 0.0,
                 'min_chars' => isset($row['min_chars']) ? max(0, absint($row['min_chars'])) : 0,
                 'max_chars' => isset($row['max_chars']) ? max(0, absint($row['max_chars'])) : 0,
+                'description' => isset($row['description']) ? sanitize_text_field((string) $row['description']) : '',
+                'placeholder' => isset($row['placeholder']) ? sanitize_text_field((string) $row['placeholder']) : '',
                 'options'   => [],
             ];
 

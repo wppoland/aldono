@@ -77,6 +77,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         </label>
                         <button type="button" class="button addons-admin-remove" data-addons-remove><?php esc_html_e('Remove', 'aldono'); ?></button>
                     </p>
+                    <p class="form-field addons-admin-texts">
+                        <input type="text" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][description]" placeholder="<?php esc_attr_e('Description (optional)', 'aldono'); ?>" value="<?php echo esc_attr((string) ($addons_row['description'] ?? '')); ?>" style="width:60%;" aria-label="<?php esc_attr_e('Description shown under the label', 'aldono'); ?>" />
+                        <input type="text" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][placeholder]" placeholder="<?php esc_attr_e('Placeholder (optional)', 'aldono'); ?>" value="<?php echo esc_attr((string) ($addons_row['placeholder'] ?? '')); ?>" style="width:35%;<?php echo in_array($addons_type, array('text', 'textarea', 'number'), true) ? '' : 'display:none;'; ?>" data-addons-placeholder aria-label="<?php esc_attr_e('Placeholder shown inside an empty Text, Textarea or Number field', 'aldono'); ?>" />
+                    </p>
                     <p class="form-field" data-addons-options <?php echo in_array($addons_type, array('select', 'radio'), true) ? '' : 'style="display:none;"'; ?>>
                         <textarea name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][options]" rows="3" placeholder="<?php esc_attr_e('Choices, one per line: Label | price', 'aldono'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select and Radio types', 'aldono'); ?>"><?php echo esc_textarea($addons_options); ?></textarea>
                         <span class="addons-options-help description"><?php esc_html_e('Only used for the "Select" and "Radio" types. One choice per line as "Label | price", e.g. "Standard | 0" and "Premium | 9.99". Omit the price for a free choice.', 'aldono'); ?></span>
@@ -125,6 +129,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         <?php esc_html_e('Required', 'aldono'); ?>
                     </label>
                     <button type="button" class="button addons-admin-remove" data-addons-remove><?php esc_html_e('Remove', 'aldono'); ?></button>
+                </p>
+                <p class="form-field addons-admin-texts">
+                    <input type="text" name="addons_def[__INDEX__][description]" placeholder="<?php esc_attr_e('Description (optional)', 'aldono'); ?>" value="" style="width:60%;" aria-label="<?php esc_attr_e('Description shown under the label', 'aldono'); ?>" />
+                    <input type="text" name="addons_def[__INDEX__][placeholder]" placeholder="<?php esc_attr_e('Placeholder (optional)', 'aldono'); ?>" value="" style="width:35%;" data-addons-placeholder aria-label="<?php esc_attr_e('Placeholder shown inside an empty Text, Textarea or Number field', 'aldono'); ?>" />
                 </p>
                 <p class="form-field" data-addons-options style="display:none;">
                     <textarea name="addons_def[__INDEX__][options]" rows="3" placeholder="<?php esc_attr_e('Choices, one per line: Label | price', 'aldono'); ?>" style="width:100%;" aria-label="<?php esc_attr_e('Choices for the Select and Radio types', 'aldono'); ?>"></textarea>
