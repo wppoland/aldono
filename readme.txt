@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.3.0 =
+* New: a live subtotal under the product options. It adds the price of each chosen option to the product price, multiplies by the quantity, updates as options and quantity change and when a variation is chosen, and uses the store currency format. It is shown on simple and variable products when add-on prices are visible and taxes leave displayed prices unchanged; otherwise it stays hidden rather than show a figure the cart would not charge.
 
 = 1.2.1 =
 * Fixed: the mini cart and the header cart showed each line at the product's base price, without its add-ons, under a subtotal that included them. The add-on price is now on the line as soon as it is in the cart.

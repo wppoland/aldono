@@ -31,6 +31,26 @@ $addons_show_required = (bool) ($addons_settings['show_required'] ?? true);
 $addons_card_style    = (bool) ($addons_settings['card_style'] ?? true);
 
 $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--card' : '');
+
+// Live subtotal. The cart charges (product price + add-on prices) x quantity,
+// with add-on prices exactly as entered. That is only the number the shopper
+// will see when taxes leave displayed prices untouched for every purchasable
+// product, so with any tax adjustment in play nothing is shown rather than a
+// wrong figure. Grouped and other product types post several quantities or
+// none, so the subtotal is limited to simple and variable products. It stays
+// off when the merchant hides add-on prices, as it would reveal them.
+$addons_subtotal = $addons_show_prices && isset($product) && $product instanceof \WC_Product && $product->is_type(array('simple', 'variable'));
+
+if ($addons_subtotal && wc_tax_enabled()) {
+    $addons_priced = $product->is_type('variable') ? array_filter(array_map('wc_get_product', $product->get_children())) : array($product);
+
+    foreach ($addons_priced as $addons_priced_product) {
+        if (100.0 !== (float) wc_get_price_to_display($addons_priced_product, array('price' => 100))) {
+            $addons_subtotal = false;
+            break;
+        }
+    }
+}
 ?>
 <div class="<?php echo esc_attr($addons_wrap_class); ?>">
     <?php if ($addons_group_title !== '') : ?>
@@ -78,6 +98,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                         id="<?php echo esc_attr($addons_id); ?>"
                         name="<?php echo esc_attr($addons_name); ?>"
                         value="<?php echo esc_attr($addons_label); ?>"
+                        data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
                     />
                     <?php echo esc_html($addons_label); ?>
@@ -102,6 +123,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                                 id="<?php echo esc_attr($addons_opt_id); ?>"
                                 name="<?php echo esc_attr($addons_name); ?>"
                                 value="<?php echo esc_attr($addons_opt_label); ?>"
+                                data-addons-price="<?php echo esc_attr((string) $addons_opt_price); ?>"
                                 <?php echo $addons_required ? 'required' : ''; ?>
                             />
                             <?php echo esc_html($addons_opt_label); ?>
@@ -130,7 +152,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                             ? $addons_opt_label . ' (' . wp_strip_all_tags(wc_price($addons_opt_price)) . ')'
                             : $addons_opt_label;
                         ?>
-                        <option value="<?php echo esc_attr($addons_opt_label); ?>"><?php echo esc_html($addons_opt_text); ?></option>
+                        <option value="<?php echo esc_attr($addons_opt_label); ?>" data-addons-price="<?php echo esc_attr((string) $addons_opt_price); ?>"><?php echo esc_html($addons_opt_text); ?></option>
                     <?php endforeach; ?>
                 </select>
             <?php else : ?>
@@ -144,6 +166,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                         id="<?php echo esc_attr($addons_id); ?>"
                         name="<?php echo esc_attr($addons_name); ?>"
                         class="input-text"
+                        data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         rows="3"
                         <?php echo $addons_required ? 'required' : ''; ?>
                         <?php echo $addons_char_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
@@ -155,6 +178,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                         id="<?php echo esc_attr($addons_id); ?>"
                         name="<?php echo esc_attr($addons_name); ?>"
                         class="input-text"
+                        data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
                     />
                 <?php elseif ($addons_type === 'date') : ?>
@@ -163,6 +187,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                         id="<?php echo esc_attr($addons_id); ?>"
                         name="<?php echo esc_attr($addons_name); ?>"
                         class="input-text"
+                        data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
                     />
                 <?php else : ?>
@@ -171,6 +196,7 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
                         id="<?php echo esc_attr($addons_id); ?>"
                         name="<?php echo esc_attr($addons_name); ?>"
                         class="input-text"
+                        data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
                         <?php echo $addons_char_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
                     />
@@ -183,6 +209,22 @@ $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--ca
             <?php endif; ?>
         </div>
     <?php endforeach; ?>
+
+    <?php if ($addons_subtotal) : ?>
+        <p
+            class="addons-subtotal"
+            aria-live="polite"
+            aria-atomic="true"
+            data-addons-subtotal
+            data-base="<?php echo esc_attr($product->is_type('variable') ? '' : (string) wc_get_price_to_display($product)); ?>"
+            data-decimals="<?php echo esc_attr((string) wc_get_price_decimals()); ?>"
+            data-decimal-separator="<?php echo esc_attr(wc_get_price_decimal_separator()); ?>"
+            data-thousand-separator="<?php echo esc_attr(wc_get_price_thousand_separator()); ?>"
+            data-symbol="<?php echo esc_attr(html_entity_decode(get_woocommerce_currency_symbol(), ENT_QUOTES | ENT_HTML5, 'UTF-8')); ?>"
+            data-price-format="<?php echo esc_attr(html_entity_decode(get_woocommerce_price_format(), ENT_QUOTES | ENT_HTML5, 'UTF-8')); ?>"
+            data-label="<?php /* translators: %s: the formatted subtotal, for example 25.00 EUR. */ echo esc_attr__('Subtotal: %s', 'aldono'); ?>"
+        ></p>
+    <?php endif; ?>
 </div>
 <?php
 // phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
