@@ -73,6 +73,7 @@
 			var select = row.querySelector('select[name*="[type]"]');
 			var charSettings = row.querySelector('[data-addons-char-settings]');
 			var options = row.querySelector('[data-addons-options]');
+			var placeholder = row.querySelector('[data-addons-placeholder]');
 
 			if (!select) {
 				return;
@@ -84,6 +85,10 @@
 
 			if (options) {
 				options.style.display = select.value === 'select' || select.value === 'radio' ? '' : 'none';
+			}
+
+			if (placeholder) {
+				placeholder.style.display = ['text', 'textarea', 'number'].indexOf(select.value) !== -1 ? '' : 'none';
 			}
 		}
 

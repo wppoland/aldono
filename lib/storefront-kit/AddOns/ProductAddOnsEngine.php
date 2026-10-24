@@ -68,6 +68,46 @@ final class ProductAddOnsEngine
         add_filter('woocommerce_add_cart_item', [$this, 'applyCartItemPrice'], 20);
         add_filter('woocommerce_get_cart_item_from_session', [$this, 'applyCartItemPrice'], 20);
         add_action('woocommerce_checkout_create_order_line_item', [$this, 'addOrderLineItemMeta'], 10, 4);
+        add_filter('woocommerce_available_variation', [$this, 'addVariationPricing'], 10, 3);
+    }
+
+    /**
+     * What the cart line displays per unit of raw price: the line is
+     * (product price + add-on prices) x quantity, taxed and converted once, and
+     * every WooCommerce tax path is linear in the line price before its final
+     * rounding. The probe is large so the factor carries every digit a price
+     * needs; the storefront multiplies and rounds once, as the cart does.
+     *
+     * ponytail: one rounding of the whole line. Several tax rates on one class,
+     * or prices entered with more decimals than the store shows, round each
+     * tax separately in WooCommerce and can differ by a cent.
+     */
+    public static function displayFactor(\WC_Product $product): float
+    {
+        $probe = 1000000.0;
+
+        return (float) wc_get_price_to_display($product, ['price' => $probe, 'display_context' => 'cart']) / $probe;
+    }
+
+    /**
+     * Give the live subtotal the raw variation price and its factor; the
+     * display_price WooCommerce sends is already converted and rounded.
+     *
+     * @param array<string, mixed> $data
+     * @param \WC_Product $parent
+     * @param \WC_Product $variation
+     * @return array<string, mixed>
+     */
+    public function addVariationPricing($data, $parent, $variation): array
+    {
+        if (! is_array($data) || ! $variation instanceof \WC_Product || ! $this->isEnabled()) {
+            return (array) $data;
+        }
+
+        $data['addons_price'] = (float) $variation->get_price();
+        $data['addons_tax_factor'] = self::displayFactor($variation);
+
+        return $data;
     }
 
     public function renderFields(): void
@@ -245,12 +285,13 @@ final class ProductAddOnsEngine
         }
 
         $selections = $this->selectionsFromCartItem($cartItem);
+        $product = $cartItem['data'] ?? null;
 
         foreach ($selections as $selection) {
             $value = $selection['value'];
 
             if ($selection['price'] > 0) {
-                $value .= ' (' . $this->plainPrice($selection['price']) . ')';
+                $value .= ' (' . $this->plainPrice($this->cartDisplayPrice($product, $selection['price'])) . ')';
             }
 
             $itemData[] = [
@@ -298,15 +339,38 @@ final class ProductAddOnsEngine
             return;
         }
 
+        $product = $values['data'] ?? null;
+
         foreach ($this->selectionsFromCartItem($values) as $selection) {
             $value = $selection['value'];
 
+            // Stored once, as the cart showed it when the order was placed.
             if ($selection['price'] > 0) {
-                $value .= ' (' . $this->plainPrice($selection['price']) . ')';
+                $value .= ' (' . $this->plainPrice($this->cartDisplayPrice($product, $selection['price'])) . ')';
             }
 
             $item->add_meta_data($selection['label'], $value);
         }
+    }
+
+    /**
+     * An add-on price the way the cart shows the line it is added to: taxed
+     * like the product, including or excluding tax as the cart displays prices
+     * (WC_Cart::get_product_subtotal()). Without a product it stays as entered.
+     */
+    private function cartDisplayPrice(mixed $product, float $price): float
+    {
+        if (! $product instanceof \WC_Product) {
+            return $price;
+        }
+
+        $cart = function_exists('WC') ? WC()->cart : null;
+        $including = $cart instanceof \WC_Cart
+            ? $cart->display_prices_including_tax()
+            : get_option('woocommerce_tax_display_cart') === 'incl';
+        $args = ['price' => $price, 'qty' => 1];
+
+        return (float) ($including ? wc_get_price_including_tax($product, $args) : wc_get_price_excluding_tax($product, $args));
     }
 
     /**
@@ -322,7 +386,7 @@ final class ProductAddOnsEngine
     /**
      * Normalise the host-stored add-on definition into a typed list.
      *
-     * @return list<array{label: string, type: string, required: bool, price: float, options: array<string, float>}>
+     * @return list<array{label: string, type: string, required: bool, price: float, options: array<string, float>, min_chars: int, max_chars: int, description: string, placeholder: string}>
      */
     public function getAddOns(\WC_Product $product): array
     {
@@ -366,6 +430,8 @@ final class ProductAddOnsEngine
                 'options' => $options,
                 'min_chars' => isset($entry['min_chars']) ? max(0, (int) $entry['min_chars']) : 0,
                 'max_chars' => isset($entry['max_chars']) ? max(0, (int) $entry['max_chars']) : 0,
+                'description' => trim((string) ($entry['description'] ?? '')),
+                'placeholder' => trim((string) ($entry['placeholder'] ?? '')),
             ];
         }
 
@@ -431,22 +497,21 @@ final class ProductAddOnsEngine
 
         $key = $this->fieldPrefix . $index;
 
-        // Nonce verified by nonceState() just above.
+        // Nonce verified by nonceState() just above. A field posted as an
+        // array (name="addons_field_0[]") did not come from the form.
         // phpcs:disable WordPress.Security.NonceVerification.Recommended
-        if (! isset($_REQUEST[$key])) {
+        if (! isset($_REQUEST[$key]) || ! is_string($_REQUEST[$key])) {
             return '';
         }
 
-        $raw = (string) wp_unslash($_REQUEST[$key]);
-        // phpcs:enable WordPress.Security.NonceVerification.Recommended
-
         if ($type !== 'textarea') {
-            return sanitize_text_field($raw);
+            return sanitize_text_field(wp_unslash($_REQUEST[$key]));
         }
 
         // Keep the line breaks, as one "\n" each: the browser counts a line
         // break as one character against maxlength but posts it as "\r\n".
-        return str_replace("\r\n", "\n", sanitize_textarea_field($raw));
+        return str_replace("\r\n", "\n", sanitize_textarea_field(wp_unslash($_REQUEST[$key])));
+        // phpcs:enable WordPress.Security.NonceVerification.Recommended
     }
 
     /**

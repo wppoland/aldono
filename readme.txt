@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,12 +15,14 @@ Add WooCommerce product options, product add-ons and custom product fields befor
 
 Aldono lets store owners offer WooCommerce product options, product add-ons and custom product fields that customers pick before adding a product to the cart: gift wrapping, an engraving message, an extended warranty or a colour choice.
 
-For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, and an optional price.
+For each product you define a list of add-ons in the WooCommerce product editor. Every add-on has a label, a field type, an optional required flag, an optional price, and optional help text.
 
 * **Field types**, a text line, a multi-line textarea, a number, a date picker, a checkbox, a select drop-down, or a group of radio buttons.
 * **Text limits**, set minimum and maximum character lengths for text and textarea product options.
 * **Checked input**, a number must be numeric, a date must be a real calendar date, and a select or radio must post one of its own choices.
-* **Price deltas**, give an add-on (or each select or radio choice) a price; the amount is added to the cart line total automatically.
+* **Price deltas**, give an add-on (or each select or radio choice) a price; the amount is added to the cart line total automatically. Taxes apply to it like to the product, and the price beside each option is shown the way your store displays prices, including or excluding tax.
+* **Help text**, an optional description under each option's label, and an optional placeholder inside empty text, textarea and number fields.
+* **Live subtotal**, the product page shows the line total (product price plus chosen options, times the quantity) as the cart will display it, updated as options, quantity and variations change.
 * **Free or paid**, leave the price at zero for free options such as a personalised message.
 * **Cart & order display**, the customer's choices appear in the cart, at checkout, and on the order.
 * **Display settings**, choose the group heading, show or hide option prices, toggle the required-field asterisk, and wrap the options in a bordered card, all from the Add-Ons settings page.
@@ -86,7 +88,7 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 
 == Screenshots ==
 
-1. On the storefront.
+1. Text, checkbox, select and radio options on a product page, each with its price, and the live subtotal under them.
 2. Settings in the WordPress admin.
 3. On a mobile device.
 4. The live subtotal under the product options, updated as options are picked.
@@ -99,6 +101,14 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.4.0 =
+* Fixed: the price beside an option ignored taxes. With prices entered excluding tax and shown including tax, an option labelled 10.00 added 12.30 at 23% VAT. Option prices are now shown the way the store displays prices, so the label matches what the cart adds.
+* Changed: the live subtotal now also shows when taxes change displayed prices, in all four combinations of prices entered with or without tax and shown with or without tax. With one tax rate per product it matches the cart line to the cent. It stays hidden when the shop and the cart are set to display taxes differently.
+* New: an optional description under each option's label and an optional placeholder for text, textarea and number options, set per option in the product editor.
+* Fixed: a required checkbox option now shows the required marker like the other field types.
+* Fixed: the price beside a chosen option in the cart, at checkout, in the order confirmation and in the admin order was the amount as entered, without tax. It is now shown the way the cart displays prices, and new orders store it that way. Existing orders keep what they stored.
+* Fixed: an option field posted as a list instead of text is now ignored instead of being read as the word "Array".
 
 = 1.3.0 =
 * New: a live subtotal under the product options. It adds the price of each chosen option to the product price, multiplies by the quantity, updates as options and quantity change and when a variation is chosen, and uses the store currency format. It is shown on simple and variable products when add-on prices are visible and taxes leave displayed prices unchanged; otherwise it stays hidden rather than show a figure the cart would not charge.

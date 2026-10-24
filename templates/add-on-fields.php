@@ -4,7 +4,7 @@
  * `woocommerce_before_add_to_cart_button`.
  *
  * @var \WC_Product                                                                              $product
- * @var list<array{label: string, type: string, required: bool, price: float, options: array<string, float>}> $add_ons
+ * @var list<array{label: string, type: string, required: bool, price: float, options: array<string, float>, description?: string, placeholder?: string}> $add_ons
  * @var string                                                                                   $field_prefix
  * @var array<string, mixed>                                                                     $settings
  * @var string                                                                                   $group_title
@@ -18,7 +18,7 @@ declare(strict_types=1);
 
 defined('ABSPATH') || exit;
 
-if (! isset($add_ons) || ! is_array($add_ons) || $add_ons === []) {
+if (! isset($add_ons) || ! is_array($add_ons) || $add_ons === [] || ! isset($product) || ! $product instanceof \WC_Product) {
     return;
 }
 
@@ -32,25 +32,23 @@ $addons_card_style    = (bool) ($addons_settings['card_style'] ?? true);
 
 $addons_wrap_class = 'addons-fields' . ($addons_card_style ? ' addons-fields--card' : '');
 
-// Live subtotal. The cart charges (product price + add-on prices) x quantity,
-// with add-on prices exactly as entered. That is only the number the shopper
-// will see when taxes leave displayed prices untouched for every purchasable
-// product, so with any tax adjustment in play nothing is shown rather than a
-// wrong figure. Grouped and other product types post several quantities or
-// none, so the subtotal is limited to simple and variable products. It stays
-// off when the merchant hides add-on prices, as it would reveal them.
-$addons_subtotal = $addons_show_prices && isset($product) && $product instanceof \WC_Product && $product->is_type(array('simple', 'variable'));
+// Add-on prices are stored as entered and added to the product price in the
+// cart, so taxes apply to them like to the product. Labels show each price the
+// way the store displays product prices.
+$addons_display_price = static function (float $price) use ($product): float {
+    return (float) wc_get_price_to_display($product, array('price' => $price));
+};
 
-if ($addons_subtotal && wc_tax_enabled()) {
-    $addons_priced = $product->is_type('variable') ? array_filter(array_map('wc_get_product', $product->get_children())) : array($product);
-
-    foreach ($addons_priced as $addons_priced_product) {
-        if (100.0 !== (float) wc_get_price_to_display($addons_priced_product, array('price' => 100))) {
-            $addons_subtotal = false;
-            break;
-        }
-    }
-}
+// Live subtotal. The cart line is (product price + add-on prices) x quantity,
+// converted for display once, so the script does the same with the raw prices
+// and the factor from Engine::displayFactor(). Shown only when the shop and the
+// cart display taxes the same way, so it never disagrees with the labels above
+// it. Grouped and other product types post several quantities or none, so the
+// subtotal is limited to simple and variable products. It stays off when the
+// merchant hides add-on prices, as it would reveal them.
+$addons_subtotal = $addons_show_prices
+    && $product->is_type(array('simple', 'variable'))
+    && (! wc_tax_enabled() || get_option('woocommerce_tax_display_shop') === get_option('woocommerce_tax_display_cart'));
 ?>
 <div class="<?php echo esc_attr($addons_wrap_class); ?>">
     <?php if ($addons_group_title !== '') : ?>
@@ -67,6 +65,12 @@ if ($addons_subtotal && wc_tax_enabled()) {
         $addons_price     = (float) ($addons_field['price'] ?? 0);
         $addons_min_chars = isset($addons_field['min_chars']) ? (int) $addons_field['min_chars'] : 0;
         $addons_max_chars = isset($addons_field['max_chars']) ? (int) $addons_field['max_chars'] : 0;
+        $addons_desc      = (string) ($addons_field['description'] ?? '');
+        $addons_desc_id   = $addons_id . '-description';
+        $addons_described = $addons_desc !== '' ? ' aria-describedby="' . esc_attr($addons_desc_id) . '"' : '';
+        $addons_desc_html = $addons_desc !== '' ? '<span class="addons-field__description description" id="' . esc_attr($addons_desc_id) . '">' . esc_html($addons_desc) . '</span>' : '';
+        $addons_hint      = (string) ($addons_field['placeholder'] ?? '');
+        $addons_hint_attr = $addons_hint !== '' ? ' placeholder="' . esc_attr($addons_hint) . '"' : '';
         $addons_options   = isset($addons_field['options']) && is_array($addons_field['options'])
             ? $addons_field['options']
             : array();
@@ -82,7 +86,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
         }
 
         $addons_price_html = ($addons_show_prices && $addons_price > 0)
-            ? '<span class="addons-field__price">(' . wc_price($addons_price) . ')</span>'
+            ? '<span class="addons-field__price">(' . wc_price($addons_display_price($addons_price)) . ')</span>'
             : '';
         $addons_required_html = ($addons_required && $addons_show_required)
             ? '<abbr class="required" title="' . esc_attr__('required', 'aldono') . '">*</abbr>'
@@ -100,16 +104,20 @@ if ($addons_subtotal && wc_tax_enabled()) {
                         value="<?php echo esc_attr($addons_label); ?>"
                         data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
+                        <?php echo $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() above. ?>
                     />
                     <?php echo esc_html($addons_label); ?>
+                    <?php echo wp_kses_post($addons_required_html); ?>
                     <?php echo wp_kses_post($addons_price_html); ?>
                 </label>
+                <?php echo $addons_desc_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() and esc_html() above. ?>
             <?php elseif ($addons_type === 'radio') : ?>
-                <fieldset class="addons-field__choices">
+                <fieldset class="addons-field__choices"<?php echo $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() above. ?>>
                     <legend>
                         <?php echo esc_html($addons_label); ?>
                         <?php echo wp_kses_post($addons_required_html); ?>
                     </legend>
+                    <?php echo $addons_desc_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() and esc_html() above. ?>
                     <?php $addons_opt_i = 0; ?>
                     <?php foreach ($addons_options as $addons_opt_label => $addons_opt_price) : ?>
                         <?php
@@ -128,7 +136,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                             />
                             <?php echo esc_html($addons_opt_label); ?>
                             <?php if ($addons_show_prices && $addons_opt_price > 0) : ?>
-                                <span class="addons-field__price">(<?php echo wp_kses_post(wc_price($addons_opt_price)); ?>)</span>
+                                <span class="addons-field__price">(<?php echo wp_kses_post(wc_price($addons_display_price($addons_opt_price))); ?>)</span>
                             <?php endif; ?>
                         </label>
                     <?php endforeach; ?>
@@ -138,10 +146,12 @@ if ($addons_subtotal && wc_tax_enabled()) {
                     <?php echo esc_html($addons_label); ?>
                     <?php echo wp_kses_post($addons_required_html); ?>
                 </label>
+                <?php echo $addons_desc_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() and esc_html() above. ?>
                 <select
                     id="<?php echo esc_attr($addons_id); ?>"
                     name="<?php echo esc_attr($addons_name); ?>"
                     <?php echo $addons_required ? 'required' : ''; ?>
+                    <?php echo $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() above. ?>
                 >
                     <option value=""><?php esc_html_e('- Select -', 'aldono'); ?></option>
                     <?php foreach ($addons_options as $addons_opt_label => $addons_opt_price) : ?>
@@ -149,7 +159,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                         $addons_opt_label = (string) $addons_opt_label;
                         $addons_opt_price = (float) $addons_opt_price;
                         $addons_opt_text  = ($addons_show_prices && $addons_opt_price > 0)
-                            ? $addons_opt_label . ' (' . wp_strip_all_tags(wc_price($addons_opt_price)) . ')'
+                            ? $addons_opt_label . ' (' . wp_strip_all_tags(wc_price($addons_display_price($addons_opt_price))) . ')'
                             : $addons_opt_label;
                         ?>
                         <option value="<?php echo esc_attr($addons_opt_label); ?>" data-addons-price="<?php echo esc_attr((string) $addons_opt_price); ?>"><?php echo esc_html($addons_opt_text); ?></option>
@@ -161,6 +171,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                     <?php echo wp_kses_post($addons_required_html); ?>
                     <?php echo wp_kses_post($addons_price_html); ?>
                 </label>
+                <?php echo $addons_desc_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() and esc_html() above. ?>
                 <?php if ($addons_type === 'textarea') : ?>
                     <textarea
                         id="<?php echo esc_attr($addons_id); ?>"
@@ -169,7 +180,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                         data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         rows="3"
                         <?php echo $addons_required ? 'required' : ''; ?>
-                        <?php echo $addons_char_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
+                        <?php echo $addons_char_attrs . $addons_hint_attr . $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
                     ></textarea>
                 <?php elseif ($addons_type === 'number') : ?>
                     <input
@@ -180,6 +191,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                         class="input-text"
                         data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
+                        <?php echo $addons_hint_attr . $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
                     />
                 <?php elseif ($addons_type === 'date') : ?>
                     <input
@@ -189,6 +201,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                         class="input-text"
                         data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
+                        <?php echo $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() above. ?>
                     />
                 <?php else : ?>
                     <input
@@ -198,7 +211,7 @@ if ($addons_subtotal && wc_tax_enabled()) {
                         class="input-text"
                         data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>
-                        <?php echo $addons_char_attrs; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
+                        <?php echo $addons_char_attrs . $addons_hint_attr . $addons_described; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Built from esc_attr() values above. ?>
                     />
                 <?php endif; ?>
                 <?php if (($addons_type === 'text' || $addons_type === 'textarea') && ($addons_min_chars > 0 || $addons_max_chars > 0)) : ?>
@@ -216,7 +229,8 @@ if ($addons_subtotal && wc_tax_enabled()) {
             aria-live="polite"
             aria-atomic="true"
             data-addons-subtotal
-            data-base="<?php echo esc_attr($product->is_type('variable') ? '' : (string) wc_get_price_to_display($product)); ?>"
+            data-base="<?php echo esc_attr($product->is_type('variable') ? '' : (string) $product->get_price()); ?>"
+            data-tax-factor="<?php echo esc_attr((string) \WPPoland\StorefrontKit\AddOns\ProductAddOnsEngine::displayFactor($product)); ?>"
             data-decimals="<?php echo esc_attr((string) wc_get_price_decimals()); ?>"
             data-decimal-separator="<?php echo esc_attr(wc_get_price_decimal_separator()); ?>"
             data-thousand-separator="<?php echo esc_attr(wc_get_price_thousand_separator()); ?>"

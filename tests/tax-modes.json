@@ -1,0 +1,5821 @@
+{
+    "format": {
+        "decimals": 2,
+        "decimalSeparator": ".",
+        "thousandSeparator": ",",
+        "symbol": "$",
+        "priceFormat": "%1$s%2$s"
+    },
+    "cases": [
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$12.30"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$24.60"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$36.90"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$86.10"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$24.60"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$49.20"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$73.80"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$172.20"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$15.44"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$30.87"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$46.31"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$108.06"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$27.99"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$55.99"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$83.98"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$195.96"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$12.31"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$24.62"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$36.94"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$86.19"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$24.59"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$49.18"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$73.76"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$172.11"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$36.89"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$73.78"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$110.66"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$258.21"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$27.72"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$55.45"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$83.17"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$194.07"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$40.28"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$80.57"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$120.85"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$281.98"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$24.60"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$49.20"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$73.80"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$172.20"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$0.62"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$1.23"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$1.85"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$4.31"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$12.92"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$25.83"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$38.75"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$90.41"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$3.75"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$7.50"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$11.25"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$26.26"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$16.31"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$32.62"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$48.93"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$114.17"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$0.63"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$1.25"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$1.88"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$4.39"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$41.00"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$81.99"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$122.99"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$286.97"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$53.30"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$106.59"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$159.89"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$373.07"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$44.13"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$88.26"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$132.40"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$308.93"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$56.69"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$113.38"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$170.07"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$396.83"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$41.01"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$82.02"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$123.02"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$287.06"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$122.94"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$245.88"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$368.82"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$860.57"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$135.24"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$270.48"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$405.72"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$946.67"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$126.08"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$252.15"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$378.23"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$882.53"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$138.63"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$277.27"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$415.90"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$970.43"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$122.95"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$245.90"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$368.85"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$860.66"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$1,518.51"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$3,037.02"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$4,555.53"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$10,629.56"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$1,530.81"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$3,061.62"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$4,592.43"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$10,715.66"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$1,521.65"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$3,043.29"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$4,564.94"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$10,651.52"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$1,534.20"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$3,068.41"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$4,602.61"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$10,739.43"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1.23,
+            "cart": "$1,518.52"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1.23,
+            "cart": "$3,037.04"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1.23,
+            "cart": "$4,555.56"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1.23,
+            "cart": "$10,629.65"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$10.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$20.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$30.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$70.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$20.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$40.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$60.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$140.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$12.55"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$25.10"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$37.65"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$87.85"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$22.76"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$45.52"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$68.28"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$159.32"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$10.01"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$20.02"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$30.03"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$70.07"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$19.99"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$39.98"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$59.97"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$139.93"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$29.99"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$59.98"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$89.97"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$209.93"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$22.54"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$45.08"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$67.62"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$157.78"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$32.75"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$65.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$98.25"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$229.25"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$20.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$40.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$60.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$140.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$0.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$1.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$1.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$3.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$10.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$21.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$31.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$73.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$3.05"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$6.10"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$9.15"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$21.35"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$13.26"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$26.52"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$39.78"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$92.82"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$0.51"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$1.02"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$1.53"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$3.57"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$33.33"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$66.66"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$99.99"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$233.31"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$43.33"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$86.66"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$129.99"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$303.31"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$35.88"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$71.76"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$107.64"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$251.16"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$46.09"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$92.18"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$138.27"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$322.63"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$33.34"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$66.68"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$100.02"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$233.38"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$99.95"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$199.90"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$299.85"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$699.65"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$109.95"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$219.90"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$329.85"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$769.65"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$102.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$205.00"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$307.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$717.50"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$112.71"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$225.42"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$338.13"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$788.97"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$99.96"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$199.92"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$299.88"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$699.72"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,234.56"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,469.12"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,703.68"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,641.92"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,244.56"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,489.12"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,733.68"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,711.92"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,237.11"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,474.22"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,711.33"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,659.77"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,247.32"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,494.64"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,741.96"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,731.24"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,234.57"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,469.14"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,703.71"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,641.99"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$10.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$20.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$30.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$70.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$20.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$40.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$60.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$140.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$12.55"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$25.10"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$37.65"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$87.85"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$22.76"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$45.52"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$68.28"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$159.32"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$10.01"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$20.02"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$30.03"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$70.07"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$19.99"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$39.98"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$59.97"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$139.93"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$29.99"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$59.98"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$89.97"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$209.93"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$22.54"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$45.08"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$67.62"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$157.78"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$32.75"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$65.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$98.25"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$229.25"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$20.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$40.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$60.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$140.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$0.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$1.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$1.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$3.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$10.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$21.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$31.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$73.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$3.05"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$6.10"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$9.15"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$21.35"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$13.26"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$26.52"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$39.78"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$92.82"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$0.51"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$1.02"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$1.53"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$3.57"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$33.33"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$66.66"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$99.99"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$233.31"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$43.33"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$86.66"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$129.99"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$303.31"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$35.88"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$71.76"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$107.64"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$251.16"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$46.09"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$92.18"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$138.27"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$322.63"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$33.34"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$66.68"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$100.02"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$233.38"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$99.95"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$199.90"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$299.85"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$699.65"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$109.95"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$219.90"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$329.85"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$769.65"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$102.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$205.00"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$307.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$717.50"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$112.71"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$225.42"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$338.13"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$788.97"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$99.96"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$199.92"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$299.88"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$699.72"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,234.56"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,469.12"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,703.68"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,641.92"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,244.56"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,489.12"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,733.68"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,711.92"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,237.11"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,474.22"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,711.33"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,659.77"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,247.32"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,494.64"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,741.96"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,731.24"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 1,
+            "cart": "$1,234.57"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 1,
+            "cart": "$2,469.14"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 1,
+            "cart": "$3,703.71"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 1,
+            "cart": "$8,641.99"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$8.13"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$16.26"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$24.39"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$56.91"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$16.26"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$32.52"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$48.78"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$113.82"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$10.20"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$20.41"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$30.61"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$71.42"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$18.50"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$37.01"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$55.51"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$129.53"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$8.14"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$16.28"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$24.41"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 10,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$56.97"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$16.25"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$32.50"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$48.76"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$113.76"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$24.38"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$48.76"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$73.15"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$170.67"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$18.33"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$36.65"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$54.98"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$128.28"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$26.63"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$53.25"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$79.88"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$186.38"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$16.26"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$32.52"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$48.78"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 19.99,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$113.82"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$0.41"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$0.81"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$1.22"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$2.85"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$8.54"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$17.07"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$25.61"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$59.76"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$2.48"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$4.96"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$7.44"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$17.36"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$10.78"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$21.56"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$32.34"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$75.46"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$0.41"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$0.83"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$1.24"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 0.5,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$2.90"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$27.10"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$54.20"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$81.29"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$189.68"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$35.23"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$70.46"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$105.68"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$246.59"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$29.17"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$58.34"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$87.51"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$204.20"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$37.47"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$74.94"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$112.41"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$262.30"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$27.11"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$54.21"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$81.32"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 33.33,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$189.74"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$81.26"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$162.52"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$243.78"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$568.82"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$89.39"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$178.78"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$268.17"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$625.73"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$83.33"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$166.67"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$250.00"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$583.33"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$91.63"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$183.27"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$274.90"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$641.44"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$81.27"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$162.54"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$243.80"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 99.95,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$568.88"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$1,003.71"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$2,007.41"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$3,011.12"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$7,025.95"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$1,011.84"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$2,023.67"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$3,035.51"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                10
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$7,082.86"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$1,005.78"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$2,011.56"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$3,017.34"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                2.5,
+                0.05
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$7,040.46"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$1,014.08"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$2,028.16"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$3,042.24"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                4.99,
+                7.77
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$7,098.57"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 1,
+            "factor": 0.813008130081,
+            "cart": "$1,003.72"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 2,
+            "factor": 0.813008130081,
+            "cart": "$2,007.43"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 3,
+            "factor": 0.813008130081,
+            "cart": "$3,011.15"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "base": 1234.56,
+            "extras": [
+                0.01
+            ],
+            "qty": 7,
+            "factor": 0.813008130081,
+            "cart": "$7,026.01"
+        }
+    ],
+    "metas": [
+        {
+            "mode": "entered excl, shown incl",
+            "price": 10,
+            "cart": "$12.30",
+            "shown": "x ($12.30)",
+            "order": "x ($12.30)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 2.5,
+            "cart": "$3.08",
+            "shown": "x ($3.08)",
+            "order": "x ($3.08)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.05,
+            "cart": "$0.06",
+            "shown": "x ($0.06)",
+            "order": "x ($0.06)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 4.99,
+            "cart": "$6.14",
+            "shown": "x ($6.14)",
+            "order": "x ($6.14)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 7.77,
+            "cart": "$9.56",
+            "shown": "x ($9.56)",
+            "order": "x ($9.56)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 10,
+            "cart": "$12.30",
+            "shown": "x ($12.30)",
+            "order": "x ($12.30)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 2.5,
+            "cart": "$3.08",
+            "shown": "x ($3.08)",
+            "order": "x ($3.08)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.05,
+            "cart": "$0.06",
+            "shown": "x ($0.06)",
+            "order": "x ($0.06)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 4.99,
+            "cart": "$6.14",
+            "shown": "x ($6.14)",
+            "order": "x ($6.14)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 7.77,
+            "cart": "$9.56",
+            "shown": "x ($9.56)",
+            "order": "x ($9.56)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 10,
+            "cart": "$12.30",
+            "shown": "x ($12.30)",
+            "order": "x ($12.30)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 2.5,
+            "cart": "$3.08",
+            "shown": "x ($3.08)",
+            "order": "x ($3.08)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.05,
+            "cart": "$0.06",
+            "shown": "x ($0.06)",
+            "order": "x ($0.06)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 4.99,
+            "cart": "$6.14",
+            "shown": "x ($6.14)",
+            "order": "x ($6.14)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 7.77,
+            "cart": "$9.56",
+            "shown": "x ($9.56)",
+            "order": "x ($9.56)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 10,
+            "cart": "$12.30",
+            "shown": "x ($12.30)",
+            "order": "x ($12.30)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 2.5,
+            "cart": "$3.08",
+            "shown": "x ($3.08)",
+            "order": "x ($3.08)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.05,
+            "cart": "$0.06",
+            "shown": "x ($0.06)",
+            "order": "x ($0.06)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 4.99,
+            "cart": "$6.14",
+            "shown": "x ($6.14)",
+            "order": "x ($6.14)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 7.77,
+            "cart": "$9.56",
+            "shown": "x ($9.56)",
+            "order": "x ($9.56)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 10,
+            "cart": "$12.30",
+            "shown": "x ($12.30)",
+            "order": "x ($12.30)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 2.5,
+            "cart": "$3.08",
+            "shown": "x ($3.08)",
+            "order": "x ($3.08)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.05,
+            "cart": "$0.06",
+            "shown": "x ($0.06)",
+            "order": "x ($0.06)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 4.99,
+            "cart": "$6.14",
+            "shown": "x ($6.14)",
+            "order": "x ($6.14)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 7.77,
+            "cart": "$9.56",
+            "shown": "x ($9.56)",
+            "order": "x ($9.56)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 10,
+            "cart": "$12.30",
+            "shown": "x ($12.30)",
+            "order": "x ($12.30)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 2.5,
+            "cart": "$3.08",
+            "shown": "x ($3.08)",
+            "order": "x ($3.08)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.05,
+            "cart": "$0.06",
+            "shown": "x ($0.06)",
+            "order": "x ($0.06)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 4.99,
+            "cart": "$6.14",
+            "shown": "x ($6.14)",
+            "order": "x ($6.14)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 7.77,
+            "cart": "$9.56",
+            "shown": "x ($9.56)",
+            "order": "x ($9.56)"
+        },
+        {
+            "mode": "entered excl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered excl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 10,
+            "cart": "$10.00",
+            "shown": "x ($10.00)",
+            "order": "x ($10.00)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 2.5,
+            "cart": "$2.50",
+            "shown": "x ($2.50)",
+            "order": "x ($2.50)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.05,
+            "cart": "$0.05",
+            "shown": "x ($0.05)",
+            "order": "x ($0.05)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 4.99,
+            "cart": "$4.99",
+            "shown": "x ($4.99)",
+            "order": "x ($4.99)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 7.77,
+            "cart": "$7.77",
+            "shown": "x ($7.77)",
+            "order": "x ($7.77)"
+        },
+        {
+            "mode": "entered incl, shown incl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 10,
+            "cart": "$8.13",
+            "shown": "x ($8.13)",
+            "order": "x ($8.13)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 2.5,
+            "cart": "$2.03",
+            "shown": "x ($2.03)",
+            "order": "x ($2.03)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.05,
+            "cart": "$0.04",
+            "shown": "x ($0.04)",
+            "order": "x ($0.04)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 4.99,
+            "cart": "$4.06",
+            "shown": "x ($4.06)",
+            "order": "x ($4.06)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 7.77,
+            "cart": "$6.32",
+            "shown": "x ($6.32)",
+            "order": "x ($6.32)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 10,
+            "cart": "$8.13",
+            "shown": "x ($8.13)",
+            "order": "x ($8.13)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 2.5,
+            "cart": "$2.03",
+            "shown": "x ($2.03)",
+            "order": "x ($2.03)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.05,
+            "cart": "$0.04",
+            "shown": "x ($0.04)",
+            "order": "x ($0.04)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 4.99,
+            "cart": "$4.06",
+            "shown": "x ($4.06)",
+            "order": "x ($4.06)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 7.77,
+            "cart": "$6.32",
+            "shown": "x ($6.32)",
+            "order": "x ($6.32)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 10,
+            "cart": "$8.13",
+            "shown": "x ($8.13)",
+            "order": "x ($8.13)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 2.5,
+            "cart": "$2.03",
+            "shown": "x ($2.03)",
+            "order": "x ($2.03)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.05,
+            "cart": "$0.04",
+            "shown": "x ($0.04)",
+            "order": "x ($0.04)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 4.99,
+            "cart": "$4.06",
+            "shown": "x ($4.06)",
+            "order": "x ($4.06)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 7.77,
+            "cart": "$6.32",
+            "shown": "x ($6.32)",
+            "order": "x ($6.32)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 10,
+            "cart": "$8.13",
+            "shown": "x ($8.13)",
+            "order": "x ($8.13)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 2.5,
+            "cart": "$2.03",
+            "shown": "x ($2.03)",
+            "order": "x ($2.03)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.05,
+            "cart": "$0.04",
+            "shown": "x ($0.04)",
+            "order": "x ($0.04)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 4.99,
+            "cart": "$4.06",
+            "shown": "x ($4.06)",
+            "order": "x ($4.06)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 7.77,
+            "cart": "$6.32",
+            "shown": "x ($6.32)",
+            "order": "x ($6.32)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 10,
+            "cart": "$8.13",
+            "shown": "x ($8.13)",
+            "order": "x ($8.13)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 2.5,
+            "cart": "$2.03",
+            "shown": "x ($2.03)",
+            "order": "x ($2.03)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.05,
+            "cart": "$0.04",
+            "shown": "x ($0.04)",
+            "order": "x ($0.04)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 4.99,
+            "cart": "$4.06",
+            "shown": "x ($4.06)",
+            "order": "x ($4.06)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 7.77,
+            "cart": "$6.32",
+            "shown": "x ($6.32)",
+            "order": "x ($6.32)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 10,
+            "cart": "$8.13",
+            "shown": "x ($8.13)",
+            "order": "x ($8.13)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 2.5,
+            "cart": "$2.03",
+            "shown": "x ($2.03)",
+            "order": "x ($2.03)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.05,
+            "cart": "$0.04",
+            "shown": "x ($0.04)",
+            "order": "x ($0.04)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 4.99,
+            "cart": "$4.06",
+            "shown": "x ($4.06)",
+            "order": "x ($4.06)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 7.77,
+            "cart": "$6.32",
+            "shown": "x ($6.32)",
+            "order": "x ($6.32)"
+        },
+        {
+            "mode": "entered incl, shown excl",
+            "price": 0.01,
+            "cart": "$0.01",
+            "shown": "x ($0.01)",
+            "order": "x ($0.01)"
+        }
+    ]
+}
