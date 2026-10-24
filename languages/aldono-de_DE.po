@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plogins Add-Ons for WooCommerce 0.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/aldono\n"
-"POT-Creation-Date: 2026-09-29T09:16:17+00:00\n"
+"POT-Creation-Date: 2026-10-23T19:40:43+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -300,13 +300,19 @@ msgstr ""
 msgid "Product options"
 msgstr ""
 
-#: templates/add-on-fields.php:68
+#: templates/add-on-fields.php:92
 msgid "required"
 msgstr "erforderlich"
 
-#: templates/add-on-fields.php:124
+#: templates/add-on-fields.php:156
 msgid "- Select -"
 msgstr "- Wählen -"
+
+#. translators: %s: the formatted subtotal, for example 25.00 EUR.
+#: templates/add-on-fields.php:239
+#, php-format
+msgid "Subtotal: %s"
+msgstr ""
 
 #: templates/admin/product-data-panel.php:23
 msgid "Product add-ons"
@@ -343,119 +349,139 @@ msgstr ""
 "können."
 
 #: templates/admin/product-data-panel.php:58
-#: templates/admin/product-data-panel.php:107
+#: templates/admin/product-data-panel.php:111
 msgid "Option"
 msgstr "Option"
 
 #: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:108
+#: templates/admin/product-data-panel.php:112
 msgid "Label (e.g. Gift wrap)"
 msgstr "Etikett (z. B. Geschenkverpackung)"
 
 #: templates/admin/product-data-panel.php:59
-#: templates/admin/product-data-panel.php:108
+#: templates/admin/product-data-panel.php:112
 msgid "Option label"
 msgstr "Optionsetikett"
 
 #: templates/admin/product-data-panel.php:60
-#: templates/admin/product-data-panel.php:109
+#: templates/admin/product-data-panel.php:113
 msgid "Option type"
 msgstr "Optionstyp"
 
 #: templates/admin/product-data-panel.php:61
-#: templates/admin/product-data-panel.php:110
+#: templates/admin/product-data-panel.php:114
 msgid "Text"
 msgstr "Text"
 
 #: templates/admin/product-data-panel.php:62
-#: templates/admin/product-data-panel.php:111
+#: templates/admin/product-data-panel.php:115
 msgid "Checkbox"
 msgstr "Kontrollkästchen"
 
 #: templates/admin/product-data-panel.php:63
-#: templates/admin/product-data-panel.php:112
+#: templates/admin/product-data-panel.php:116
 msgid "Select"
 msgstr "Auswahl"
 
 #: templates/admin/product-data-panel.php:64
-#: templates/admin/product-data-panel.php:113
+#: templates/admin/product-data-panel.php:117
 msgid "Radio"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:65
-#: templates/admin/product-data-panel.php:114
+#: templates/admin/product-data-panel.php:118
 msgid "Textarea"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:66
-#: templates/admin/product-data-panel.php:115
+#: templates/admin/product-data-panel.php:119
 msgid "Number"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:67
-#: templates/admin/product-data-panel.php:116
+#: templates/admin/product-data-panel.php:120
 msgid "Date"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:69
-#: templates/admin/product-data-panel.php:118
+#: templates/admin/product-data-panel.php:122
 msgid "Price"
 msgstr "Preis"
 
 #: templates/admin/product-data-panel.php:69
-#: templates/admin/product-data-panel.php:118
+#: templates/admin/product-data-panel.php:122
 msgid "Extra price added when chosen"
 msgstr "Zusätzlicher Preis wird bei Auswahl hinzugefügt"
 
 #: templates/admin/product-data-panel.php:71
-#: templates/admin/product-data-panel.php:120
+#: templates/admin/product-data-panel.php:124
 msgid "Min chars"
 msgstr "Min. Zeichen"
 
 #: templates/admin/product-data-panel.php:71
-#: templates/admin/product-data-panel.php:120
+#: templates/admin/product-data-panel.php:124
 msgid "Minimum character length"
 msgstr "Mindestzeichenlänge"
 
 #: templates/admin/product-data-panel.php:72
-#: templates/admin/product-data-panel.php:121
+#: templates/admin/product-data-panel.php:125
 msgid "Max chars"
 msgstr "Max. Zeichen"
 
 #: templates/admin/product-data-panel.php:72
-#: templates/admin/product-data-panel.php:121
+#: templates/admin/product-data-panel.php:125
 msgid "Maximum character length"
 msgstr "Maximale Zeichenlänge"
 
 #: templates/admin/product-data-panel.php:76
-#: templates/admin/product-data-panel.php:125
+#: templates/admin/product-data-panel.php:129
 msgid "Required"
 msgstr "Erforderlich"
 
 #: templates/admin/product-data-panel.php:78
-#: templates/admin/product-data-panel.php:127
+#: templates/admin/product-data-panel.php:131
 msgid "Remove"
 msgstr "Entfernen"
 
 #: templates/admin/product-data-panel.php:81
-#: templates/admin/product-data-panel.php:130
-msgid "Choices, one per line: Label | price"
+#: templates/admin/product-data-panel.php:134
+msgid "Description (optional)"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:81
-#: templates/admin/product-data-panel.php:130
-msgid "Choices for the Select and Radio types"
+#: templates/admin/product-data-panel.php:134
+msgid "Description shown under the label"
 msgstr ""
 
 #: templates/admin/product-data-panel.php:82
-#: templates/admin/product-data-panel.php:131
+#: templates/admin/product-data-panel.php:135
+msgid "Placeholder (optional)"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:82
+#: templates/admin/product-data-panel.php:135
+msgid "Placeholder shown inside an empty Text, Textarea or Number field"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:85
+#: templates/admin/product-data-panel.php:138
+msgid "Choices, one per line: Label | price"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:85
+#: templates/admin/product-data-panel.php:138
+msgid "Choices for the Select and Radio types"
+msgstr ""
+
+#: templates/admin/product-data-panel.php:86
+#: templates/admin/product-data-panel.php:139
 msgid ""
 "Only used for the \"Select\" and \"Radio\" types. One choice per line as "
 "\"Label | price\", e.g. \"Standard | 0\" and \"Premium | 9.99\". Omit the "
 "price for a free choice."
 msgstr ""
 
-#: templates/admin/product-data-panel.php:101
+#: templates/admin/product-data-panel.php:105
 msgid "Add option"
 msgstr "Option hinzufügen"
 
