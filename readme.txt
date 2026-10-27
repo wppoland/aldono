@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,22 +35,25 @@ The code is developed in the open at [github.com/wppoland/plogins-addons](https:
 
 == Aldono Pro ==
 
-Aldono Pro is a separate paid plugin that extends Aldono:
+Aldono Pro is a separate paid plugin that extends Aldono.
 
-| Feature | Free | Pro |
-|:--- |:---:|:---:|
-| Field types | Yes | Yes |
-| Text limits | Yes | Yes |
-| Paid and free options | Yes | Yes |
-| Field validation | Yes | Yes |
-| Price adjustment | Yes | Yes |
-| Conditional logic | - | Yes |
-| Front-end hiding | - | Yes |
-| Server-side validation | - | Yes |
-| File uploads | - | Yes |
-| Quantity-based options | - | Yes |
-| Swatches | - | Yes |
-| Per-option inventory | - | Yes |
+Included in Aldono:
+
+* Field types
+* Text limits
+* Paid and free options
+* Field validation
+* Price adjustment
+
+Aldono Pro adds:
+
+* Conditional logic
+* Front-end hiding
+* Server-side validation
+* File uploads
+* Quantity-based options
+* Swatches
+* Per-option inventory
 
 The free edition is not a trial and its features stay available without a time limit.
 
@@ -127,6 +130,10 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.4.2 =
+* The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.
+* Readme: the PRO section lists what the free plugin includes and what the paid edition adds as two lists, which WordPress.org can display (it does not display tables).
 
 = 1.4.1 =
 * Readme only: a PRO section with links to the paid edition.

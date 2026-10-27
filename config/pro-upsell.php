@@ -12,6 +12,8 @@ defined('ABSPATH') || exit;
 return [
     'name'       => 'Aldono Pro',
     'url'        => 'https://plogins.com/plogins-addons-pro/pricing/',
+    'campaign'   => 'plogins-addons',
+    'locales'    => ['pl', 'de', 'es'],
     'sellable'   => true,
     'price_from' => 49,
     'currency'   => 'EUR',
