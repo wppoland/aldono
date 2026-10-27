@@ -35,15 +35,22 @@ The code is developed in the open at [github.com/wppoland/plogins-addons](https:
 
 == Aldono Pro ==
 
-Aldono Pro is a separate paid plugin that works on top of Aldono. It adds:
+Aldono Pro is a separate paid plugin that extends Aldono:
 
-* Conditional logic
-* Front-end hiding
-* Server-side validation
-* File uploads
-* Quantity-based options
-* Swatches
-* Per-option inventory
+| Feature | Free | Pro |
+|:--- |:---:|:---:|
+| Field types | Yes | Yes |
+| Text limits | Yes | Yes |
+| Paid and free options | Yes | Yes |
+| Field validation | Yes | Yes |
+| Price adjustment | Yes | Yes |
+| Conditional logic | - | Yes |
+| Front-end hiding | - | Yes |
+| Server-side validation | - | Yes |
+| File uploads | - | Yes |
+| Quantity-based options | - | Yes |
+| Swatches | - | Yes |
+| Per-option inventory | - | Yes |
 
 The free edition is not a trial and its features stay available without a time limit.
 
