@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,24 @@ Settings live under **WooCommerce > Add-Ons**. Removing the plugin cleans up its
 
 The code is developed in the open at [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons), that's the place to report a bug or suggest a field type you'd like to see.
 
+== Aldono Pro ==
+
+Aldono Pro is a separate paid plugin that works on top of Aldono. It adds:
+
+* Conditional logic
+* Front-end hiding
+* Server-side validation
+* File uploads
+* Quantity-based options
+* Swatches
+* Per-option inventory
+
+The free edition is not a trial and its features stay available without a time limit.
+
+* **Aldono Pro** - [plogins.com/plogins-addons-pro/](https://plogins.com/plogins-addons-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-addons-pro/pricing/](https://plogins.com/plogins-addons-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-addons-pro/docs/](https://plogins.com/plogins-addons-pro/docs/)
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/aldono`, or install via Plugins > Add New.
@@ -47,6 +65,7 @@ The code is developed in the open at [github.com/wppoland/plogins-addons](https:
 * **Plugin page**: [plogins.com/plogins-addons/](https://plogins.com/plogins-addons/)
 * **Source code**: [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons)
 * **Bug reports and feature requests**: [github.com/wppoland/plogins-addons/issues](https://github.com/wppoland/plogins-addons/issues)
+* **Aldono Pro**: [plogins.com/plogins-addons-pro/](https://plogins.com/plogins-addons-pro/)
 
 
 = Does it require WooCommerce? =
@@ -101,6 +120,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.4.1 =
+* Readme only: a PRO section with links to the paid edition.
 
 = 1.4.0 =
 * Fixed: the price beside an option ignored taxes. With prices entered excluding tax and shown including tax, an option labelled 10.00 added 12.30 at 23% VAT. Option prices are now shown the way the store displays prices, so the label matches what the cart adds.
