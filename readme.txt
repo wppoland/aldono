@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.4.2
+Stable tag: 1.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ Add-on definitions are stored as standard product meta, no custom database table
 
 Settings live under **WooCommerce > Add-Ons**. Removing the plugin cleans up its own options; your per-product definitions are kept as product meta so re-installing restores them.
 
-The code is developed in the open at [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons), that's the place to report a bug or suggest a field type you'd like to see.
+The code is developed in the open at [github.com/wppoland/aldono](https://github.com/wppoland/aldono), that's the place to report a bug or suggest a field type you'd like to see.
 
 == Aldono Pro ==
 
@@ -57,9 +57,9 @@ Aldono Pro adds:
 
 The free edition is not a trial and its features stay available without a time limit.
 
-* **Aldono Pro** - [plogins.com/plogins-addons-pro/](https://plogins.com/plogins-addons-pro/)
-* **Compare editions and pricing** - [plogins.com/plogins-addons-pro/pricing/](https://plogins.com/plogins-addons-pro/pricing/)
-* **PRO documentation** - [plogins.com/plogins-addons-pro/docs/](https://plogins.com/plogins-addons-pro/docs/)
+* **Aldono Pro** - [plogins.com/aldono-pro/](https://plogins.com/aldono-pro/)
+* **Compare editions and pricing** - [plogins.com/aldono-pro/pricing/](https://plogins.com/aldono-pro/pricing/)
+* **PRO documentation** - [plogins.com/aldono-pro/docs/](https://plogins.com/aldono-pro/docs/)
 
 == Installation ==
 
@@ -71,11 +71,11 @@ The free edition is not a trial and its features stay available without a time l
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-addons/docs/](https://plogins.com/plogins-addons/docs/)
-* **Plugin page**: [plogins.com/plogins-addons/](https://plogins.com/plogins-addons/)
-* **Source code**: [github.com/wppoland/plogins-addons](https://github.com/wppoland/plogins-addons)
-* **Bug reports and feature requests**: [github.com/wppoland/plogins-addons/issues](https://github.com/wppoland/plogins-addons/issues)
-* **Aldono Pro**: [plogins.com/plogins-addons-pro/](https://plogins.com/plogins-addons-pro/)
+* **Documentation**: [plogins.com/aldono/docs/](https://plogins.com/aldono/docs/)
+* **Plugin page**: [plogins.com/aldono/](https://plogins.com/aldono/)
+* **Source code**: [github.com/wppoland/aldono](https://github.com/wppoland/aldono)
+* **Bug reports and feature requests**: [github.com/wppoland/aldono/issues](https://github.com/wppoland/aldono/issues)
+* **Aldono Pro**: [plogins.com/aldono-pro/](https://plogins.com/aldono-pro/)
 
 
 = Does it require WooCommerce? =
@@ -130,6 +130,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.4.3 =
+* Links point at the new plogins.com address and the renamed GitHub repository.
 
 = 1.4.2 =
 * The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.

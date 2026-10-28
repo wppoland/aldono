@@ -22,7 +22,7 @@ msgstr "Aldono - opciones de producto para WooCommerce"
 
 #. Plugin URI of the plugin
 #: aldono.php
-msgid "https://plogins.com/plogins-addons/"
+msgid "https://plogins.com/aldono/"
 msgstr ""
 
 #. Description of the plugin
