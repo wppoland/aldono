@@ -4,15 +4,15 @@
  * scripts/gen-pro-upsell.mjs. The admin upsell renders this; curate the
  * feature list to fit this plugin's settings screen (do not invent features).
  *
- * @package plogins-addons-pro
+ * @package aldono-pro
  */
 
 defined('ABSPATH') || exit;
 
 return [
     'name'       => 'Aldono Pro',
-    'url'        => 'https://plogins.com/plogins-addons-pro/pricing/',
-    'campaign'   => 'plogins-addons',
+    'url'        => 'https://plogins.com/aldono-pro/pricing/',
+    'campaign'   => 'aldono',
     'locales'    => ['pl', 'de', 'es'],
     'sellable'   => true,
     'price_from' => 49,
