@@ -230,7 +230,7 @@ $addons_subtotal = $addons_show_prices
             aria-atomic="true"
             data-addons-subtotal
             data-base="<?php echo esc_attr($product->is_type('variable') ? '' : (string) $product->get_price()); ?>"
-            data-tax-factor="<?php echo esc_attr((string) \WPPoland\StorefrontKit\AddOns\ProductAddOnsEngine::displayFactor($product)); ?>"
+            data-tax-factor="<?php echo esc_attr((string) \Addons\Vendor\StorefrontKit\AddOns\ProductAddOnsEngine::displayFactor($product)); ?>"
             data-decimals="<?php echo esc_attr((string) wc_get_price_decimals()); ?>"
             data-decimal-separator="<?php echo esc_attr(wc_get_price_decimal_separator()); ?>"
             data-thousand-separator="<?php echo esc_attr(wc_get_price_thousand_separator()); ?>"

@@ -16,7 +16,7 @@
     "autoload": {
         "psr-4": {
             "Addons\\": "src/",
-            "WPPoland\\StorefrontKit\\": "lib/storefront-kit/"
+            "Addons\\Vendor\\StorefrontKit\\": "lib/storefront-kit/"
         }
     },
     "scripts": {
