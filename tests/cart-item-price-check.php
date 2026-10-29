@@ -77,7 +77,7 @@ namespace {
     require __DIR__ . '/../lib/storefront-kit/AddOns/ProductAddOnsEngine.php';
 
     $enabled = true;
-    $engine  = new \WPPoland\StorefrontKit\AddOns\ProductAddOnsEngine(
+    $engine  = new \Addons\Vendor\StorefrontKit\AddOns\ProductAddOnsEngine(
         'addons_selections',
         'addons_field_',
         '',

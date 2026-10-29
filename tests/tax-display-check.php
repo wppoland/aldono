@@ -20,7 +20,7 @@
 
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- Test script.
 
-use WPPoland\StorefrontKit\AddOns\ProductAddOnsEngine;
+use Addons\Vendor\StorefrontKit\AddOns\ProductAddOnsEngine;
 
 defined('ABSPATH') || exit;
 

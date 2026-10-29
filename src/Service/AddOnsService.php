@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Addons\Service;
 
 use Addons\Contract\HasHooks;
-use WPPoland\StorefrontKit\AddOns\ProductAddOnsEngine;
+use Addons\Vendor\StorefrontKit\AddOns\ProductAddOnsEngine;
 
 defined('ABSPATH') || exit;
 

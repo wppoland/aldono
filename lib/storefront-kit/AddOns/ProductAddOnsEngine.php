@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPPoland\StorefrontKit\AddOns;
+namespace Addons\Vendor\StorefrontKit\AddOns;
 
 /**
  * Namespace-neutral per-product add-ons engine (powers the Add-Ons, Product
@@ -17,8 +17,8 @@ namespace WPPoland\StorefrontKit\AddOns;
  * meta, the host owns the meta key and read/write, injected via the
  * `productMeta` closure (no custom table). Everything WooCommerce/
  * text-domain/option/meta specific is constructor-injected, mirroring
- * {@see \WPPoland\StorefrontKit\Badge\BadgeEngine} and
- * {@see \WPPoland\StorefrontKit\Pricing\DynamicPricingEngine}.
+ * {@see \Addons\Vendor\StorefrontKit\Badge\BadgeEngine} and
+ * {@see \Addons\Vendor\StorefrontKit\Pricing\DynamicPricingEngine}.
  *
  * The add-on field markup ships in the consuming plugin via the injected
  * `renderTemplate` closure.
@@ -168,7 +168,7 @@ final class ProductAddOnsEngine
 
             if ($value !== '' && ! $this->isAllowedValue($addOn, $value)) {
                 wc_add_notice(
-                    \WPPoland\StorefrontKit\Support\Formatter::interpolate(
+                    \Addons\Vendor\StorefrontKit\Support\Formatter::interpolate(
                         $this->message(match ($addOn['type']) {
                             'number' => 'number_error',
                             'date' => 'date_error',
@@ -184,7 +184,7 @@ final class ProductAddOnsEngine
 
             if ($addOn['required'] && $value === '') {
                 wc_add_notice(
-                    \WPPoland\StorefrontKit\Support\Formatter::interpolate(
+                    \Addons\Vendor\StorefrontKit\Support\Formatter::interpolate(
                         $this->message('required_error'),
                         ['label' => $addOn['label']],
                     ),
@@ -201,7 +201,7 @@ final class ProductAddOnsEngine
 
                 if ($min > 0 && $len < $min) {
                     wc_add_notice(
-                        \WPPoland\StorefrontKit\Support\Formatter::interpolate(
+                        \Addons\Vendor\StorefrontKit\Support\Formatter::interpolate(
                             $this->message('min_chars_error'),
                             [
                                 'label' => $addOn['label'],
@@ -215,7 +215,7 @@ final class ProductAddOnsEngine
 
                 if ($max > 0 && $len > $max) {
                     wc_add_notice(
-                        \WPPoland\StorefrontKit\Support\Formatter::interpolate(
+                        \Addons\Vendor\StorefrontKit\Support\Formatter::interpolate(
                             $this->message('max_chars_error'),
                             [
                                 'label' => $addOn['label'],

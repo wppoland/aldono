@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WPPoland\StorefrontKit\Support;
+namespace Addons\Vendor\StorefrontKit\Support;
 
 final class Formatter
 {
