@@ -58,7 +58,14 @@ final class ProductAddOnsEngine
     public function registerHooks(): void
     {
         add_action('woocommerce_before_add_to_cart_button', [$this, 'renderFields'], 10);
-        add_filter('woocommerce_add_to_cart_validation', [$this, 'validate'], 10, 3);
+        add_filter('woocommerce_add_to_cart_validation', [$this, 'validate'], 10, 6);
+        add_filter('woocommerce_order_again_cart_item_data', [$this, 'restoreForOrderAgain'], 10, 2);
+        // Express pay buttons on the product page (Stripe, WooPayments) add the
+        // product without the add-on form, so choices would be lost or a
+        // required one skipped. Products with add-ons keep the normal button.
+        add_filter('wc_stripe_hide_payment_request_on_product_page', [$this, 'hideStripeExpress'], 10, 2);
+        add_filter('wcpay_payment_request_is_product_supported', [$this, 'supportsExpress'], 10, 2);
+        add_filter('wcpay_woopay_button_is_product_supported', [$this, 'supportsExpress'], 10, 2);
         add_filter('woocommerce_add_cart_item_data', [$this, 'captureCartItemData'], 10, 2);
         add_filter('woocommerce_get_item_data', [$this, 'displayCartItemData'], 10, 2);
         // Price the line once per product object, when it enters the cart and
@@ -139,8 +146,11 @@ final class ProductAddOnsEngine
      * @param bool $passed
      * @param int $productId
      * @param int $quantity
+     * @param int $variationId
+     * @param array<string, mixed> $variations
+     * @param array<string, mixed>|null $cartItemData Passed by "Order again" (6 arguments).
      */
-    public function validate($passed, $productId, $quantity): bool
+    public function validate($passed, $productId, $quantity, $variationId = 0, $variations = [], $cartItemData = null): bool
     {
         if (! $this->isEnabled() || ! $passed) {
             return (bool) $passed;
@@ -154,17 +164,22 @@ final class ProductAddOnsEngine
 
         $addOns = $this->getAddOns($product);
 
+        // "Order again": the values come from the old order, not from a form.
+        $reorder = is_array($cartItemData) && isset($cartItemData[$this->reorderKey()]) && is_array($cartItemData[$this->reorderKey()])
+            ? $cartItemData[$this->reorderKey()]
+            : null;
+
         // A form rendered with the add-on fields carries a nonce. One that is
         // present but no longer valid (an old cached page) is refused; without a
         // nonce no add-on input is read at all, see postedValue().
-        if ($addOns !== [] && $this->nonceState() === 'invalid') {
+        if ($reorder === null && $addOns !== [] && $this->nonceState() === 'invalid') {
             wc_add_notice($this->message('expired_error'), 'error');
 
             return false;
         }
 
         foreach ($addOns as $index => $addOn) {
-            $value = $this->postedValue($index, $addOn['type']);
+            $value = $reorder !== null ? (string) ($reorder[$index] ?? '') : $this->postedValue($index, $addOn['type']);
 
             if ($value !== '' && ! $this->isAllowedValue($addOn, $value)) {
                 wc_add_notice(
@@ -369,6 +384,86 @@ final class ProductAddOnsEngine
 
             $item->add_meta_data($selection['label'], $value);
         }
+
+        $raw = array_map(static fn (array $selection): array => ['label' => $selection['label'], 'value' => $selection['value']], $this->selectionsFromCartItem($values));
+        if ($raw !== []) {
+            // Hidden copy of the raw choices for "Order again"; the visible meta above carries prices.
+            $item->add_meta_data('_' . $this->cartKey, $raw);
+        }
+    }
+
+    /**
+     * "Order again": bring back the add-ons of the old line, matched to the
+     * product's current add-ons by label and priced at today's prices. A
+     * choice that no longer exists is dropped; validate() then checks the rest
+     * as if typed into the form (required, limits, dates).
+     *
+     * @param array<string, mixed> $cartItemData
+     * @param \WC_Order_Item_Product $item
+     * @return array<string, mixed>
+     */
+    public function restoreForOrderAgain($cartItemData, $item): array
+    {
+        $cartItemData = is_array($cartItemData) ? $cartItemData : [];
+        $product = $item instanceof \WC_Order_Item_Product ? $item->get_product() : null;
+
+        if (! $this->isEnabled() || ! $product instanceof \WC_Product) {
+            return $cartItemData;
+        }
+
+        $saved = $item->get_meta('_' . $this->cartKey, true);
+        $byLabel = [];
+        foreach (is_array($saved) ? $saved : [] as $row) {
+            if (is_array($row) && isset($row['label'], $row['value'])) {
+                $byLabel[(string) $row['label']] = (string) $row['value'];
+            }
+        }
+
+        $values = [];
+        $selections = [];
+        foreach ($this->getAddOns($product) as $index => $addOn) {
+            $value = $byLabel[$addOn['label']] ?? '';
+            if ($value === '' || ! $this->isAllowedValue($addOn, $value)) {
+                continue;
+            }
+            $values[$index] = $value;
+            $selections[] = ['label' => $addOn['label'], 'value' => $value, 'price' => $this->resolvePrice($addOn, $value)];
+        }
+
+        $cartItemData[$this->reorderKey()] = $values;
+        if ($selections !== []) {
+            $cartItemData[$this->cartKey] = $selections;
+        }
+
+        return $cartItemData;
+    }
+
+    private function reorderKey(): string
+    {
+        return $this->cartKey . '_order_again';
+    }
+
+    /**
+     * @param mixed $hide
+     * @param mixed $post
+     */
+    public function hideStripeExpress($hide, $post = null): bool
+    {
+        $product = $post instanceof \WP_Post ? wc_get_product($post->ID) : null;
+
+        return (bool) $hide || ($product instanceof \WC_Product && $this->getAddOns($product) !== []);
+    }
+
+    /**
+     * @param mixed $supported
+     * @param mixed $product
+     */
+    public function supportsExpress($supported, $product = null): bool
+    {
+        // Only the product page; a cart line already carries its add-ons.
+        $onProductPage = function_exists('is_product') && is_product();
+
+        return (bool) $supported && ! ($onProductPage && $product instanceof \WC_Product && $this->getAddOns($product) !== []);
     }
 
     /**
