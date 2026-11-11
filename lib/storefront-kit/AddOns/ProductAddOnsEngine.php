@@ -194,6 +194,24 @@ final class ProductAddOnsEngine
                 return false;
             }
 
+            if ($value !== '' && $addOn['type'] === 'date') {
+                foreach (['min_days' => 'date_min_error', 'max_days' => 'date_max_error'] as $limit => $error) {
+                    $bound = self::dateFromToday($addOn[$limit] ?? null);
+                    // Y-m-d strings compare in date order.
+                    if ($bound !== '' && ($limit === 'min_days' ? $value < $bound : $value > $bound)) {
+                        wc_add_notice(
+                            \Addons\Vendor\StorefrontKit\Support\Formatter::interpolate(
+                                $this->message($error),
+                                ['label' => $addOn['label'], 'date' => date_i18n((string) get_option('date_format'), (int) strtotime($bound . ' 12:00:00'))],
+                            ),
+                            'error',
+                        );
+
+                        return false;
+                    }
+                }
+            }
+
             if ($value !== '' && in_array($addOn['type'], ['text', 'textarea'], true)) {
                 $min = (int) ($addOn['min_chars'] ?? 0);
                 $max = (int) ($addOn['max_chars'] ?? 0);
@@ -386,7 +404,7 @@ final class ProductAddOnsEngine
     /**
      * Normalise the host-stored add-on definition into a typed list.
      *
-     * @return list<array{label: string, type: string, required: bool, price: float, options: array<string, float>, min_chars: int, max_chars: int, description: string, placeholder: string}>
+     * @return list<array{label: string, type: string, required: bool, price: float, options: array<string, float>, min_chars: int, max_chars: int, min_days: ?int, max_days: ?int, description: string, placeholder: string}>
      */
     public function getAddOns(\WC_Product $product): array
     {
@@ -430,6 +448,8 @@ final class ProductAddOnsEngine
                 'options' => $options,
                 'min_chars' => isset($entry['min_chars']) ? max(0, (int) $entry['min_chars']) : 0,
                 'max_chars' => isset($entry['max_chars']) ? max(0, (int) $entry['max_chars']) : 0,
+                'min_days' => isset($entry['min_days']) && $entry['min_days'] !== '' ? max(0, (int) $entry['min_days']) : null,
+                'max_days' => isset($entry['max_days']) && $entry['max_days'] !== '' ? max(0, (int) $entry['max_days']) : null,
                 'description' => trim((string) ($entry['description'] ?? '')),
                 'placeholder' => trim((string) ($entry['placeholder'] ?? '')),
             ];
@@ -466,6 +486,16 @@ final class ProductAddOnsEngine
             'date' => $this->isDate($value),
             default => true,
         };
+    }
+
+    /**
+     * The Y-m-d date a number of days after today in the site's time zone, or
+     * '' when the limit is not set. The template prints the same value as the
+     * input's min/max, so the picker and the server agree.
+     */
+    public static function dateFromToday(?int $days): string
+    {
+        return $days === null ? '' : (new \DateTimeImmutable('today', wp_timezone()))->modify('+' . $days . ' days')->format('Y-m-d');
     }
 
     private function isDate(string $value): bool

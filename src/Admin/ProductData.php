@@ -164,6 +164,9 @@ final class ProductData implements HasHooks
                 'price'     => isset($row['price']) ? max(0.0, (float) wc_format_decimal((string) $row['price'])) : 0.0,
                 'min_chars' => isset($row['min_chars']) ? max(0, absint($row['min_chars'])) : 0,
                 'max_chars' => isset($row['max_chars']) ? max(0, absint($row['max_chars'])) : 0,
+                // Days from today; an empty field means no limit, not "today".
+                'min_days'  => isset($row['min_days']) && trim((string) $row['min_days']) !== '' ? absint($row['min_days']) : '',
+                'max_days'  => isset($row['max_days']) && trim((string) $row['max_days']) !== '' ? absint($row['max_days']) : '',
                 'description' => isset($row['description']) ? sanitize_text_field((string) $row['description']) : '',
                 'placeholder' => isset($row['placeholder']) ? sanitize_text_field((string) $row['placeholder']) : '',
                 'options'   => [],

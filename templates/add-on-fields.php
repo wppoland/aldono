@@ -198,6 +198,12 @@ $addons_subtotal = $addons_show_prices
                         type="date"
                         id="<?php echo esc_attr($addons_id); ?>"
                         name="<?php echo esc_attr($addons_name); ?>"
+                        <?php
+                        $addons_date_min = \Addons\Vendor\StorefrontKit\AddOns\ProductAddOnsEngine::dateFromToday(isset($addons_field['min_days']) && is_int($addons_field['min_days']) ? $addons_field['min_days'] : null);
+                        $addons_date_max = \Addons\Vendor\StorefrontKit\AddOns\ProductAddOnsEngine::dateFromToday(isset($addons_field['max_days']) && is_int($addons_field['max_days']) ? $addons_field['max_days'] : null);
+                        echo $addons_date_min !== '' ? 'min="' . esc_attr($addons_date_min) . '"' : '';
+                        echo $addons_date_max !== '' ? ' max="' . esc_attr($addons_date_max) . '"' : '';
+                        ?>
                         class="input-text"
                         data-addons-price="<?php echo esc_attr((string) $addons_price); ?>"
                         <?php echo $addons_required ? 'required' : ''; ?>

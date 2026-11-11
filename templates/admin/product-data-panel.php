@@ -52,6 +52,8 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                 }
                 $addons_min_chars = (string) ($addons_row['min_chars'] ?? '');
                 $addons_max_chars = (string) ($addons_row['max_chars'] ?? '');
+                $addons_min_days  = (string) ($addons_row['min_days'] ?? '');
+                $addons_max_days  = (string) ($addons_row['max_days'] ?? '');
                 ?>
                 <div class="addons-admin-row" data-addons-row>
                     <p class="form-field">
@@ -70,6 +72,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         <span class="addons-char-settings" data-addons-char-settings <?php echo in_array($addons_type, array('text', 'textarea'), true) ? '' : 'style="display:none;"'; ?>>
                             <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][min_chars]" placeholder="<?php esc_attr_e('Min chars', 'aldono'); ?>" value="<?php echo esc_attr($addons_min_chars); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Minimum character length', 'aldono'); ?>" />
                             <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][max_chars]" placeholder="<?php esc_attr_e('Max chars', 'aldono'); ?>" value="<?php echo esc_attr($addons_max_chars); ?>" style="width:6em;" aria-label="<?php esc_attr_e('Maximum character length', 'aldono'); ?>" />
+                        </span>
+                        <span class="addons-date-settings" data-addons-date-settings <?php echo $addons_type === 'date' ? '' : 'style="display:none;"'; ?>>
+                            <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][min_days]" placeholder="<?php esc_attr_e('Earliest, days from today', 'aldono'); ?>" value="<?php echo esc_attr($addons_min_days); ?>" style="width:13em;" aria-label="<?php esc_attr_e('Earliest date the customer can pick, in days from today. Empty: no limit.', 'aldono'); ?>" />
+                            <input type="number" min="0" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][max_days]" placeholder="<?php esc_attr_e('Latest, days from today', 'aldono'); ?>" value="<?php echo esc_attr($addons_max_days); ?>" style="width:13em;" aria-label="<?php esc_attr_e('Latest date the customer can pick, in days from today. Empty: no limit.', 'aldono'); ?>" />
                         </span>
                         <label>
                             <input type="checkbox" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][required]" value="1" <?php checked($addons_required); ?> />
@@ -124,6 +130,10 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                         <input type="number" min="0" name="addons_def[__INDEX__][min_chars]" placeholder="<?php esc_attr_e('Min chars', 'aldono'); ?>" value="" style="width:6em;" aria-label="<?php esc_attr_e('Minimum character length', 'aldono'); ?>" />
                         <input type="number" min="0" name="addons_def[__INDEX__][max_chars]" placeholder="<?php esc_attr_e('Max chars', 'aldono'); ?>" value="" style="width:6em;" aria-label="<?php esc_attr_e('Maximum character length', 'aldono'); ?>" />
                     </span>
+                    <span class="addons-date-settings" data-addons-date-settings style="display:none;">
+                            <input type="number" min="0" name="addons_def[__INDEX__][min_days]" placeholder="<?php esc_attr_e('Earliest, days from today', 'aldono'); ?>" value="" style="width:13em;" aria-label="<?php esc_attr_e('Earliest date the customer can pick, in days from today. Empty: no limit.', 'aldono'); ?>" />
+                            <input type="number" min="0" name="addons_def[__INDEX__][max_days]" placeholder="<?php esc_attr_e('Latest, days from today', 'aldono'); ?>" value="" style="width:13em;" aria-label="<?php esc_attr_e('Latest date the customer can pick, in days from today. Empty: no limit.', 'aldono'); ?>" />
+                        </span>
                     <label>
                         <input type="checkbox" name="addons_def[__INDEX__][required]" value="1" />
                         <?php esc_html_e('Required', 'aldono'); ?>

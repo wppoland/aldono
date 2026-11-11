@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.4.5
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,7 @@ For each product you define a list of add-ons in the WooCommerce product editor.
 * **Field types**, a text line, a multi-line textarea, a number, a date picker, a checkbox, a select drop-down, or a group of radio buttons.
 * **Text limits**, set minimum and maximum character lengths for text and textarea product options.
 * **Checked input**, a number must be numeric, a date must be a real calendar date, and a select or radio must post one of its own choices.
+* **Date limits**, a date field can set the earliest and the latest day a customer can pick, in days from today (for example from 2 to 30 days ahead). The date picker greys out the other days and add to cart refuses them.
 * **Price deltas**, give an add-on (or each select or radio choice) a price; the amount is added to the cart line total automatically. Taxes apply to it like to the product, and the price beside each option is shown the way your store displays prices, including or excluding tax.
 * **Help text**, an optional description under each option's label, and an optional placeholder inside empty text, textarea and number fields.
 * **Live subtotal**, the product page shows the line total (product price plus chosen options, times the quantity) as the cart will display it, updated as options, quantity and variations change.
@@ -100,7 +101,7 @@ Yes. Tick the Required checkbox for an option, and the product cannot be added t
 
 = Can I limit text option length? =
 
-Yes. Text and textarea add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart.
+Yes. Text and textarea add-ons can have minimum and maximum character limits. The storefront shows a live counter and the server validates the same limits before add to cart. Date add-ons can have an earliest and a latest day, counted in days from today in your site's time zone; leave a field empty for no limit.
 
 = Does it create custom database tables? =
 
@@ -130,6 +131,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.5.0 =
+* New: date options can set the earliest and the latest day the customer can pick, in days from today. The date picker offers only those days and add to cart refuses a date outside them. Empty means no limit, so existing date options are unchanged.
 
 = 1.4.5 =
 * Fixed: deleting the plugin on a multisite network now removes its settings from every site, not only the main one.

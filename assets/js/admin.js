@@ -74,6 +74,7 @@
 			var charSettings = row.querySelector('[data-addons-char-settings]');
 			var options = row.querySelector('[data-addons-options]');
 			var placeholder = row.querySelector('[data-addons-placeholder]');
+			var dateSettings = row.querySelector('[data-addons-date-settings]');
 
 			if (!select) {
 				return;
@@ -81,6 +82,10 @@
 
 			if (charSettings) {
 				charSettings.style.display = select.value === 'text' || select.value === 'textarea' ? '' : 'none';
+			}
+
+			if (dateSettings) {
+				dateSettings.style.display = select.value === 'date' ? '' : 'none';
 			}
 
 			if (options) {

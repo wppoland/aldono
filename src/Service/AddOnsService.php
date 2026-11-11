@@ -46,6 +46,8 @@ final class AddOnsService implements HasHooks
                 'invalid_error'   => __('The choice for "{label}" is not one of its options.', 'aldono'),
                 'number_error'    => __('The option "{label}" must be a number.', 'aldono'),
                 'date_error'      => __('The option "{label}" must be a valid date.', 'aldono'),
+                'date_min_error'  => __('The date for "{label}" cannot be earlier than {date}.', 'aldono'),
+                'date_max_error'  => __('The date for "{label}" cannot be later than {date}.', 'aldono'),
                 'expired_error'   => __('This page has expired. Reload it and add the product again.', 'aldono'),
             ],
             isEnabled: fn (): bool => $this->isEnabled(),
