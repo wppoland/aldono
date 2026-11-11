@@ -172,6 +172,11 @@ final class ProductData implements HasHooks
                 'options'   => [],
             ];
 
+            // Earliest after latest would refuse every date; the merchant meant the range, so swap.
+            if (is_int($definition['min_days']) && is_int($definition['max_days']) && $definition['min_days'] > $definition['max_days']) {
+                [$definition['min_days'], $definition['max_days']] = [$definition['max_days'], $definition['min_days']];
+            }
+
             if (($type === 'select' || $type === 'radio') && isset($row['options']) && is_string($row['options'])) {
                 $definition['options'] = $this->parseOptions($row['options']);
             }
