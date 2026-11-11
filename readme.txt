@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.5.1 =
+* Fixed: a date option saved with the earliest day after the latest day refused every date. The two are now swapped on save.
 
 = 1.5.0 =
 * New: date options can set the earliest and the latest day the customer can pick, in days from today. The date picker offers only those days and add to cart refuses a date outside them. Empty means no limit, so existing date options are unchanged.
