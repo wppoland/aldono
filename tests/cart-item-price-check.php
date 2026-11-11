@@ -128,7 +128,7 @@ namespace {
         /** @var array<string, string> */
         public array $meta = [];
 
-        public function add_meta_data(string $key, string $value): void
+        public function add_meta_data(string $key, mixed $value): void
         {
             $this->meta[$key] = $value;
         }
