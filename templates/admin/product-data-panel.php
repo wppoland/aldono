@@ -58,6 +58,7 @@ $addons_rows = isset($add_ons) && is_array($add_ons) ? $add_ons : array();
                 <div class="addons-admin-row" data-addons-row>
                     <p class="form-field">
                         <span class="addons-row-badge" aria-hidden="true"><?php esc_html_e('Option', 'aldono'); ?></span>
+                        <input type="hidden" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][uid]" value="<?php echo esc_attr(\Addons\Service\AddOnsService::uidFor($addons_row, (int) $addons_i)); ?>" />
                         <input type="text" name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][label]" placeholder="<?php esc_attr_e('Label (e.g. Gift wrap)', 'aldono'); ?>" value="<?php echo esc_attr($addons_label); ?>" aria-label="<?php esc_attr_e('Option label', 'aldono'); ?>" />
                         <select name="addons_def[<?php echo esc_attr((string) $addons_i); ?>][type]" aria-label="<?php esc_attr_e('Option type', 'aldono'); ?>">
                             <option value="text" <?php selected($addons_type, 'text'); ?>><?php esc_html_e('Text', 'aldono'); ?></option>

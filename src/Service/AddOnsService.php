@@ -195,6 +195,50 @@ final class AddOnsService implements HasHooks
     }
 
     /**
+     * A row's stable id. Rows saved before 1.6.1 have none; until their next save
+     * they are named after their place in the stored list, which is what the
+     * editor posts back and keeps from then on.
+     *
+     * @param array<string, mixed> $definition
+     */
+    public static function uidFor(array $definition, int $storedIndex): string
+    {
+        $uid = isset($definition['uid']) ? sanitize_key((string) $definition['uid']) : '';
+
+        return '' !== $uid ? $uid : 'p' . $storedIndex;
+    }
+
+    /**
+     * Where each row lands among the storefront fields (`addons_field_{N}`), by
+     * uid: the rows the engine renders, in order, after the same drops the
+     * renderer applies (no label, unsupported type, a select or radio with no
+     * choices). Rows the engine does not render get no position.
+     *
+     * @param array<int|string, mixed> $definitions Stored definitions, in stored order.
+     * @return array<string, int>
+     */
+    public static function fieldPositions(array $definitions): array
+    {
+        $positions = [];
+        $position  = 0;
+        foreach (array_values($definitions) as $storedIndex => $row) {
+            if (! is_array($row)) {
+                continue;
+            }
+            $type = (string) ($row['type'] ?? 'text');
+            if ('' === trim((string) ($row['label'] ?? '')) || ! in_array($type, ProductAddOnsEngine::SUPPORTED_TYPES, true)) {
+                continue;
+            }
+            if (in_array($type, ['select', 'radio'], true) && (! isset($row['options']) || ! is_array($row['options']) || [] === $row['options'])) {
+                continue;
+            }
+            $positions[self::uidFor($row, $storedIndex)] = $position++;
+        }
+
+        return $positions;
+    }
+
+    /**
      * Stored settings merged over packaged defaults, resolved for RENDERING.
      *
      * {@see Texts::apply()} supplies the translated group heading when no

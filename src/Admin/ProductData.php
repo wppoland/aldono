@@ -141,6 +141,7 @@ final class ProductData implements HasHooks
             $supportedTypes = $defaultTypes;
         }
         $definitions    = [];
+        $seenUids       = [];
 
         foreach ($rows as $row) {
             if (! is_array($row)) {
@@ -154,7 +155,16 @@ final class ProductData implements HasHooks
                 continue;
             }
 
+            // Stable across saves, so a rule pointing at this row survives rows
+            // being removed above it. A new row (or a repeated id) gets a fresh one.
+            $uid = isset($row['uid']) ? sanitize_key((string) $row['uid']) : '';
+            if ('' === $uid || isset($seenUids[$uid])) {
+                $uid = 'u' . strtolower(wp_generate_password(10, false));
+            }
+            $seenUids[$uid] = true;
+
             $definition = [
+                'uid'       => $uid,
                 'label'     => $label,
                 'type'      => $type,
                 'required'  => ! empty($row['required']),

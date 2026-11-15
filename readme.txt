@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,9 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.6.1 =
+* Changed: every option row now keeps a fixed internal id across saves (nothing changes on screen). Aldono Pro uses it so a conditional rule keeps pointing at the same option when other options are added or removed.
 
 = 1.6.0 =
 * Fixed: "Order again" in My Account put the product back without its options, and a product with a required option could not be reordered at all. The options of the old order now come back, at today's prices; one that no longer exists is left out, and a required option added since then has to be picked again.
