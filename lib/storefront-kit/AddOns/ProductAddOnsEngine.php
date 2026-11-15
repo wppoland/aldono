@@ -25,7 +25,7 @@ namespace Addons\Vendor\StorefrontKit\AddOns;
  */
 final class ProductAddOnsEngine
 {
-    private const SUPPORTED_TYPES = ['text', 'textarea', 'number', 'date', 'checkbox', 'select', 'radio'];
+    public const SUPPORTED_TYPES = ['text', 'textarea', 'number', 'date', 'checkbox', 'select', 'radio'];
 
     private const NONCE_ACTION = 'addons_add_to_cart';
 
