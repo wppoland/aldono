@@ -216,16 +216,32 @@
 	accent-color: var(--addons-ink);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark styling follows the page's color scheme (set by the theme), not the OS. */
+@supports (color: light-dark(white, black)) {
 	.addons-fields {
-		--addons-border: color-mix(in srgb, currentColor 22%, transparent);
-		--addons-surface: color-mix(in srgb, currentColor 6%, transparent);
-		/* Lift the ink so the stroke stays luminous on a dark surface. */
-		--addons-ink: var(--wp--preset--color--primary, #9d92f0);
+		--addons-border: light-dark(color-mix(in srgb, currentColor 14%, transparent), color-mix(in srgb, currentColor 22%, transparent));
+		--addons-surface: light-dark(color-mix(in srgb, currentColor 3%, transparent), color-mix(in srgb, currentColor 6%, transparent));
+		--addons-ink: light-dark(var(--wp--preset--color--primary, #4b3f9e), var(--wp--preset--color--primary, #9d92f0));
 	}
 
 	.addons-field .required {
-		color: #ff6b6e;
+		color: light-dark(#d63638, #ff6b6e);
+	}
+}
+
+/* Browsers without light-dark() keep following the OS preference. */
+@supports not (color: light-dark(white, black)) {
+	@media (prefers-color-scheme: dark) {
+		.addons-fields {
+			--addons-border: color-mix(in srgb, currentColor 22%, transparent);
+			--addons-surface: color-mix(in srgb, currentColor 6%, transparent);
+			/* Lift the ink so the stroke stays luminous on a dark surface. */
+			--addons-ink: var(--wp--preset--color--primary, #9d92f0);
+		}
+
+		.addons-field .required {
+			color: #ff6b6e;
+		}
 	}
 }
 
