@@ -2,7 +2,7 @@
 Contributors: motylanogha
 Tags: woocommerce, product options, product addons, extra fields, custom product fields
 Requires at least: 6.5
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 8.1
 Requires Plugins: woocommerce
 Stable tag: 1.6.3
