@@ -91,10 +91,12 @@
 }
 
 .addons-field__choices > legend {
+	float: none;
+	inline-size: 100%;
 	font-weight: 500;
 	line-height: 1.35;
 	padding: 0;
-	margin-block-end: 0.3em;
+	margin: 0 0 0.3em; /* Storefront pulls legends out with a negative inline margin */
 }
 
 .addons-field__choices > label {

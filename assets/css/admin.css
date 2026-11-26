@@ -101,11 +101,28 @@
 	flex: 0 0 auto;
 }
 
-.addons-admin-row label {
+.woocommerce_options_panel .addons-admin-row label {
+	/* WooCommerce floats panel labels into a 150px column with a negative margin. */
+	float: none;
+	inline-size: auto;
+	margin: 0;
+	padding: 0;
 	display: inline-flex;
 	align-items: center;
 	gap: 0.3rem;
 	white-space: nowrap;
+}
+
+.addons-admin-field > span {
+	color: var(--addons-a-muted);
+	font-size: 0.82rem;
+}
+
+.addons-char-settings,
+.addons-date-settings {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
 
 .addons-admin-remove {

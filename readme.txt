@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.2
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,10 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.6.4 =
+* The radio group title stays inside the options card on Storefront.
+* Product data: the price and min/max fields keep a visible label once filled, and "Required" no longer slides into the WooCommerce label column.
 
 = 1.6.3 =
 * Plugins list shows a shortcut to the settings screen.
