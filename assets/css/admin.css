@@ -92,7 +92,9 @@
 	margin-bottom: 0;
 }
 
-.addons-admin-row input[type="text"] {
+/* Aldono's own row inputs only: a basis here would set the height of inputs an add-on stacks in a column. */
+.addons-admin-row .form-field > input[type="text"],
+.addons-admin-row .addons-admin-field > input[type="text"] {
 	flex: 1 1 12rem;
 	min-inline-size: 8rem;
 }

@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.2
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.6.4
+Stable tag: 1.6.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +131,10 @@ Aldono does not connect to any external services. It sends no data off your site
 Aldono is fully translatable and ships the `aldono.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.6.5 =
+* Fixed: the live subtotal counts an add-on's own quantity when Aldono Pro sets one, so it matches the cart.
+* Fixed: in the product editor, the row text input styles no longer stretch inputs an add-on stacks in a column (Aldono Pro's rule value field was 12rem tall).
 
 = 1.6.4 =
 * The radio group title stays inside the options card on Storefront.
