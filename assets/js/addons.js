@@ -131,6 +131,31 @@
 	}
 
 	/**
+	 * How many of one add-on the shopper asked for. An input marked
+	 * data-addons-quantity-for="<row index>" (Aldono Pro's per add-on quantity)
+	 * multiplies that add-on's price, as the cart does; clamped to its min/max
+	 * the way the cart clamps it. Without one the add-on counts once.
+	 *
+	 * @param {HTMLFormElement} form
+	 * @param {HTMLElement}     control
+	 * @return {number}
+	 */
+	function addonQuantity(form, control) {
+		var match = /_(\d+)(\[\])?$/.exec(control.name || '');
+		var input = match ? form.querySelector('[data-addons-quantity-for="' + match[1] + '"]') : null;
+
+		if (!input) {
+			return 1;
+		}
+
+		var qty = parseInt(input.value, 10);
+		var min = parseInt(input.getAttribute('min') || '1', 10);
+		var max = parseInt(input.getAttribute('max') || String(qty), 10);
+
+		return isFinite(qty) ? Math.max(min, Math.min(max, qty)) : NaN;
+	}
+
+	/**
 	 * Format like wc_price(): rounded half up to the store decimals the way PHP
 	 * round() does (0.615 is 0.61499... in binary, PHP still gives 0.62), grouped
 	 * with the store separators, the symbol placed by the store price format.
@@ -177,7 +202,11 @@
 		function update() {
 			var qtyInput = form.querySelector('input[name="quantity"]');
 			var qty = qtyInput ? parseFloat(qtyInput.value) : 1;
-			var prices = Array.prototype.map.call(group.querySelectorAll('[name][data-addons-price], select[name]'), controlPrice);
+			var prices = Array.prototype.map.call(group.querySelectorAll('[name][data-addons-price], select[name]'), function (control) {
+				var price = controlPrice(control);
+
+				return price ? price * addonQuantity(form, control) : 0;
+			});
 			var total = lineTotal(base, prices, qty, taxFactor);
 			var text = qty > 0 && isFinite(total) && total >= 0 ? label.replace('%s', formatPrice(total, fmt)) : '';
 
@@ -229,7 +258,7 @@
 	}
 
 	// The pure price math, for tests/subtotal-check.js.
-	window.addonsSubtotalMath = { lineTotal: lineTotal, formatPrice: formatPrice };
+	window.addonsSubtotalMath = { lineTotal: lineTotal, formatPrice: formatPrice, addonQuantity: addonQuantity };
 
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', init);

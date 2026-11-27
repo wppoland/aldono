@@ -58,4 +58,14 @@ fixture.metas.forEach((m) => {
 assert.ok(fixture.metas.length > 0, 'cart and order meta covered');
 assert.strictEqual(failures, 0, `${failures} prices differ from the cart`);
 
+// A per add-on quantity input (Aldono Pro) multiplies its add-on, clamped as the cart clamps it.
+const { addonQuantity } = ctx.window.addonsSubtotalMath;
+const qtyInput = (value) => ({ value, getAttribute: (a) => ({ min: '1', max: '10' })[a] });
+const formWith = (input) => ({ querySelector: (sel) => (sel === '[data-addons-quantity-for="3"]' ? input : null) });
+assert.strictEqual(addonQuantity(formWith(qtyInput('3')), { name: 'addons_field_3' }), 3);
+assert.strictEqual(addonQuantity(formWith(qtyInput('3')), { name: 'addons_field_3[]' }), 3);
+assert.strictEqual(addonQuantity(formWith(qtyInput('40')), { name: 'addons_field_3' }), 10);
+assert.strictEqual(addonQuantity(formWith(qtyInput('3')), { name: 'addons_field_4' }), 1);
+assert.ok(Number.isNaN(addonQuantity(formWith(qtyInput('')), { name: 'addons_field_3' })));
+
 console.log(`OK: subtotal math and formatting match the cart (${fixture.cases.length} cart lines, ${fixture.metas.length} cart and order choice prices, 4 tax setups)`);
